@@ -32,6 +32,10 @@ Children:
       Type: BaseDataVariableType
       DataType: Size
       Value: 14.0
+    - Name: BackgroundColor
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#e4e4e4"
   - Name: ChartStyle
     Type: ChartStyle
   - Name: DataListStyle
@@ -58,6 +62,10 @@ Children:
     Type: BaseDataVariableType
     DataType: Color
     Value: "#0fafff"
+  - Name: InteractiveBackgroundColor
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#f0f0f0"
 - Name: WebPresentationEngine
   Type: ns=33;PresentationEngine
   Children:
