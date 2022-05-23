@@ -1,0 +1,112 @@
+Name: Loggers
+Type: FolderType
+Children:
+- Name: DataLogger
+  Type: Datalogger
+  Children:
+  - Name: SamplingMode
+    Type: PropertyType
+    DataType: SamplingModeEnum
+    Value: 1
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"b64b1a3c83f8b66c8afbfccb5cec04d9","Namespace":17}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":1,"Namespace":14}
+  - Name: VariablesToLog
+    Type: BaseObjectType
+    Children:
+    - Name: FillLevel
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastOperationCode
+        Type: PropertyType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: 0
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../../../OPC-UA/OPCUAClient/Objects/Demo/BoilerDemo/Boiler1/FillLevelSensor/FillLevel"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          Value: 2
+    - Name: Temperature
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastOperationCode
+        Type: PropertyType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: 0
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../../../OPC-UA/OPCUAClient/Objects/Demo/BoilerDemo/Boiler1/TemperatureSensor/Temperature"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          Value: 2
+  - Class: Reference
+    Target: ns=10;i=21
+    Direction: Forward
+  - Name: LogLocalTime
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+- Name: EventLogger
+  Type: EventLogger
+  Children:
+  - Name: Enabled
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"b64b1a3c83f8b66c8afbfccb5cec04d9","Namespace":17}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":1,"Namespace":14}
+  - Name: EventConfigurations
+    Type: BaseObjectType
+  - Name: EventFieldPaths
+    Type: BaseObjectType
+  - Name: EventArguments
+    Type: BaseObjectType
+    Children:
+    - Name: EventTypeId
+      Type: BaseDataVariableType
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+  - Name: EventFieldsToLog
+    Type: BaseObjectType

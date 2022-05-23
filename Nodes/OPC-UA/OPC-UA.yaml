@@ -1,0 +1,4 @@
+Name: 'OPC-UA'
+Type: FolderType
+Children:
+- File: OPCUAClient/OPCUAClient.yaml

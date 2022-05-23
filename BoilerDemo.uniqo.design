@@ -1,0 +1,46 @@
+Project:
+ Name: BoilerDemo_Design
+ ProjectNamespaceIndex: 10
+ Description: ''
+ Company: ''
+ Copyright: ''
+ FormatVersion: 1
+ CoreVersion: 8.0.1.68
+ Dependencies:
+  2:
+   Uri: BoilerDemo
+   RelativePath: BoilerDemo.uniqo
+  3:
+   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC553.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
+   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  4:
+   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://opcfoundation.org/UA/DI/'
+   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  5:
+   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://PLCopen.org/OpcUa/IEC61131-3/'
+   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  6:
+   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://www.unifiedautomation.com/DemoServer/'
+   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  7:
+   Uri: 'urn:QPlatform:CoreBase'
+   Module: QPlatform.CoreBase
+   Version: 8.0.6.68
+  8:
+   Uri: 'urn:QPlatform:TagImporter'
+   Module: QPlatform.TagImporter
+   Version: 2.0.24.68
+  9:
+   Uri: 'urn:QPlatform:OPCUAImporter'
+   Module: QPlatform.OPCUAImporter
+   Version: 3.0.2.68
+  11:
+   Uri: 'urn:QPlatform:CoreBase:Net'
+   Module: QPlatform.CoreBase.Net
+   Version: 5.0.6.68
+  12:
+   Uri: 'urn:QPlatform:NetLogic'
+   Module: QPlatform.NetLogic
+   Version: 5.0.6.68
+ Nodes:
+ - File: 'DesignTimeNodes/OPC-UA/OPCUAClient/OPCUATagImporter.yaml'

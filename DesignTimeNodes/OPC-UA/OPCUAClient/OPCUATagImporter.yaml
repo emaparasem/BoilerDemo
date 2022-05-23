@@ -1,0 +1,15 @@
+Name: OPCUATagImporter
+Type: OPCUAImporter
+OwnerId: ns=2;g=9f78eb2f1f373feb2ad5ccb7e29a5e21
+Children:
+- Name: IgnoredPLCItems
+  Type: BaseDataVariableType
+  DataType: BaseDataType
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+- Name: IgnoredHMIItems
+  Type: BaseDataVariableType
+  DataType: NodeId
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+  Value: []

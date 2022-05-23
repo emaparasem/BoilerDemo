@@ -1,0 +1,80 @@
+Name: Recipes
+Type: FolderType
+Children:
+- Name: RecipeSchema
+  Type: RecipeSchema
+  Children:
+  - Name: Root
+    Type: BaseObjectType
+    Children:
+    - Name: FillLevelSetPoint
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 0.0
+    - Name: TemperatureSetPoint
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 0.0
+  - Class: Reference
+    Target: ns=11;i=27
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=33
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=31
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=35
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=37
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=62
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=58
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=60
+    Direction: Forward
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"b64b1a3c83f8b66c8afbfccb5cec04d9","Namespace":17}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":1,"Namespace":14}
+  - Name: TargetNode
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+  - Name: EditModel
+    Id: g=6e92df5365a242ea9a45b1efe8bdd220
+    Type: BaseObjectType
+    Children:
+    - Name: FillLevelSetPoint
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 0.0
+    - Name: TemperatureSetPoint
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 0.0
