@@ -20,7 +20,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 820.0
+      Value: 260.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
@@ -277,7 +277,7 @@ Children:
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 1
-    - Name: OutletPump
+    - Name: OutletBoiler
       Type: PipeStraight
       Children:
       - Name: FillColor
@@ -675,7 +675,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 40.0
+      Value: 600.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -819,120 +819,6 @@ Children:
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 1
-    - Name: Boiler
-      Type: Boiler
-      Children:
-      - Name: LevelColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#00adee"
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#cccccc"
-      - Name: Level
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 0.0
-      - Name: MinLevel
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 0.0
-      - Name: MaxLevel
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 100.0
-      - Name: Boiler_x5F_Outline
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Outline.svg"
-      - Name: Fill
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=17;%PROJECTDIR%/res/Boiler_Fill.svg"
-        - Name: DynamicColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#cccccc"
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../FillColor"
-      - Name: Boiler_bottlelevel
-        Type: LinearGauge
-        Children:
-        - Name: Value
-          Type: BaseDataVariableType
-          DataType: Float
-          Value: 70.0
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../Level"
-        - Name: MinValue
-          Type: BaseDataVariableType
-          DataType: Float
-          Value: 0.0
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../MinLevel"
-        - Name: MaxValue
-          Type: BaseDataVariableType
-          DataType: Float
-          Value: 100.0
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../MaxLevel"
-        - Name: WarningZones
-          Type: BaseObjectType
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#00adee"
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../LevelColor"
-      - Name: Boiler_x5F_Overlay
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Overlay.svg"
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 560.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 409.0
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 10.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 20.0
   - Name: TankWidget1
     Type: TankWidget
     Children:
@@ -2437,6 +2323,113 @@ Children:
       Type: Label
     - Name: TankName
       Type: Label
+  - Name: BoilerWidget1
+    Type: BoilerWidget
+    Children:
+    - Name: Boiler
+      Type: Boiler
+      Children:
+      - Name: LevelColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#00adee"
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cccccc"
+      - Name: Level
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+      - Name: MinLevel
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+      - Name: MaxLevel
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 100.0
+      - Name: Boiler_x5F_Outline
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Outline.svg"
+      - Name: Fill
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Boiler_Fill.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#cccccc"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+      - Name: Boiler_bottlelevel
+        Type: LinearGauge
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 70.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Level"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../MinLevel"
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../MaxLevel"
+        - Name: WarningZones
+          Type: BaseObjectType
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#00adee"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../LevelColor"
+      - Name: Boiler_x5F_Overlay
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Overlay.svg"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 130.0
 - Name: Data
   Id: g=1b0dc70d5d42c09a70acec1c917ca5d0
   Supertype: BasePage
