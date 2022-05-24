@@ -3979,7 +3979,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../AnalogItemIntegratedUnit1/Value/AnalogItem1"
+                    Value: "../../../../../../ValueSetpoint/Value"
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
@@ -4054,17 +4054,12 @@ Children:
             DataType: NodePath
             Value: "{BoilerAlias}/FillLevelSensor/FillLevel/EURange/High"
       - Name: ValueSetpoint
-        Type: TextBox
+        Type: SpinBox
         Children:
-        - Name: Text
+        - Name: Value
           Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../../Level/ValueSetpoint/Value/Text"
+          DataType: Double
+          Value: 0.0
     - Name: SetTemperature
       Type: Panel
       Children:
@@ -4088,43 +4083,6 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 450.0
-      - Name: ValueSetpoint
-        Type: SpinBox
-        Children:
-        - Name: Value
-          Type: BaseDataVariableType
-          DataType: Double
-          Value: 0.0
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "{BoilerAlias}/TemperatureSetPoint"
-        - Name: Width
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 80.0
-        - Name: LeftMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 20.0
-        - Name: TopMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 20.0
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 16.0
-        - Name: ShowButtons
-          Type: BaseDataVariableType
-          DataType: Boolean
-          ModellingRule: Optional
-          Value: false
       - Name: Set
         Type: Button
         Children:
