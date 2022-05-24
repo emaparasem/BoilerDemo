@@ -1016,6 +1016,132 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 16.0
+  - Name: StatusWidget1
+    Type: StatusWidget
+    Children:
+    - Name: OpenDialog
+      Type: Button
+    - Name: Title
+      Type: Label
+    - Name: ValueActual
+      Type: Label
+      Children:
+      - Name: AnalogVariable1
+        Type: AnalogItemType
+        DataType: Float
+        Value: 0.0
+        Children:
+        - Name: EURange
+          Type: RangeType
+          DataType: EURange
+          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+          Children:
+          - Name: Low
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+          - Name: High
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            Value: -1
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: ValueSetpoint
+      Type: Label
+      Children:
+      - Name: AnalogVariable1
+        Type: AnalogItemType
+        DataType: Float
+        Value: 0.0
+        Children:
+        - Name: EURange
+          Type: RangeType
+          DataType: EURange
+          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+          Children:
+          - Name: Low
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+          - Name: High
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            Value: -1
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: Chevron1
+      Type: Chevron
+      Children:
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#9ca0a2"
+      - Name: shape
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Chevron_shape.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#d1d3d4"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 98.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 140.0
 - Name: BoilerWidget
   Id: g=a3daadbcc88c5753e88ae7d8f72bb57f
   Supertype: Panel
@@ -1030,7 +1156,7 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 600.0
+    Value: 480.0
   - Name: ItemName
     Type: Label
     Children:
@@ -1163,3 +1289,485 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 40.0
+  - Name: StatusWidget1
+    Type: StatusWidget
+    Children:
+    - Name: OpenDialog
+      Type: Button
+    - Name: Title
+      Type: Label
+    - Name: ValueActual
+      Type: Label
+      Children:
+      - Name: AnalogVariable1
+        Type: AnalogItemType
+        DataType: Float
+        Value: 0.0
+        Children:
+        - Name: EURange
+          Type: RangeType
+          DataType: EURange
+          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+          Children:
+          - Name: Low
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+          - Name: High
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            Value: -1
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: ValueSetpoint
+      Type: Label
+      Children:
+      - Name: AnalogVariable1
+        Type: AnalogItemType
+        DataType: Float
+        Value: 0.0
+        Children:
+        - Name: EURange
+          Type: RangeType
+          DataType: EURange
+          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+          Children:
+          - Name: Low
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+          - Name: High
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            Value: -1
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: Chevron1
+      Type: Chevron
+      Children:
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#9ca0a2"
+      - Name: shape
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Chevron_shape.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#d1d3d4"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 210.0
+  - Name: StatusWidget2
+    Type: StatusWidget
+    Children:
+    - Name: OpenDialog
+      Type: Button
+    - Name: Title
+      Type: Label
+    - Name: ValueActual
+      Type: Label
+      Children:
+      - Name: AnalogVariable1
+        Type: AnalogItemType
+        DataType: Float
+        Value: 0.0
+        Children:
+        - Name: EURange
+          Type: RangeType
+          DataType: EURange
+          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+          Children:
+          - Name: Low
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+          - Name: High
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            Value: -1
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: ValueSetpoint
+      Type: Label
+      Children:
+      - Name: AnalogVariable1
+        Type: AnalogItemType
+        DataType: Float
+        Value: 0.0
+        Children:
+        - Name: EURange
+          Type: RangeType
+          DataType: EURange
+          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+          Children:
+          - Name: Low
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+          - Name: High
+            Type: BaseVariableType
+            DataType: Double
+            ReferenceType: HasProperty
+            Value: 0.0
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            Value: -1
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: Chevron1
+      Type: Chevron
+      Children:
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#9ca0a2"
+      - Name: shape
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Chevron_shape.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#d1d3d4"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 180.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 210.0
+- Name: StatusWidget
+  Id: g=6ed6fbe544b23c05d85da20aba3442d1
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 120.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 120.0
+  - Name: OpenDialog
+    Type: Button
+    Children:
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: Appearance
+      Type: BaseVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "transparent"
+  - Name: CornerRadius
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0
+  - Name: Title
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Label1"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 16.0
+  - Name: FillColor
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#ffffffdd"
+  - Name: ValueActual
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Label1"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 46.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: AnalogVariable1
+      Type: AnalogItemType
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: EURange
+        Type: RangeType
+        DataType: EURange
+        Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+        Children:
+        - Name: Low
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+        - Name: High
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+      - Name: EngineeringUnits
+        Type: EUInformationType
+        DataType: EUInformation
+        Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+        Children:
+        - Name: UnitId
+          Type: BaseVariableType
+          DataType: Int32
+          ReferenceType: HasProperty
+          Value: -1
+        - Name: DisplayName
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Description
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: ValueSetpoint
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Label1"}
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 0
+    - Name: AnalogVariable1
+      Type: AnalogItemType
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: EURange
+        Type: RangeType
+        DataType: EURange
+        Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+        Children:
+        - Name: Low
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+        - Name: High
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+      - Name: EngineeringUnits
+        Type: EUInformationType
+        DataType: EUInformation
+        Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+        Children:
+        - Name: UnitId
+          Type: BaseVariableType
+          DataType: Int32
+          ReferenceType: HasProperty
+          Value: -1
+        - Name: DisplayName
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Description
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 35.0
+  - Name: Chevron1
+    Type: Chevron
+    Children:
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#9ca0a2"
+    - Name: shape
+      Type: Image
+      Children:
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=17;%PROJECTDIR%/res/Chevron_shape.svg"
+      - Name: DynamicColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#d1d3d4"
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../FillColor"
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 88.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
