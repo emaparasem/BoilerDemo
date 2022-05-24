@@ -1,0 +1,42 @@
+Name: LogixStation
+Id: g=462c0f7997d840db92ad492a48164480
+Type: LogixDriverStation
+Children:
+- Name: IPAddress
+  Type: BaseDataVariableType
+  DataType: String
+  Value: ""
+- Name: Port
+  Type: BaseDataVariableType
+  DataType: UInt16
+  Value: 44818
+- Name: Timeout
+  Type: BaseDataVariableType
+  DataType: Duration
+  Value: "0:00:01:0.0000000"
+- Name: OperationCode
+  Type: BaseDataVariableType
+  DataType: CommunicationOperationCode
+  AccessLevel: Read
+  Value: 0
+- Class: Reference
+  Target: ns=16;i=29
+  Direction: Forward
+- Class: Reference
+  Target: ns=16;i=30
+  Direction: Forward
+- Class: Reference
+  Target: ns=16;i=67
+  Direction: Forward
+- Class: Reference
+  Target: ns=16;i=31
+  Direction: Forward
+- Class: Reference
+  Target: ns=16;i=94
+  Direction: Forward
+- Class: Reference
+  Target: ns=16;i=96
+  Direction: Forward
+- File: Tags/Tags.yaml
+- Name: Types
+  Type: BaseObjectType

@@ -1597,285 +1597,76 @@ Children:
     - Name: Level
       Type: StatusWidget
       Children:
-      - Name: OpenDialog
-        Type: Button
-        Children:
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":16,"Namespace":7}
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"Id":121,"Namespace":7}
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: {"Id":58}
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "OpenDialog"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: Dialog
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                - Name: ParentItem
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../..@NodeId"
-              - Name: OutputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: DialogNodeId
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-              Value: ""
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-              Value: ""
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-              Value: 0
       - Name: Title
         Type: Label
-      - Name: ValueActual
-        Type: RowLayout
-        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
         Children:
-        - Name: InputVariable
-          Type: Alias
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"d1ddd26af2dab7ac43e7cc6c5043a393","Namespace":17}
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":2368}
-        - Name: Value
-          Type: Label
-          Children:
-          - Name: AnalogItem1
-            Type: AnalogItemType
-            DataType: Float
-            Value: 0.0
-            Children:
-            - Name: EURange
-              Type: RangeType
-              DataType: EURange
-              Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
-              Children:
-              - Name: Low
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
-              Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                Value: -1
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: DataBind
-              Type: DataBind
-              DataType: NodePath
-              Value: "{InputVariable}"
-              Children:
-              - Name: EngineeringUnitBindingMode
-                Type: BaseVariableType
-                DataType: DataBindEngineeringUnitBindingMode
-                Value: 0
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"00.00"}
-            Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
-              Children:
-              - Name: Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DataBind
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1@Value"
-              - Name: Source1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1/EngineeringUnits/DisplayName"
-      - Name: ValueSetpoint
-        Type: RowLayout
-        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
-        Children:
-        - Name: InputVariable
-          Type: Alias
-          DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":2368}
           - Name: DynamicLink
             Type: DataBind
             DataType: NodePath
-            Value: "../../AnalogVariable1@NodeId"
-        - Name: Value
-          Type: Label
+            Value: "../../Name"
+      - Name: ValueActual
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
-          - Name: AnalogItem1
-            Type: AnalogItemType
-            DataType: Float
-            Value: 0.0
+          - Name: StringFormatter1
+            Type: StringFormatter
             Children:
-            - Name: EURange
-              Type: RangeType
-              DataType: EURange
-              Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: Low
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Actual"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                Value: -1
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: DataBind
-              Type: DataBind
-              DataType: NodePath
-              Value: "{InputVariable}"
-              Children:
-              - Name: EngineeringUnitBindingMode
-                Type: BaseVariableType
-                DataType: DataBindEngineeringUnitBindingMode
-                Value: 0
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"00.00"}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
+      - Name: ValueSetpoint
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
             Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DataBind
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1@Value"
-              - Name: Source1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1/EngineeringUnits/DisplayName"
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Setpoint"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
       - Name: Chevron1
         Type: Chevron
         Children:
@@ -1899,46 +1690,22 @@ Children:
               Type: DataBind
               DataType: NodePath
               Value: "../../FillColor"
-      - Name: AnalogVariable1
-        Type: AnalogItemType
-        DataType: Float
+      - Name: Name
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Level"
+      - Name: Actual
+        Type: BaseDataVariableType
+        DataType: Double
         Value: 0.0
-        Children:
-        - Name: EURange
-          Type: RangeType
-          DataType: EURange
-          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
-          Children:
-          - Name: Low
-            Type: BaseVariableType
-            DataType: Double
-            ReferenceType: HasProperty
-            Value: 0.0
-          - Name: High
-            Type: BaseVariableType
-            DataType: Double
-            ReferenceType: HasProperty
-            Value: 0.0
-        - Name: EngineeringUnits
-          Type: EUInformationType
-          DataType: EUInformation
-          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
-          Children:
-          - Name: UnitId
-            Type: BaseVariableType
-            DataType: Int32
-            ReferenceType: HasProperty
-            Value: 4408652
-          - Name: DisplayName
-            Type: BaseVariableType
-            DataType: LocalizedText
-            ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Description
-            Type: BaseVariableType
-            DataType: LocalizedText
-            ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Setpoint
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+      - Name: MeasurementUnit
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "gal"
   - Name: TankWidget2
     Type: TankWidget
     Children:
@@ -2717,285 +2484,76 @@ Children:
     - Name: Level
       Type: StatusWidget
       Children:
-      - Name: OpenDialog
-        Type: Button
-        Children:
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":16,"Namespace":7}
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"Id":121,"Namespace":7}
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: {"Id":58}
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "OpenDialog"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: Dialog
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                - Name: ParentItem
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../..@NodeId"
-              - Name: OutputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: DialogNodeId
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-              Value: ""
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-              Value: ""
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-              Value: 0
       - Name: Title
         Type: Label
-      - Name: ValueActual
-        Type: RowLayout
-        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
         Children:
-        - Name: InputVariable
-          Type: Alias
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"d1ddd26af2dab7ac43e7cc6c5043a393","Namespace":17}
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":2368}
-        - Name: Value
-          Type: Label
-          Children:
-          - Name: AnalogItem1
-            Type: AnalogItemType
-            DataType: Float
-            Value: 0.0
-            Children:
-            - Name: EURange
-              Type: RangeType
-              DataType: EURange
-              Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
-              Children:
-              - Name: Low
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
-              Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                Value: -1
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: DataBind
-              Type: DataBind
-              DataType: NodePath
-              Value: "{InputVariable}"
-              Children:
-              - Name: EngineeringUnitBindingMode
-                Type: BaseVariableType
-                DataType: DataBindEngineeringUnitBindingMode
-                Value: 0
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"00.00"}
-            Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
-              Children:
-              - Name: Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DataBind
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1@Value"
-              - Name: Source1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1/EngineeringUnits/DisplayName"
-      - Name: ValueSetpoint
-        Type: RowLayout
-        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
-        Children:
-        - Name: InputVariable
-          Type: Alias
-          DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":2368}
           - Name: DynamicLink
             Type: DataBind
             DataType: NodePath
-            Value: "../../AnalogVariable1@NodeId"
-        - Name: Value
-          Type: Label
+            Value: "../../Name"
+      - Name: ValueActual
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
-          - Name: AnalogItem1
-            Type: AnalogItemType
-            DataType: Float
-            Value: 0.0
+          - Name: StringFormatter1
+            Type: StringFormatter
             Children:
-            - Name: EURange
-              Type: RangeType
-              DataType: EURange
-              Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: Low
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Actual"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                Value: -1
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: DataBind
-              Type: DataBind
-              DataType: NodePath
-              Value: "{InputVariable}"
-              Children:
-              - Name: EngineeringUnitBindingMode
-                Type: BaseVariableType
-                DataType: DataBindEngineeringUnitBindingMode
-                Value: 0
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"00.00"}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
+      - Name: ValueSetpoint
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
             Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DataBind
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1@Value"
-              - Name: Source1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1/EngineeringUnits/DisplayName"
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Setpoint"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
       - Name: Chevron1
         Type: Chevron
         Children:
@@ -3019,46 +2577,22 @@ Children:
               Type: DataBind
               DataType: NodePath
               Value: "../../FillColor"
-      - Name: AnalogVariable1
-        Type: AnalogItemType
-        DataType: Float
+      - Name: Name
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Level"
+      - Name: Actual
+        Type: BaseDataVariableType
+        DataType: Double
         Value: 0.0
-        Children:
-        - Name: EURange
-          Type: RangeType
-          DataType: EURange
-          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
-          Children:
-          - Name: Low
-            Type: BaseVariableType
-            DataType: Double
-            ReferenceType: HasProperty
-            Value: 0.0
-          - Name: High
-            Type: BaseVariableType
-            DataType: Double
-            ReferenceType: HasProperty
-            Value: 0.0
-        - Name: EngineeringUnits
-          Type: EUInformationType
-          DataType: EUInformation
-          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
-          Children:
-          - Name: UnitId
-            Type: BaseVariableType
-            DataType: Int32
-            ReferenceType: HasProperty
-            Value: 4408652
-          - Name: DisplayName
-            Type: BaseVariableType
-            DataType: LocalizedText
-            ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Description
-            Type: BaseVariableType
-            DataType: LocalizedText
-            ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Setpoint
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+      - Name: MeasurementUnit
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "gal"
   - Name: BoilerWidget1
     Type: BoilerWidget
     Children:
@@ -3205,294 +2739,76 @@ Children:
     - Name: Level
       Type: StatusWidget
       Children:
-      - Name: OpenDialog
-        Type: Button
-        Children:
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":16,"Namespace":7}
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"Id":121,"Namespace":7}
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: {"Id":58}
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "OpenDialog"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: Dialog
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":2,"Id":"1cca814cfdc030e80ec229523c89f060","Namespace":17}
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "{BoilerAlias}/FillLevelSetPoint@NodeId"
-                - Name: ParentItem
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../..@NodeId"
-              - Name: OutputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: DialogNodeId
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-              Value: ""
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-              Value: ""
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-              Value: 0
       - Name: Title
         Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Name"
       - Name: ValueActual
-        Type: RowLayout
-        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+        Type: Label
         Children:
-        - Name: InputVariable
-          Type: Alias
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"d1ddd26af2dab7ac43e7cc6c5043a393","Namespace":17}
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":2368}
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "{BoilerAlias}/FillLevelSensor/FillLevel@NodeId"
-        - Name: Value
-          Type: Label
-          Children:
-          - Name: AnalogItem1
-            Type: AnalogItemType
-            DataType: Float
-            Value: 0.0
+          - Name: StringFormatter1
+            Type: StringFormatter
             Children:
-            - Name: EURange
-              Type: RangeType
-              DataType: EURange
-              Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: Low
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Actual"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                Value: -1
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: DataBind
-              Type: DataBind
-              DataType: NodePath
-              Value: "{InputVariable}"
-              Children:
-              - Name: EngineeringUnitBindingMode
-                Type: BaseVariableType
-                DataType: DataBindEngineeringUnitBindingMode
-                Value: 0
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"00.00"}
-            Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
-              Children:
-              - Name: Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DataBind
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1@Value"
-              - Name: Source1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1/EngineeringUnits/DisplayName"
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
       - Name: ValueSetpoint
-        Type: RowLayout
-        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+        Type: Label
         Children:
-        - Name: InputVariable
-          Type: Alias
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"346051fcd61e7dec2be0f8a615233380","Namespace":17}
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":2368}
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../AnalogVariable1@NodeId"
-        - Name: Value
-          Type: Label
-          Children:
-          - Name: AnalogItem1
-            Type: AnalogItemType
-            DataType: Float
-            Value: 0.0
+          - Name: StringFormatter1
+            Type: StringFormatter
             Children:
-            - Name: EURange
-              Type: RangeType
-              DataType: EURange
-              Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: Low
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Setpoint"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                Value: -1
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: DataBind
-              Type: DataBind
-              DataType: NodePath
-              Value: "{InputVariable}"
-              Children:
-              - Name: EngineeringUnitBindingMode
-                Type: BaseVariableType
-                DataType: DataBindEngineeringUnitBindingMode
-                Value: 0
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"00.00"}
-            Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
-              Children:
-              - Name: Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DataBind
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1@Value"
-              - Name: Source1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1/EngineeringUnits/DisplayName"
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
       - Name: Chevron1
         Type: Chevron
         Children:
@@ -3516,336 +2832,105 @@ Children:
               Type: DataBind
               DataType: NodePath
               Value: "../../FillColor"
-      - Name: AnalogVariable1
-        Type: AnalogItemType
-        DataType: Float
+      - Name: Name
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Level"
+      - Name: Actual
+        Type: BaseDataVariableType
+        DataType: Double
         Value: 0.0
         Children:
-        - Name: EURange
-          Type: RangeType
-          DataType: EURange
-          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
-          Children:
-          - Name: Low
-            Type: BaseVariableType
-            DataType: Double
-            ReferenceType: HasProperty
-            Value: 0.0
-          - Name: High
-            Type: BaseVariableType
-            DataType: Double
-            ReferenceType: HasProperty
-            Value: 0.0
-        - Name: EngineeringUnits
-          Type: EUInformationType
-          DataType: EUInformation
-          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
-          Children:
-          - Name: UnitId
-            Type: BaseVariableType
-            DataType: Int32
-            ReferenceType: HasProperty
-            Value: 5002322
-          - Name: DisplayName
-            Type: BaseVariableType
-            DataType: LocalizedText
-            ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Description
-            Type: BaseVariableType
-            DataType: LocalizedText
-            ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
+      - Name: Setpoint
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+        Children:
         - Name: DynamicLink
           Type: DataBind
           DataType: NodePath
           Value: "{BoilerAlias}/FillLevelSetPoint"
+      - Name: MeasurementUnit
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "gal"
     - Name: Temperature
       Type: StatusWidget
       Children:
-      - Name: OpenDialog
-        Type: Button
-        Children:
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":16,"Namespace":7}
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"Id":121,"Namespace":7}
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: {"Id":58}
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "OpenDialog"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: Dialog
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                - Name: ParentItem
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../..@NodeId"
-              - Name: OutputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: DialogNodeId
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-              Value: ""
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-              Value: ""
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-              Value: 0
       - Name: Title
         Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Name"
       - Name: ValueActual
-        Type: RowLayout
-        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+        Type: Label
         Children:
-        - Name: InputVariable
-          Type: Alias
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"d1ddd26af2dab7ac43e7cc6c5043a393","Namespace":17}
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":2368}
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "{BoilerAlias}/TemperatureSensor/Temperature@NodeId"
-        - Name: Value
-          Type: Label
-          Children:
-          - Name: AnalogItem1
-            Type: AnalogItemType
-            DataType: Float
-            Value: 0.0
+          - Name: StringFormatter1
+            Type: StringFormatter
             Children:
-            - Name: EURange
-              Type: RangeType
-              DataType: EURange
-              Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: Low
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Actual"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                Value: -1
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: DataBind
-              Type: DataBind
-              DataType: NodePath
-              Value: "{InputVariable}"
-              Children:
-              - Name: EngineeringUnitBindingMode
-                Type: BaseVariableType
-                DataType: DataBindEngineeringUnitBindingMode
-                Value: 0
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"00.00"}
-            Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
-              Children:
-              - Name: Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DataBind
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1@Value"
-              - Name: Source1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1/EngineeringUnits/DisplayName"
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
       - Name: ValueSetpoint
-        Type: RowLayout
-        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+        Type: Label
         Children:
-        - Name: InputVariable
-          Type: Alias
-          DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":2368}
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../AnalogVariable1@NodeId"
-        - Name: Value
-          Type: Label
-          Children:
-          - Name: AnalogItem1
-            Type: AnalogItemType
-            DataType: Float
-            Value: 0.0
+          - Name: StringFormatter1
+            Type: StringFormatter
             Children:
-            - Name: EURange
-              Type: RangeType
-              DataType: EURange
-              Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: Low
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Setpoint"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
               Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                Value: -1
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: DataBind
-              Type: DataBind
-              DataType: NodePath
-              Value: "{InputVariable}"
-              Children:
-              - Name: EngineeringUnitBindingMode
-                Type: BaseVariableType
-                DataType: DataBindEngineeringUnitBindingMode
-                Value: 0
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"00.00"}
-            Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
-              Children:
-              - Name: Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DataBind
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1@Value"
-              - Name: Source1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../AnalogItem1/EngineeringUnits/DisplayName"
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
       - Name: Chevron1
         Type: Chevron
         Children:
@@ -3869,50 +2954,32 @@ Children:
               Type: DataBind
               DataType: NodePath
               Value: "../../FillColor"
-      - Name: AnalogVariable1
-        Type: AnalogItemType
-        DataType: Float
+      - Name: Name
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Temperature"
+      - Name: Actual
+        Type: BaseDataVariableType
+        DataType: Double
         Value: 0.0
         Children:
-        - Name: EURange
-          Type: RangeType
-          DataType: EURange
-          Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
-          Children:
-          - Name: Low
-            Type: BaseVariableType
-            DataType: Double
-            ReferenceType: HasProperty
-            Value: 0.0
-          - Name: High
-            Type: BaseVariableType
-            DataType: Double
-            ReferenceType: HasProperty
-            Value: 0.0
-        - Name: EngineeringUnits
-          Type: EUInformationType
-          DataType: EUInformation
-          Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
-          Children:
-          - Name: UnitId
-            Type: BaseVariableType
-            DataType: Int32
-            ReferenceType: HasProperty
-            Value: 4408652
-          - Name: DisplayName
-            Type: BaseVariableType
-            DataType: LocalizedText
-            ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Description
-            Type: BaseVariableType
-            DataType: LocalizedText
-            ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "{BoilerAlias}/TemperatureSensor/Temperature"
+      - Name: Setpoint
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+        Children:
         - Name: DynamicLink
           Type: DataBind
           DataType: NodePath
           Value: "{BoilerAlias}/TemperatureSetPoint"
+      - Name: MeasurementUnit
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "°F"
     - Name: BoilerAlias
       Type: Alias
       DataType: NodeId

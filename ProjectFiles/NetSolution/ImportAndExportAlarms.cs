@@ -15,6 +15,7 @@ using QPlatform.OPCUAServer;
 using QPlatform.UI;
 using QPlatform.Core;
 using QPlatform.WebUI;
+using QPlatform.Logix;
 #endregion
 
 public class ImportAndExportAlarms : BaseNetLogic

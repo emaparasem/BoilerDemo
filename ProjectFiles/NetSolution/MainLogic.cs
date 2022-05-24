@@ -17,6 +17,7 @@ using QPlatform.CoreBase;
 using QPlatform.CommunicationDriver;
 using QPlatform.Alarm;
 using QPlatform.Core;
+using QPlatform.Logix;
 #endregion
 
 public class MainLogic : BaseNetLogic

@@ -49,3 +49,9 @@ Children:
     Type: PropertyType
     DataType: NodeId
     Value: {"IdType":2,"Id":"6e92df5365a242ea9a45b1efe8bdd220","Namespace":17}
+- Name: MeasurementSystemMap
+  Type: BaseDataVariableType
+  DataType: MeasurementSystemMapItem
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+  Value: []

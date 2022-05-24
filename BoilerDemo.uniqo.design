@@ -42,5 +42,14 @@ Project:
    Uri: 'urn:QPlatform:NetLogic'
    Module: QPlatform.NetLogic
    Version: 5.0.6.68
+  13:
+   Uri: 'urn:QPlatform:Core:Net'
+   Module: QPlatform.Core.Net
+   Version: 6.2.2.68
+  14:
+   Uri: 'urn:QPlatform:LogixDriverTagImporter'
+   Module: QPlatform.LogixDriverTagImporter
+   Version: 0.0.2.68
  Nodes:
+ - File: DesignTimeNodes/CommDrivers/LogixDriver/LogixStation/TagImporter.yaml
  - File: 'DesignTimeNodes/OPC-UA/OPCUAClient/OPCUATagImporter.yaml'

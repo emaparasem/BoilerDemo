@@ -1,2 +1,4 @@
 Name: CommDrivers
 Type: FolderType
+Children:
+- File: LogixDriver/LogixDriver.yaml
