@@ -1170,12 +1170,16 @@ Children:
       - Name: InputVariable
         Type: Alias
         DataType: NodeId
-        Value: {"IdType":2,"Id":"d1ddd26af2dab7ac43e7cc6c5043a393","Namespace":17}
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
         Children:
         - Name: Kind
           Type: PropertyType
           DataType: NodeId
           Value: {"Id":2368}
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../AnalogVariable1@NodeId"
       - Name: Value
         Type: Label
         Children:
@@ -1287,6 +1291,46 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 140.0
+    - Name: AnalogVariable1
+      Type: AnalogItemType
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: EURange
+        Type: RangeType
+        DataType: EURange
+        Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+        Children:
+        - Name: Low
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+        - Name: High
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+      - Name: EngineeringUnits
+        Type: EUInformationType
+        DataType: EUInformation
+        Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+        Children:
+        - Name: UnitId
+          Type: BaseVariableType
+          DataType: Int32
+          ReferenceType: HasProperty
+          Value: 4408652
+        - Name: DisplayName
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Description
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
 - Name: BoilerWidget
   Id: g=a3daadbcc88c5753e88ae7d8f72bb57f
   Supertype: Panel
@@ -1609,6 +1653,10 @@ Children:
           Type: PropertyType
           DataType: NodeId
           Value: {"Id":2368}
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../AnalogVariable1@NodeId"
       - Name: Value
         Type: Label
         Children:
@@ -1720,6 +1768,56 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 210.0
+    - Name: AnalogVariable1
+      Type: AnalogItemType
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: EURange
+        Type: RangeType
+        DataType: EURange
+        Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+        Children:
+        - Name: Low
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+        - Name: High
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+      - Name: EngineeringUnits
+        Type: EUInformationType
+        DataType: EUInformation
+        Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+        Children:
+        - Name: UnitId
+          Type: BaseVariableType
+          DataType: Int32
+          ReferenceType: HasProperty
+          Value: 5002322
+        - Name: DisplayName
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Description
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "{BoilerAlias}/FillLevelSetPoint"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          ModellingRule: Optional
+          Value: 2
   - Name: Temperature
     Type: StatusWidget
     Children:
@@ -1841,12 +1939,16 @@ Children:
       - Name: InputVariable
         Type: Alias
         DataType: NodeId
-        Value: {"IdType":2,"Id":"d1ddd26af2dab7ac43e7cc6c5043a393","Namespace":17}
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
         Children:
         - Name: Kind
           Type: PropertyType
           DataType: NodeId
           Value: {"Id":2368}
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../AnalogVariable1@NodeId"
       - Name: Value
         Type: Label
         Children:
@@ -1958,6 +2060,56 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 210.0
+    - Name: AnalogVariable1
+      Type: AnalogItemType
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: EURange
+        Type: RangeType
+        DataType: EURange
+        Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+        Children:
+        - Name: Low
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+        - Name: High
+          Type: BaseVariableType
+          DataType: Double
+          ReferenceType: HasProperty
+          Value: 0.0
+      - Name: EngineeringUnits
+        Type: EUInformationType
+        DataType: EUInformation
+        Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+        Children:
+        - Name: UnitId
+          Type: BaseVariableType
+          DataType: Int32
+          ReferenceType: HasProperty
+          Value: 4408652
+        - Name: DisplayName
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Description
+          Type: BaseVariableType
+          DataType: LocalizedText
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "{BoilerAlias}/TemperatureSetPoint"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          ModellingRule: Optional
+          Value: 2
   - Name: Alarm_Medium_Priority1
     Type: Alarm_Medium_Priority
     Children:
@@ -2235,12 +2387,22 @@ Children:
     - Name: InputVariable
       Type: Alias
       DataType: NodeId
-      Value: {"IdType":2,"Id":"d1ddd26af2dab7ac43e7cc6c5043a393","Namespace":17}
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
         Value: {"Id":2368}
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../AnalogVariable1@NodeId"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          ModellingRule: Optional
+          Value: 2
     - Name: Value
       Type: Label
       Children:
@@ -2349,7 +2511,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 38.0
+      Value: 40.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -2393,3 +2555,43 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
+  - Name: AnalogVariable1
+    Type: AnalogItemType
+    DataType: Float
+    Value: 0.0
+    Children:
+    - Name: EURange
+      Type: RangeType
+      DataType: EURange
+      Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+      Children:
+      - Name: Low
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 0.0
+      - Name: High
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 0.0
+    - Name: EngineeringUnits
+      Type: EUInformationType
+      DataType: EUInformation
+      Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+      Children:
+      - Name: UnitId
+        Type: BaseVariableType
+        DataType: Int32
+        ReferenceType: HasProperty
+        Value: 4408652
+      - Name: DisplayName
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Description
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
