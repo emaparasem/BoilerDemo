@@ -17,4 +17,4 @@ Children:
     ReferenceType: HasProperty
     ValueRank: OneDimension
     ArrayDimensions: [0]
-    Value: ["en-US"]
+    Value: ["it-IT"]
