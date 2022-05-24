@@ -66,6 +66,10 @@ Children:
     Type: BaseDataVariableType
     DataType: Color
     Value: "#f0f0f0"
+  - Name: TextColor
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#3b3b3b"
 - Name: WebPresentationEngine
   Type: ns=33;PresentationEngine
   Children:
