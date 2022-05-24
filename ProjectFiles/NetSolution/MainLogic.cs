@@ -19,7 +19,7 @@ using QPlatform.Alarm;
 using QPlatform.Core;
 #endregion
 
-public class StartupSetup : BaseNetLogic
+public class MainLogic : BaseNetLogic
 {
     public override void Start()
     {
