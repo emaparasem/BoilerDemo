@@ -1526,6 +1526,49 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 40.0
+  - Name: Alarm_Medium_Priority1
+    Type: Alarm_Medium_Priority
+    Children:
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#f5e119"
+    - Name: Icon_border
+      Type: Image
+      Children:
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=17;%PROJECTDIR%/res/Alarm_Medium_Priority_Icon_border.svg"
+      - Name: DynamicColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f5e119"
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../FillColor"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 520.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 180.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
   - Name: Level
     Type: StatusWidget
     Children:
@@ -2110,49 +2153,6 @@ Children:
           DataType: DataBindModeType
           ModellingRule: Optional
           Value: 2
-  - Name: Alarm_Medium_Priority1
-    Type: Alarm_Medium_Priority
-    Children:
-    - Name: FillColor
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#f5e119"
-    - Name: Icon_border
-      Type: Image
-      Children:
-      - Name: Path
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=17;%PROJECTDIR%/res/Alarm_Medium_Priority_Icon_border.svg"
-      - Name: DynamicColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#f5e119"
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "../../FillColor"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 520.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 180.0
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 30.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 30.0
   - Name: BoilerAlias
     Type: Alias
     DataType: NodeId

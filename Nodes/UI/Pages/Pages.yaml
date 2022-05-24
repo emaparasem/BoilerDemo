@@ -2918,12 +2918,18 @@ Children:
       - Name: MaxLevel
         Type: BaseDataVariableType
         DataType: Double
-        Value: 100.0
+        Value: 0.0
         Children:
         - Name: DynamicLink
           Type: DataBind
           DataType: NodePath
           Value: "{BoilerAlias}/FillLevelSensor/FillLevel/EURange/High"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DataBindModeType
+            ModellingRule: Optional
+            Value: 2
       - Name: Boiler_x5F_Outline
         Type: Image
         Children:
@@ -2995,6 +3001,29 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Overlay.svg"
+    - Name: Alarm_Medium_Priority1
+      Type: Alarm_Medium_Priority
+      Children:
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f5e119"
+      - Name: Icon_border
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Alarm_Medium_Priority_Icon_border.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#f5e119"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
     - Name: Level
       Type: StatusWidget
       Children:
@@ -3523,29 +3552,6 @@ Children:
           Type: DataBind
           DataType: NodePath
           Value: "{BoilerAlias}/TemperatureSetPoint"
-    - Name: Alarm_Medium_Priority1
-      Type: Alarm_Medium_Priority
-      Children:
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#f5e119"
-      - Name: Icon_border
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=17;%PROJECTDIR%/res/Alarm_Medium_Priority_Icon_border.svg"
-        - Name: DynamicColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#f5e119"
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../FillColor"
     - Name: BoilerAlias
       Type: Alias
       DataType: NodeId
@@ -3565,6 +3571,8 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 130.0
+  - Name: StartupSetup
+    Type: NetLogic
 - Name: Data
   Id: g=1b0dc70d5d42c09a70acec1c917ca5d0
   Supertype: BasePage
