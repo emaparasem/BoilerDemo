@@ -5,7 +5,7 @@ Children:
 - Name: IPAddress
   Type: BaseDataVariableType
   DataType: String
-  Value: ""
+  Value: "172.19.17.109"
 - Name: Port
   Type: BaseDataVariableType
   DataType: UInt16
@@ -40,3 +40,122 @@ Children:
 - File: Tags/Tags.yaml
 - Name: Types
   Type: BaseObjectType
+  Children:
+  - Name: Tank1
+    Id: g=5efbca174c20c582f75da1eeed08ea98
+    Supertype: TagStructure
+    Children:
+    - Name: ValveInStatus
+      Type: LogixDriverTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "ValveInStatus"
+      - Name: Quality
+        Type: BaseDataVariableType
+        DataType: ns=16;Quality
+        AccessLevel: Read
+        Value: 0
+      - Name: OperationCode
+        Type: BaseDataVariableType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: -2144272384
+    - Name: ValveInCmd
+      Type: LogixDriverTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "ValveInCmd"
+      - Name: Quality
+        Type: BaseDataVariableType
+        DataType: ns=16;Quality
+        AccessLevel: Read
+        Value: 0
+      - Name: OperationCode
+        Type: BaseDataVariableType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: -2144272384
+    - Name: ValveOutStatus
+      Type: LogixDriverTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "ValveOutStatus"
+      - Name: Quality
+        Type: BaseDataVariableType
+        DataType: ns=16;Quality
+        AccessLevel: Read
+        Value: 0
+      - Name: OperationCode
+        Type: BaseDataVariableType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: -2144272384
+    - Name: ValveOutCmd
+      Type: LogixDriverTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "ValveOutCmd"
+      - Name: Quality
+        Type: BaseDataVariableType
+        DataType: ns=16;Quality
+        AccessLevel: Read
+        Value: 0
+      - Name: OperationCode
+        Type: BaseDataVariableType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: -2144272384
+    - Name: Level
+      Type: LogixDriverTag
+      DataType: Int16
+      Value: 0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Level"
+      - Name: Quality
+        Type: BaseDataVariableType
+        DataType: ns=16;Quality
+        AccessLevel: Read
+        Value: 0
+      - Name: OperationCode
+        Type: BaseDataVariableType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: -2144272384
+    - Name: SetPoint
+      Type: LogixDriverTag
+      DataType: Int16
+      Value: 0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "SetPoint"
+      - Name: Quality
+        Type: BaseDataVariableType
+        DataType: ns=16;Quality
+        AccessLevel: Read
+        Value: 0
+      - Name: OperationCode
+        Type: BaseDataVariableType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: -2144272384

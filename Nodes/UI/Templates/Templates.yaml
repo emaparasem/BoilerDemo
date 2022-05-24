@@ -198,6 +198,45 @@ Children:
       Type: BaseDataVariableType
       DataType: Color
       Value: "#cccccc"
+      Children:
+      - Name: KeyValueConverter1
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{TankAlias}/ValveInStatus"
+        - Name: Pairs
+          Type: BaseObjectType
+          ModellingRule: None
+          Children:
+          - Name: Pair
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#cccccc"
+          - Name: Pair1
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#00ff00"
     - Name: Solenoid_x5F_Valve_x5F_Outline
       Type: Image
       Children:
@@ -520,7 +559,45 @@ Children:
     - Name: BodyColor
       Type: BaseDataVariableType
       DataType: Color
-      Value: "#cccccc"
+      Value: "#00000000"
+      Children:
+      - Name: KeyValueConverter1
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{TankAlias}/ValveOutStatus"
+        - Name: Pairs
+          Type: BaseObjectType
+          Children:
+          - Name: Pair
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#cccccc"
+          - Name: Pair1
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#00ff00"
     - Name: Solenoid_x5F_Valve_x5F_Outline
       Type: Image
       Children:
@@ -602,6 +679,17 @@ Children:
       Type: BaseDataVariableType
       DataType: Double
       Value: 0.0
+      Children:
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "{TankAlias}/Level"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          ModellingRule: Optional
+          Value: 2
     - Name: MinLevel
       Type: BaseDataVariableType
       DataType: Double
@@ -609,7 +697,7 @@ Children:
     - Name: MaxLevel
       Type: BaseDataVariableType
       DataType: Double
-      Value: 100.0
+      Value: 300.0
     - Name: Equipment_x5F_Vessel_x5F_Outline
       Type: Image
       Children:
@@ -711,14 +799,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 260.0
-  - Name: InletValveStatus
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: false
-  - Name: OutletValveStatus
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: false
   - Name: PipeFlange1
     Type: PipeFlange
     Children:
@@ -1173,14 +1253,45 @@ Children:
       Type: BaseDataVariableType
       DataType: Double
       Value: 0.0
+      Children:
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "{TankAlias}/Level"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          ModellingRule: Optional
+          Value: 2
     - Name: Setpoint
       Type: BaseDataVariableType
       DataType: Double
       Value: 0.0
+      Children:
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "{TankAlias}/SetPoint"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          ModellingRule: Optional
+          Value: 2
     - Name: MeasurementUnit
       Type: BaseDataVariableType
       DataType: String
       Value: "gal"
+  - Name: TankAlias
+    Type: Alias
+    DataType: NodeId
+    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"5efbca174c20c582f75da1eeed08ea98","Namespace":17}
 - Name: BoilerWidget
   Id: g=a3daadbcc88c5753e88ae7d8f72bb57f
   Supertype: Panel
@@ -2401,3 +2512,33 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
+- Name: ParametersWidget
+  Id: g=396574c3e0c82e19c9342bcb616d23fb
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 120.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 120.0
+  - Name: BorderThickness
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1.0
+  - Name: FillColor
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#ffffffdd"
+  - Name: CornerRadius
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0

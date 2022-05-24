@@ -9,7 +9,7 @@ Children:
 - Name: Mode
   Type: BaseDataVariableType
   DataType: FetchModes
-  Value: 0
+  Value: 1
 - Name: IgnoredPLCItems
   Type: BaseDataVariableType
   DataType: BaseDataType

@@ -1,2 +1,239 @@
 Name: Tags
 Type: BaseObjectType
+Children:
+- Name: Tank1
+  Id: g=6bb91bacc925ed7d7e44139782da92b3
+  Type: Tank1
+  Children:
+  - Name: ValveInStatus
+    Type: LogixDriverTag
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank1.ValveInStatus"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: ValveInCmd
+    Type: LogixDriverTag
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank1.ValveInCmd"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: ValveOutStatus
+    Type: LogixDriverTag
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank1.ValveOutStatus"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: ValveOutCmd
+    Type: LogixDriverTag
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank1.ValveOutCmd"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: Level
+    Type: LogixDriverTag
+    DataType: Int16
+    Value: 0
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank1.Level"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: SetPoint
+    Type: LogixDriverTag
+    DataType: Int16
+    Value: 0
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank1.SetPoint"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+- Name: Tank2
+  Id: g=2bc72984ac8d4cee42304698420a93f8
+  Type: Tank1
+  Children:
+  - Name: ValveInStatus
+    Type: LogixDriverTag
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank2.ValveInStatus"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: ValveInCmd
+    Type: LogixDriverTag
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank2.ValveInCmd"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: ValveOutStatus
+    Type: LogixDriverTag
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank2.ValveOutStatus"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: ValveOutCmd
+    Type: LogixDriverTag
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank2.ValveOutCmd"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: Level
+    Type: LogixDriverTag
+    DataType: Int16
+    Value: 0
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank2.Level"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
+  - Name: SetPoint
+    Type: LogixDriverTag
+    DataType: Int16
+    Value: 0
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Tank2.SetPoint"
+    - Name: Quality
+      Type: BaseDataVariableType
+      DataType: ns=16;Quality
+      AccessLevel: Read
+      Value: 0
+    - Name: OperationCode
+      Type: BaseDataVariableType
+      DataType: TagOperationCode
+      AccessLevel: Read
+      Value: -2144272384
