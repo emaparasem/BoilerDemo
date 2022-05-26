@@ -4440,255 +4440,6 @@ Children:
         Type: PropertyType
         DataType: NodeId
         Value: {"Id":1003,"Namespace":5}
-    - Name: SetLevel
-      Type: Panel
-      Children:
-      - Name: Set
-        Type: Button
-        Children:
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":16,"Namespace":7}
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: {"Id":58}
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "{BoilerAlias}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "Fill"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: SetPoint
-                  Type: BaseDataVariableType
-                  DataType: Double
-                  Value: 0.0
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../../../ValueSetpoint/Value"
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-              Value: ""
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-              Value: ""
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-              Value: 0
-      - Name: LowLimit
-        Type: Label
-      - Name: HighLimit
-        Type: Label
-      - Name: ValueLowLimit
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "{BoilerAlias}/FillLevelSensor/FillLevel/EURange/Low"
-      - Name: ValueHighLimit
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "{BoilerAlias}/FillLevelSensor/FillLevel/EURange/High"
-      - Name: ValueSetpoint
-        Type: SpinBox
-        Children:
-        - Name: Value
-          Type: BaseDataVariableType
-          DataType: Double
-          Value: 0.0
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 30.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 650.0
-    - Name: SetTemperature
-      Type: Panel
-      Children:
-      - Name: Set
-        Type: Button
-        Children:
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":16,"Namespace":7}
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: {"Id":58}
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "{BoilerAlias}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "Heat"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: SetPoint
-                  Type: BaseDataVariableType
-                  DataType: Double
-                  Value: 0.0
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../../../ValueSetpoint/Value"
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-              Value: ""
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-              Value: ""
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-              Value: 0
-      - Name: LowLimit
-        Type: Label
-      - Name: HighLimit
-        Type: Label
-      - Name: ValueLowLimit
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "{BoilerAlias}/TemperatureSensor/Temperature/EURange/Low"
-      - Name: ValueLowLimit1
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "{BoilerAlias}/TemperatureSensor/Temperature/EURange/High"
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 230.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 650.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -4706,17 +4457,17 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"fill"}
+        Value: {"LocaleId":"en-US","Text":"FILL"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 480.0
+        Value: 20.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 465.0
+        Value: 455.0
       - Name: MouseClickEventHandler1
         Type: EventHandler
         Children:
@@ -4786,6 +4537,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 120.0
 - Name: Data
   Id: g=1b0dc70d5d42c09a70acec1c917ca5d0
   Supertype: BasePage
