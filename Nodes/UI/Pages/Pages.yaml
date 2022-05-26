@@ -1774,6 +1774,11 @@ Children:
         Type: PropertyType
         DataType: NodeId
         Value: {"IdType":2,"Id":"5efbca174c20c582f75da1eeed08ea98","Namespace":17}
+    - Name: RuntimeNetLogic1
+      Type: NetLogic
+      Children:
+      - Class: Method
+        Name: Method1
   - Name: TankWidget2
     Type: TankWidget
     Children:
@@ -2750,10 +2755,36 @@ Children:
         DataType: Double
         Value: 0.0
         Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
+          - Name: Source1
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{MainTank1Alias}/Level"
+          - Name: Source2
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{MainTank2Alias}/Level"
       - Name: MinLevel
         Type: BaseDataVariableType
         DataType: Double

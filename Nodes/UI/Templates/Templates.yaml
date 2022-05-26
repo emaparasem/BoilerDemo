@@ -1356,16 +1356,42 @@ Children:
       DataType: Double
       Value: 0.0
       Children:
-      - Name: DynamicLink
-        Type: DataBind
-        DataType: NodePath
-        Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
         Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DataBindModeType
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: 2
+          Value: "{0}-{1}-{2}"
+        - Name: ns=6;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
+        - Name: ns=6;Source1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{MainTank1Alias}/Level"
+        - Name: ns=6;Source2
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{MainTank2Alias}/Level"
     - Name: MinLevel
       Type: BaseDataVariableType
       DataType: Double
