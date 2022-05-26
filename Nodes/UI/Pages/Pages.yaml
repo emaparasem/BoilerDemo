@@ -2003,6 +2003,23 @@ Children:
             Type: DataBind
             DataType: NodePath
             Value: "../../FillColor"
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{TankAlias}/Level"
     - Name: InletValveName
       Type: Label
     - Name: OutletValveName
@@ -2563,6 +2580,33 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+  - Name: MainBoilerAlias
+    Type: Alias
+    DataType: NodeId
+    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":1003,"Namespace":5}
+  - Name: MainTank1Alias
+    Type: Alias
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"ccb5a8cd5e9e1a826b4d6f0bcb85c132","Namespace":17}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
+  - Name: MainTank2Alias
+    Type: Alias
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"bba0219b478916ea57814a756630c61a","Namespace":17}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
   - Name: TankWidget2
     Type: TankWidget
     Children:
@@ -2786,7 +2830,6 @@ Children:
               Value: "../../../../TankAlias/ValveOutStatus"
           - Name: Pairs
             Type: BaseObjectType
-            ModellingRule: None
             Children:
             - Name: Pair
               Type: ValueMapPair
@@ -3061,7 +3104,6 @@ Children:
               Value: "{TankAlias}/ValveOutStatus"
           - Name: Pairs
             Type: BaseObjectType
-            ModellingRule: None
             Children:
             - Name: Pair
               Type: ValueMapPair
@@ -3230,16 +3272,6 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           Value: "ns=17;%PROJECTDIR%/res/Equipment_x5F_Tank_x5F_Overlay.svg"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 850.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 380.0
     - Name: PipeFlange1
       Type: PipeFlange
       Children:
@@ -3314,26 +3346,6 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           Value: "ns=17;%PROJECTDIR%/res/Pipe_x5F_Flange_x5F_Overlay.svg"
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 3.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 114.0
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 13.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 30.0
     - Name: PipeFlange3
       Type: PipeFlange
       Children:
@@ -3371,26 +3383,6 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           Value: "ns=17;%PROJECTDIR%/res/Pipe_x5F_Flange_x5F_Overlay.svg"
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 253.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 244.0
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 13.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 30.0
     - Name: PipeFlange4
       Type: PipeFlange
       Children:
@@ -3428,26 +3420,6 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           Value: "ns=17;%PROJECTDIR%/res/Pipe_x5F_Flange_x5F_Overlay.svg"
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 300.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 244.0
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 13.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 30.0
     - Name: Alarm_Medium_Priority1
       Type: Alarm_Medium_Priority
       Children:
@@ -3471,6 +3443,23 @@ Children:
             Type: DataBind
             DataType: NodePath
             Value: "../../FillColor"
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{TankAlias}/Level"
     - Name: InletValveName
       Type: Label
     - Name: OutletValveName
@@ -3486,7 +3475,7 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Level"}
           Children:
           - Name: DynamicLink
             Type: DataBind
@@ -3621,26 +3610,6 @@ Children:
     - Name: FillingCycle
       Type: Button
       Children:
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 0.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 60.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 120.0
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 80.0
       - Name: MouseClickEventHandler1
         Type: EventHandler
         Children:
@@ -3710,7 +3679,6 @@ Children:
               - Name: VariableToModify
                 Type: BaseDataVariableType
                 DataType: VariablePointer
-                Description: {"NamespaceIndex":6,"TextId":"SetVariableToModifyDescription"}
                 Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: DynamicLink
@@ -3720,12 +3688,10 @@ Children:
               - Name: Value
                 Type: BaseDataVariableType
                 DataType: Boolean
-                Description: {"NamespaceIndex":6,"TextId":"SetValueDescription"}
                 Value: false
               - Name: ArrayIndex
                 Type: BaseDataVariableType
                 DataType: UInt32
-                Description: {"NamespaceIndex":6,"TextId":"SetArrayIndexDescription"}
                 ValueRank: ScalarOrOneDimension
                 Value: 0
         - Name: EventArguments
@@ -3804,12 +3770,6 @@ Children:
                 - Name: ExpressionEvaluator1
                   Type: ExpressionEvaluator
                   Children:
-                  - Name: Expression
-                    Type: BaseDataVariableType
-                    DataType: String
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: "{0}-49"
                   - Name: Source0
                     Type: BaseDataVariableType
                     DataType: BaseDataType
@@ -3819,18 +3779,6 @@ Children:
                       Type: DataBind
                       DataType: NodePath
                       Value: "{MainBoilerAlias}/FillLevelSensor/FillLevel"
-                      Children:
-                      - Name: Mode
-                        Type: BaseVariableType
-                        DataType: DataBindModeType
-                        ModellingRule: Optional
-                        Value: 2
-                  - Name: Mode
-                    Type: PropertyType
-                    DataType: DataBindModeType
-                    ReferenceType: HasComponent
-                    ModellingRule: Optional
-                    Value: 2
         - Name: EventArguments
           Type: MouseUpEvent
           Children:
@@ -3869,31 +3817,6 @@ Children:
     - Name: EmptyingCycle
       Type: Button
       Children:
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 240.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 190.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 120.0
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 80.0
-      - Name: Appearance
-        Type: BaseVariableType
-        DataType: String
-        ModellingRule: Optional
-        Value: "transparent"
       - Name: MouseClickEventHandler1
         Type: EventHandler
         Children:
@@ -3926,28 +3849,19 @@ Children:
               - Name: VariableToModify
                 Type: BaseDataVariableType
                 DataType: VariablePointer
-                Description: {"NamespaceIndex":6,"TextId":"SetVariableToModifyDescription"}
                 Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
                   Value: "../../../../../../TankAlias/ValveInCmd@NodeId"
-                  Children:
-                  - Name: Mode
-                    Type: BaseVariableType
-                    DataType: DataBindModeType
-                    ModellingRule: Optional
-                    Value: 2
               - Name: Value
                 Type: BaseDataVariableType
                 DataType: Boolean
-                Description: {"NamespaceIndex":6,"TextId":"SetValueDescription"}
                 Value: false
               - Name: ArrayIndex
                 Type: BaseDataVariableType
                 DataType: UInt32
-                Description: {"NamespaceIndex":6,"TextId":"SetArrayIndexDescription"}
                 ValueRank: ScalarOrOneDimension
                 Value: 0
           - Name: MethodContainer2
@@ -3972,28 +3886,19 @@ Children:
               - Name: VariableToModify
                 Type: BaseDataVariableType
                 DataType: VariablePointer
-                Description: {"NamespaceIndex":6,"TextId":"SetVariableToModifyDescription"}
                 Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
                   Value: "../../../../../../TankAlias/ValveOutCmd@NodeId"
-                  Children:
-                  - Name: Mode
-                    Type: BaseVariableType
-                    DataType: DataBindModeType
-                    ModellingRule: Optional
-                    Value: 2
               - Name: Value
                 Type: BaseDataVariableType
                 DataType: Boolean
-                Description: {"NamespaceIndex":6,"TextId":"SetValueDescription"}
                 Value: true
               - Name: ArrayIndex
                 Type: BaseDataVariableType
                 DataType: UInt32
-                Description: {"NamespaceIndex":6,"TextId":"SetArrayIndexDescription"}
                 ValueRank: ScalarOrOneDimension
                 Value: 0
         - Name: EventArguments
@@ -4031,35 +3936,16 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-  - Name: MainLogic
-    Type: NetLogic
-  - Name: MainBoilerAlias
-    Type: Alias
-    DataType: NodeId
-    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
-    Children:
-    - Name: Kind
-      Type: PropertyType
-      DataType: NodeId
-      Value: {"Id":1003,"Namespace":5}
-  - Name: MainTank1Alias
-    Type: Alias
-    DataType: NodeId
-    Value: {"IdType":2,"Id":"ccb5a8cd5e9e1a826b4d6f0bcb85c132","Namespace":17}
-    Children:
-    - Name: Kind
-      Type: PropertyType
-      DataType: NodeId
-      Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
-  - Name: MainTank2Alias
-    Type: Alias
-    DataType: NodeId
-    Value: {"IdType":2,"Id":"bba0219b478916ea57814a756630c61a","Namespace":17}
-    Children:
-    - Name: Kind
-      Type: PropertyType
-      DataType: NodeId
-      Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 850.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 380.0
   - Name: BoilerWidget1
     Type: BoilerWidget
     Children:
@@ -4187,6 +4073,29 @@ Children:
             Type: DataBind
             DataType: NodePath
             Value: "../../FillColor"
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0}<5"
+          - Name: Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
     - Name: Level
       Type: StatusWidget
       Children:
@@ -4542,6 +4451,8 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 120.0
+  - Name: MainLogic
+    Type: NetLogic
 - Name: Data
   Id: g=1b0dc70d5d42c09a70acec1c917ca5d0
   Supertype: BasePage
