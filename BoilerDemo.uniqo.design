@@ -51,5 +51,5 @@ Project:
    Module: QPlatform.LogixDriverTagImporter
    Version: 0.0.2.68
  Nodes:
- - File: DesignTimeNodes/CommDrivers/LogixDriver/LogixStation/TagImporter.yaml
+ - File: DesignTimeNodes/CommDrivers/LogixDriver/LogixStation/LogixTagImporter.yaml
  - File: 'DesignTimeNodes/OPC-UA/OPCUAClient/OPCUATagImporter.yaml'

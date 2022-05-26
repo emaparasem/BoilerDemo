@@ -5,7 +5,7 @@ Children:
 - Name: IPAddress
   Type: BaseDataVariableType
   DataType: String
-  Value: "172.19.17.109"
+  Value: "172.19.17.84"
 - Name: Port
   Type: BaseDataVariableType
   DataType: UInt16
@@ -42,7 +42,7 @@ Children:
   Type: BaseObjectType
   Children:
   - Name: Tank1
-    Id: g=5efbca174c20c582f75da1eeed08ea98
+    Id: g=582de8a34a8cde855dff62c2d2caa3d1
     Supertype: TagStructure
     Children:
     - Name: ValveInStatus
@@ -123,8 +123,8 @@ Children:
         Value: -2144272384
     - Name: Level
       Type: LogixDriverTag
-      DataType: Int16
-      Value: 0
+      DataType: Float
+      Value: 0.0
       Children:
       - Name: SymbolName
         Type: BaseDataVariableType
@@ -142,8 +142,8 @@ Children:
         Value: -2144272384
     - Name: SetPoint
       Type: LogixDriverTag
-      DataType: Int16
-      Value: 0
+      DataType: Float
+      Value: 0.0
       Children:
       - Name: SymbolName
         Type: BaseDataVariableType
