@@ -1,7 +1,18 @@
 Name: Model
 Type: FolderType
 Children:
-- Name: Variable1
+- Name: Hot
+  Id: g=edb18346d591b1fb28f6b37f2dcbd436
   Type: BaseDataVariableType
-  DataType: Int32
-  Value: 0
+  DataType: Color
+  Value: "#fe6c03"
+- Name: Warm
+  Id: g=bf6b1a1622a79dfc9cf05457f203ee36
+  Type: BaseDataVariableType
+  DataType: Color
+  Value: "#fee003"
+- Name: Cold
+  Id: g=e4cee26860eabb6f104af740b673bee4
+  Type: BaseDataVariableType
+  DataType: Color
+  Value: "#00adee"

@@ -1095,6 +1095,841 @@ Children:
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 1
+  - Name: BoilerWidget1
+    Type: BoilerWidget
+    Children:
+    - Name: ItemName
+      Type: Label
+    - Name: Boiler
+      Type: Boiler
+      Children:
+      - Name: LevelColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#00adee"
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cccccc"
+      - Name: Level
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
+      - Name: MinLevel
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+      - Name: MaxLevel
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 100.0
+      - Name: Boiler_x5F_Outline
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Outline.svg"
+      - Name: Fill
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Boiler_Fill.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#cccccc"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+      - Name: Boiler_bottlelevel
+        Type: LinearGauge
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 70.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Level"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../MinLevel"
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../MaxLevel"
+        - Name: WarningZones
+          Type: BaseObjectType
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#00adee"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../LevelColor"
+      - Name: Boiler_x5F_Overlay
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Overlay.svg"
+    - Name: Alarm_Medium_Priority1
+      Type: Alarm_Medium_Priority
+      Children:
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f5e119"
+      - Name: Icon_border
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Alarm_Medium_Priority_Icon_border.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#f5e119"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
+    - Name: Level
+      Type: StatusWidget
+      Children:
+      - Name: Title
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Level"}
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Name"
+      - Name: ValueActual
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Actual"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
+      - Name: ValueSetpoint
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Setpoint"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
+      - Name: Chevron1
+        Type: Chevron
+        Children:
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#9ca0a2"
+        - Name: shape
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=17;%PROJECTDIR%/res/Chevron_shape.svg"
+          - Name: DynamicColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#d1d3d4"
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "../../FillColor"
+      - Name: Name
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Level"
+      - Name: Actual
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
+      - Name: Setpoint
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "{BoilerAlias}/FillLevelSetPoint"
+      - Name: MeasurementUnit
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "gal"
+    - Name: Temperature
+      Type: StatusWidget
+      Children:
+      - Name: Title
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Temperature"}
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Name"
+      - Name: ValueActual
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Actual"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
+      - Name: ValueSetpoint
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../Setpoint"
+            - Name: Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../MeasurementUnit"
+      - Name: Chevron1
+        Type: Chevron
+        Children:
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#9ca0a2"
+        - Name: shape
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=17;%PROJECTDIR%/res/Chevron_shape.svg"
+          - Name: DynamicColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#d1d3d4"
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "../../FillColor"
+      - Name: Name
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Temperature"
+      - Name: Actual
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "{BoilerAlias}/TemperatureSensor/Temperature"
+      - Name: Setpoint
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "{BoilerAlias}/TemperatureSetPoint"
+      - Name: MeasurementUnit
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "°F"
+    - Name: BoilerAlias
+      Type: Alias
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":1003,"Namespace":5}
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../MainBoilerAlias@Pointer"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          ModellingRule: Optional
+          Value: 2
+    - Name: Fill
+      Type: Button
+      Children:
+      - Name: MouseClickEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":16,"Namespace":7}
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{MainBoilerAlias}@NodeId"
+            - Name: Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Fill"
+            - Name: InputArguments
+              Type: BaseObjectType
+              Children:
+              - Name: SetPoint
+                Type: BaseDataVariableType
+                DataType: Double
+                Value: 100.0
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+            Value: ""
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+            Value: ""
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+            Value: 0
+    - Name: Heat
+      Type: Button
+      Children:
+      - Name: MouseClickEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":16,"Namespace":7}
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{MainBoilerAlias}@NodeId"
+            - Name: Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Heat"
+            - Name: InputArguments
+              Type: BaseObjectType
+              Children:
+              - Name: SetPoint
+                Type: BaseDataVariableType
+                DataType: Double
+                Value: 86.0
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+            Value: ""
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+            Value: ""
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+            Value: 0
+    - Name: Chill
+      Type: Button
+      Children:
+      - Name: MouseClickEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":16,"Namespace":7}
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{MainBoilerAlias}@NodeId"
+            - Name: Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Heat"
+            - Name: InputArguments
+              Type: BaseObjectType
+              Children:
+              - Name: SetPoint
+                Type: BaseDataVariableType
+                DataType: Double
+                Value: 50.0
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+            Value: ""
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+            Value: ""
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+            Value: 0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 130.0
+    - Name: Thermometer1
+      Type: Thermometer
+      Children:
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f1f1f2"
+      - Name: LevelColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e31e2d"
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Value: false
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "{0} >= 50 && {0} < 68"
+              - Name: Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{MainBoilerAlias}/TemperatureSensor/Temperature"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasParameter
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{NodeId:ns=17;g=e4cee268-60ea-bb6f-104a-f740b673bee4}"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasParameter
+            Children:
+            - Name: ConditionalConverter1
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Value: false
+                Children:
+                - Name: ExpressionEvaluator1
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Expression
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: "{0} >= 68 && {0} < 86"
+                  - Name: Source0
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Type: DataBind
+                      DataType: NodePath
+                      Value: "{MainBoilerAlias}/TemperatureSensor/Temperature"
+              - Name: TrueValue
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasParameter
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{NodeId:ns=17;g=bf6b1a16-22a7-9dfc-9cf0-5457f203ee36}"
+              - Name: FalseValue
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasParameter
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{NodeId:ns=17;g=edb18346-d591-b1fb-28f6-b37f2dcbd436}"
+      - Name: Level
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 0.0
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "{MainBoilerAlias}/TemperatureSensor/Temperature"
+      - Name: MinLevel
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 50.0
+      - Name: MaxLevel
+        Type: BaseDataVariableType
+        DataType: Double
+        Value: 86.0
+      - Name: Thermometer_x5F_Outline
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Thermometer_x5F_Outline.svg"
+      - Name: Fill
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Thermometer_Fill.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#f1f1f2"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+      - Name: Thermometer_x5F_Overlay_x5F_2
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Thermometer_x5F_Overlay_x5F_2.svg"
+      - Name: Thermometer_levelcolorpe
+        Type: LinearGauge
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 70.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Level"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../MinLevel"
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../MaxLevel"
+        - Name: WarningZones
+          Type: BaseObjectType
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#e31e2d"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../LevelColor"
+      - Name: Thermometer_x5F_Overlay
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/Thermometer_x5F_Overlay.svg"
   - Name: TankWidget1
     Type: TankWidget
     Children:
@@ -3946,511 +4781,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 380.0
-  - Name: BoilerWidget1
-    Type: BoilerWidget
-    Children:
-    - Name: ItemName
-      Type: Label
-    - Name: Boiler
-      Type: Boiler
-      Children:
-      - Name: LevelColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#00adee"
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#cccccc"
-      - Name: Level
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 0.0
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
-      - Name: MinLevel
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 0.0
-      - Name: MaxLevel
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 100.0
-      - Name: Boiler_x5F_Outline
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Outline.svg"
-      - Name: Fill
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=17;%PROJECTDIR%/res/Boiler_Fill.svg"
-        - Name: DynamicColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#cccccc"
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../FillColor"
-      - Name: Boiler_bottlelevel
-        Type: LinearGauge
-        Children:
-        - Name: Value
-          Type: BaseDataVariableType
-          DataType: Float
-          Value: 70.0
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../Level"
-        - Name: MinValue
-          Type: BaseDataVariableType
-          DataType: Float
-          Value: 0.0
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../MinLevel"
-        - Name: MaxValue
-          Type: BaseDataVariableType
-          DataType: Float
-          Value: 100.0
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../MaxLevel"
-        - Name: WarningZones
-          Type: BaseObjectType
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#00adee"
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../LevelColor"
-      - Name: Boiler_x5F_Overlay
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=17;%PROJECTDIR%/res/Boiler_x5F_Overlay.svg"
-    - Name: Alarm_Medium_Priority1
-      Type: Alarm_Medium_Priority
-      Children:
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#f5e119"
-      - Name: Icon_border
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=17;%PROJECTDIR%/res/Alarm_Medium_Priority_Icon_border.svg"
-        - Name: DynamicColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#f5e119"
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../FillColor"
-      - Name: Visible
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-        Children:
-        - Name: ExpressionEvaluator1
-          Type: ExpressionEvaluator
-          Children:
-          - Name: Expression
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "{0}<5"
-          - Name: Source0
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Type: DataBind
-              DataType: NodePath
-              Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
-    - Name: Level
-      Type: StatusWidget
-      Children:
-      - Name: Title
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Level"}
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../Name"
-      - Name: ValueActual
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../Actual"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../MeasurementUnit"
-      - Name: ValueSetpoint
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../Setpoint"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../MeasurementUnit"
-      - Name: Chevron1
-        Type: Chevron
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#9ca0a2"
-        - Name: shape
-          Type: Image
-          Children:
-          - Name: Path
-            Type: BaseDataVariableType
-            DataType: ResourceUri
-            Value: "ns=17;%PROJECTDIR%/res/Chevron_shape.svg"
-          - Name: DynamicColor
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#d1d3d4"
-            Children:
-            - Name: DynamicLink
-              Type: DataBind
-              DataType: NodePath
-              Value: "../../FillColor"
-      - Name: Name
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Level"
-      - Name: Actual
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 0.0
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "{BoilerAlias}/FillLevelSensor/FillLevel"
-      - Name: Setpoint
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 0.0
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "{BoilerAlias}/FillLevelSetPoint"
-      - Name: MeasurementUnit
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "gal"
-    - Name: Temperature
-      Type: StatusWidget
-      Children:
-      - Name: Title
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Temperature"}
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "../../Name"
-      - Name: ValueActual
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../Actual"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../MeasurementUnit"
-      - Name: ValueSetpoint
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../Setpoint"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../MeasurementUnit"
-      - Name: Chevron1
-        Type: Chevron
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#9ca0a2"
-        - Name: shape
-          Type: Image
-          Children:
-          - Name: Path
-            Type: BaseDataVariableType
-            DataType: ResourceUri
-            Value: "ns=17;%PROJECTDIR%/res/Chevron_shape.svg"
-          - Name: DynamicColor
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#d1d3d4"
-            Children:
-            - Name: DynamicLink
-              Type: DataBind
-              DataType: NodePath
-              Value: "../../FillColor"
-      - Name: Name
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Temperature"
-      - Name: Actual
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 0.0
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "{BoilerAlias}/TemperatureSensor/Temperature"
-      - Name: Setpoint
-        Type: BaseDataVariableType
-        DataType: Double
-        Value: 0.0
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "{BoilerAlias}/TemperatureSetPoint"
-      - Name: MeasurementUnit
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "°F"
-    - Name: BoilerAlias
-      Type: Alias
-      DataType: NodeId
-      Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: {"Id":1003,"Namespace":5}
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 130.0
-    - Name: Button1
-      Type: Button
-      Children:
-      - Name: Text
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"FILL"}
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 20.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 455.0
-      - Name: MouseClickEventHandler1
-        Type: EventHandler
-        Children:
-        - Name: ListenEventType
-          Type: PropertyType
-          DataType: NodeId
-          Value: {"Id":16,"Namespace":7}
-        - Name: MethodsToCall
-          Type: BaseObjectType
-          Children:
-          - Name: MethodContainer1
-            Type: BaseObjectType
-            Children:
-            - Name: ns=6;ObjectPointer
-              Type: NodePointer
-              DataType: NodeId
-              Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
-              Children:
-              - Name: Kind
-                Type: PropertyType
-                DataType: NodeId
-                Value: {"Id":58}
-            - Name: ns=6;Method
-              Type: BaseDataVariableType
-              DataType: String
-              Value: "Fill"
-            - Name: InputArguments
-              Type: BaseObjectType
-              Children:
-              - Name: SetPoint
-                Type: BaseDataVariableType
-                DataType: Double
-                Description: {"LocaleId":"","Text":"FillLevel Setpoint [l]"}
-                Value: 100.0
-        - Name: EventArguments
-          Type: MouseClickEvent
-          Children:
-          - Name: EventId
-            Type: PropertyType
-            DataType: ByteString
-            Value: ""
-          - Name: EventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
-          - Name: SourceNode
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
-          - Name: SourceName
-            Type: PropertyType
-            DataType: String
-            Value: ""
-          - Name: Time
-            Type: PropertyType
-            DataType: UtcTime
-            Value: "1601-01-01T00:00:00.0000000"
-          - Name: ReceiveTime
-            Type: PropertyType
-            DataType: UtcTime
-            Value: "1601-01-01T00:00:00.0000000"
-          - Name: Message
-            Type: PropertyType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Severity
-            Type: PropertyType
-            DataType: UInt16
-            Value: 0
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 120.0
   - Name: MainLogic
     Type: NetLogic
 - Name: Data
