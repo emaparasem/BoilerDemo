@@ -1269,8 +1269,12 @@ Children:
     - Name: Text
       Type: BaseDataVariableType
       DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"SV100"}
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../ValveInlet"
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -1292,8 +1296,12 @@ Children:
     - Name: Text
       Type: BaseDataVariableType
       DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"SV101"}
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../ValveOutlet"
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -1315,8 +1323,12 @@ Children:
     - Name: Text
       Type: BaseDataVariableType
       DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"T1001"}
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../Tank"
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -1980,6 +1992,18 @@ Children:
             Type: DataBind
             DataType: NodePath
             Value: "{TankAlias}/Level"
+  - Name: Tank
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "T1001"
+  - Name: ValveInlet
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "EV101"
+  - Name: ValveOutlet
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "EV201"
 - Name: BoilerWidget
   Id: g=a3daadbcc88c5753e88ae7d8f72bb57f
   Supertype: Panel
@@ -2001,8 +2025,12 @@ Children:
     - Name: Text
       Type: BaseDataVariableType
       DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"B3001"}
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../BoilerName"
     - Name: FontSize
       Type: BaseDataVariableType
       DataType: Size
@@ -2994,6 +3022,10 @@ Children:
           Type: PropertyType
           DataType: UInt16
           Value: 0
+  - Name: BoilerName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "B2003"
 - Name: StatusWidget
   Id: g=6ed6fbe544b23c05d85da20aba3442d1
   Supertype: Rectangle
@@ -3101,6 +3133,11 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
+    - Name: TextHorizontalAlignment
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+      Value: 0
   - Name: ValueSetpoint
     Type: Label
     Children:

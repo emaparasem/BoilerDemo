@@ -1100,6 +1100,16 @@ Children:
     Children:
     - Name: ItemName
       Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../BoilerName"
     - Name: Boiler
       Type: Boiler
       Children:
@@ -1823,6 +1833,10 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 130.0
+    - Name: BoilerName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "B2003"
   - Name: TankWidget1
     Type: TankWidget
     Children:
@@ -2805,10 +2819,40 @@ Children:
               Value: "{TankAlias}/Level"
     - Name: InletValveName
       Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../ValveInlet"
     - Name: OutletValveName
       Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../ValveOutlet"
     - Name: ItemName
       Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../Tank"
     - Name: Level
       Type: StatusWidget
       Children:
@@ -3406,6 +3450,18 @@ Children:
               Type: DataBind
               DataType: NodePath
               Value: "{TankAlias}/Level"
+    - Name: Tank
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "T1001"
+    - Name: ValveInlet
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "EV101"
+    - Name: ValveOutlet
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "EV201"
   - Name: MainBoilerAlias
     Type: Alias
     DataType: NodeId
@@ -4343,10 +4399,40 @@ Children:
               Value: "{TankAlias}/Level"
     - Name: InletValveName
       Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../ValveInlet"
     - Name: OutletValveName
       Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../ValveOutlet"
     - Name: ItemName
       Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../../Tank"
     - Name: Level
       Type: StatusWidget
       Children:
@@ -4870,6 +4956,18 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 380.0
+    - Name: Tank
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "T1002"
+    - Name: ValveInlet
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "EV102"
+    - Name: ValveOutlet
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "EV202"
   - Name: MainLogic
     Type: NetLogic
 - Name: Data
