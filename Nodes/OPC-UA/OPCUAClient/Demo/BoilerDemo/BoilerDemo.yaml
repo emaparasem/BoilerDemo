@@ -35,7 +35,7 @@ Children:
       Type: BaseDataVariableType
       DataType: Double
       DisplayName: {"LocaleId":"","Text":"FillLevel"}
-      Value: 50.0
+      Value: 100.0
       Children:
       - Name: EngineeringUnits
         Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
@@ -86,7 +86,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Double
     DisplayName: {"LocaleId":"","Text":"FillLevelSetPoint"}
-    Value: 50.0
+    Value: 100.0
   - Class: Method
     Name: ns=5;Heat
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.Heat
@@ -117,7 +117,7 @@ Children:
       Type: BaseDataVariableType
       DataType: Double
       DisplayName: {"LocaleId":"","Text":"Temperature"}
-      Value: 89.394209760072
+      Value: 91.63672325144381
       Children:
       - Name: EngineeringUnits
         Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
