@@ -2,6 +2,7 @@ Name: Loggers
 Type: FolderType
 Children:
 - Name: DataLogger
+  Id: g=baf94a01056290de6fe30e155ab554c7
   Type: Datalogger
   Children:
   - Name: SamplingMode
@@ -20,7 +21,7 @@ Children:
   - Name: VariablesToLog
     Type: BaseObjectType
     Children:
-    - Name: FillLevel
+    - Name: BoilerLevel
       Type: VariableToLog
       DataType: BaseDataType
       Children:
@@ -47,7 +48,7 @@ Children:
           Type: BaseVariableType
           DataType: DataBindModeType
           Value: 2
-    - Name: Temperature
+    - Name: BoilerTemp
       Type: VariableToLog
       DataType: BaseDataType
       Children:
@@ -69,6 +70,60 @@ Children:
         Type: DataBind
         DataType: NodePath
         Value: "../../../../OPC-UA/OPCUAClient/Objects/Demo/BoilerDemo/Boiler1/TemperatureSensor/Temperature"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          Value: 2
+    - Name: Tank1Level
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastOperationCode
+        Type: PropertyType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: 0
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../../../CommDrivers/LogixDriver/LogixStation/Tags/Tank2/Level"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          Value: 2
+    - Name: Tank2Level
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastOperationCode
+        Type: PropertyType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: 0
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../../../CommDrivers/LogixDriver/LogixStation/Tags/Tank1/Level"
         Children:
         - Name: Mode
           Type: BaseVariableType
