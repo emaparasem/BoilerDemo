@@ -1,2 +1,5 @@
 Name: NetLogic
 Type: FolderType
+Children:
+- Name: Datalogger
+  Type: NetLogic

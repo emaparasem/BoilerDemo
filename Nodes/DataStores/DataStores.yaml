@@ -30,13 +30,21 @@ Children:
           Type: StoreColumn
           DataType: UtcTime
           Value: "1601-01-01T00:00:00.0000000"
-        - Name: FillLevel
+        - Name: BoilerLevel
           Type: StoreColumn
           DataType: Double
           Value: 0.0
-        - Name: Temperature
+        - Name: BoilerTemp
           Type: StoreColumn
           DataType: Double
+          Value: 0.0
+        - Name: Tank1Level
+          Type: StoreColumn
+          DataType: Float
+          Value: 0.0
+        - Name: Tank2Level
+          Type: StoreColumn
+          DataType: Float
           Value: 0.0
     - Name: EventLogger
       Type: SQLiteStoreTable
