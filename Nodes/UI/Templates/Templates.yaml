@@ -342,6 +342,38 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "({0} <= 1) && ({1} > 49)"
+        - Name: ns=6;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{TankAlias}/Level"
+        - Name: ns=6;Source1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{MainBoilerAlias}/FillLevelSensor/FillLevel"
   - Name: OutletPipe1
     Type: PipeStraight
     Children:
@@ -779,6 +811,29 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 260.0
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "{0} >= 49 "
+        - Name: ns=6;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{TankAlias}/Level"
   - Name: Tank1
     Type: Tank
     Children:
@@ -1705,6 +1760,38 @@ Children:
           Type: PropertyType
           DataType: UInt16
           Value: 0
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "({0} <= 1) && ({1} > 49)"
+        - Name: ns=6;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{TankAlias}/Level"
+        - Name: ns=6;Source1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{MainBoilerAlias}/FillLevelSensor/FillLevel"
   - Name: EmptyingCycle
     Type: Button
     Children:
@@ -1870,6 +1957,29 @@ Children:
           Type: PropertyType
           DataType: UInt16
           Value: 0
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "{0} >= 49 "
+        - Name: ns=6;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "{TankAlias}/Level"
 - Name: BoilerWidget
   Id: g=a3daadbcc88c5753e88ae7d8f72bb57f
   Supertype: Panel
@@ -2397,6 +2507,178 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "°F"
+    - Name: HotSurfaceSymbol1
+      Type: HotSurfaceSymbol2
+      Children:
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#fe6703eb"
+      - Name: fill
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/HotSurfaceSymbol2_fill.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#d1d3d4"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 80.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 80.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 25.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 25.0
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0} == 90"
+          - Name: ns=6;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{BoilerAlias}/TemperatureSetPoint"
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: BottomMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+    - Name: LowTemperatureSymbol1
+      Type: LowTemperatureSymbol
+      Children:
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#00adee"
+      - Name: Fill
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=17;%PROJECTDIR%/res/LowTemperatureSymbol_Fill.svg"
+        - Name: DynamicColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#d1d3d4"
+          Children:
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../FillColor"
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 80.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 80.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 25.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 25.0
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0} == 50"
+          - Name: ns=6;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DataBind
+              DataType: NodePath
+              Value: "{BoilerAlias}/TemperatureSetPoint"
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: BottomMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
   - Name: BoilerAlias
     Type: Alias
     DataType: NodeId
@@ -2574,7 +2856,7 @@ Children:
               Type: BaseDataVariableType
               DataType: Double
               Description: {"LocaleId":"","Text":"Temperature Setpoint [°C]"}
-              Value: 86.0
+              Value: 90.0
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
@@ -2712,225 +2994,6 @@ Children:
           Type: PropertyType
           DataType: UInt16
           Value: 0
-  - Name: Thermometer1
-    Type: Thermometer
-    Children:
-    - Name: FillColor
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#f1f1f2"
-    - Name: LevelColor
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#e31e2d"
-      Children:
-      - Name: ConditionalConverter1
-        Type: ConditionalConverter
-        Children:
-        - Name: Condition
-          Type: BaseDataVariableType
-          DataType: Boolean
-          ReferenceType: HasSource
-          Value: false
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Expression
-              Type: BaseDataVariableType
-              DataType: String
-              ReferenceType: HasParameter
-              ModellingRule: Optional
-              Value: "{0} >= 50 && {0} < 68"
-            - Name: ns=6;Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "{MainBoilerAlias}/TemperatureSensor/Temperature"
-        - Name: TrueValue
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasParameter
-          Children:
-          - Name: DynamicLink
-            Type: DataBind
-            DataType: NodePath
-            Value: "{NodeId:ns=17;g=e4cee268-60ea-bb6f-104a-f740b673bee4}"
-        - Name: FalseValue
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasParameter
-          Children:
-          - Name: ConditionalConverter1
-            Type: ConditionalConverter
-            Children:
-            - Name: Condition
-              Type: BaseDataVariableType
-              DataType: Boolean
-              ReferenceType: HasSource
-              Value: false
-              Children:
-              - Name: ExpressionEvaluator1
-                Type: ExpressionEvaluator
-                Children:
-                - Name: Expression
-                  Type: BaseDataVariableType
-                  DataType: String
-                  ReferenceType: HasParameter
-                  ModellingRule: Optional
-                  Value: "{0} >= 68 && {0} < 86"
-                - Name: ns=6;Source0
-                  Type: BaseDataVariableType
-                  DataType: BaseDataType
-                  ReferenceType: HasSource
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "{MainBoilerAlias}/TemperatureSensor/Temperature"
-            - Name: TrueValue
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasParameter
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "{NodeId:ns=17;g=bf6b1a16-22a7-9dfc-9cf0-5457f203ee36}"
-            - Name: FalseValue
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasParameter
-              Children:
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "{NodeId:ns=17;g=edb18346-d591-b1fb-28f6-b37f2dcbd436}"
-    - Name: Level
-      Type: BaseDataVariableType
-      DataType: Double
-      Value: 0.0
-      Children:
-      - Name: DynamicLink
-        Type: DataBind
-        DataType: NodePath
-        Value: "{MainBoilerAlias}/TemperatureSensor/Temperature"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DataBindModeType
-          ModellingRule: Optional
-          Value: 2
-    - Name: MinLevel
-      Type: BaseDataVariableType
-      DataType: Double
-      Value: 50.0
-    - Name: MaxLevel
-      Type: BaseDataVariableType
-      DataType: Double
-      Value: 86.0
-    - Name: Thermometer_x5F_Outline
-      Type: Image
-      Children:
-      - Name: Path
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=17;%PROJECTDIR%/res/Thermometer_x5F_Outline.svg"
-    - Name: Fill
-      Type: Image
-      Children:
-      - Name: Path
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=17;%PROJECTDIR%/res/Thermometer_Fill.svg"
-      - Name: DynamicColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#f1f1f2"
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "../../FillColor"
-    - Name: Thermometer_x5F_Overlay_x5F_2
-      Type: Image
-      Children:
-      - Name: Path
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=17;%PROJECTDIR%/res/Thermometer_x5F_Overlay_x5F_2.svg"
-    - Name: Thermometer_levelcolorpe
-      Type: LinearGauge
-      Children:
-      - Name: Value
-        Type: BaseDataVariableType
-        DataType: Float
-        Value: 70.0
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "../../Level"
-      - Name: MinValue
-        Type: BaseDataVariableType
-        DataType: Float
-        Value: 0.0
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "../../MinLevel"
-      - Name: MaxValue
-        Type: BaseDataVariableType
-        DataType: Float
-        Value: 100.0
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "../../MaxLevel"
-      - Name: WarningZones
-        Type: BaseObjectType
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#e31e2d"
-        Children:
-        - Name: DynamicLink
-          Type: DataBind
-          DataType: NodePath
-          Value: "../../LevelColor"
-    - Name: Thermometer_x5F_Overlay
-      Type: Image
-      Children:
-      - Name: Path
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=17;%PROJECTDIR%/res/Thermometer_x5F_Overlay.svg"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 260.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 260.0
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 38.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 60.0
 - Name: StatusWidget
   Id: g=6ed6fbe544b23c05d85da20aba3442d1
   Supertype: Rectangle
