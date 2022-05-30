@@ -21,7 +21,7 @@ Children:
   - Name: VariablesToLog
     Type: BaseObjectType
     Children:
-    - Name: FillLevel
+    - Name: Boiler level
       Type: VariableToLog
       DataType: BaseDataType
       Children:
@@ -48,7 +48,7 @@ Children:
           Type: BaseVariableType
           DataType: DataBindModeType
           Value: 2
-    - Name: Temperature
+    - Name: Boiler temp
       Type: VariableToLog
       DataType: BaseDataType
       Children:
@@ -75,7 +75,7 @@ Children:
           Type: BaseVariableType
           DataType: DataBindModeType
           Value: 2
-    - Name: Level
+    - Name: Tank 2 level
       Type: VariableToLog
       DataType: BaseDataType
       Children:
@@ -102,7 +102,7 @@ Children:
           Type: BaseVariableType
           DataType: DataBindModeType
           Value: 2
-    - Name: Level1
+    - Name: Tank 1 level
       Type: VariableToLog
       DataType: BaseDataType
       Children:

@@ -5055,7 +5055,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 620.0
+      Value: 680.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -5065,7 +5065,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 40.0
     - Name: Title
       Type: Label
       Children:
@@ -5147,13 +5147,13 @@ Children:
                 Type: DataBind
                 DataType: NodePath
                 Value: "{Item}/Timestamp"
-        - Name: FillLevel
+        - Name: Boiler level
           Type: DataGridColumn
           Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Boiler Level (gal)"}
+            Value: {"LocaleId":"en-US","Text":"Boiler level [gal]"}
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
@@ -5169,7 +5169,7 @@ Children:
           - Name: OrderBy
             Type: BaseDataVariableType
             DataType: NodePath
-            Value: "{Item}/FillLevel"
+            Value: "{Item}/Boiler level"
           - Name: DataItemTemplate
             Type: DataGridLabelItemTemplate
             Children:
@@ -5181,14 +5181,14 @@ Children:
               - Name: DynamicLink
                 Type: DataBind
                 DataType: NodePath
-                Value: "{Item}/FillLevel"
-        - Name: Temperature
+                Value: "{Item}/Boiler level"
+        - Name: Boiler temp
           Type: DataGridColumn
           Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Boiler Temp (F)"}
+            Value: {"LocaleId":"en-US","Text":"Boiler temp [°F]"}
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
@@ -5204,7 +5204,7 @@ Children:
           - Name: OrderBy
             Type: BaseDataVariableType
             DataType: NodePath
-            Value: "{Item}/Temperature"
+            Value: "{Item}/Boiler temp"
           - Name: DataItemTemplate
             Type: DataGridLabelItemTemplate
             Children:
@@ -5216,14 +5216,14 @@ Children:
               - Name: DynamicLink
                 Type: DataBind
                 DataType: NodePath
-                Value: "{Item}/Temperature"
-        - Name: Level
+                Value: "{Item}/Boiler temp"
+        - Name: Tank 2 level
           Type: DataGridColumn
           Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Tank 1 Level (gal)"}
+            Value: {"LocaleId":"en-US","Text":"Tank 2 level [gal]"}
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
@@ -5239,7 +5239,7 @@ Children:
           - Name: OrderBy
             Type: BaseDataVariableType
             DataType: NodePath
-            Value: "{Item}/Level"
+            Value: "{Item}/Tank 2 level"
           - Name: DataItemTemplate
             Type: DataGridLabelItemTemplate
             Children:
@@ -5251,14 +5251,14 @@ Children:
               - Name: DynamicLink
                 Type: DataBind
                 DataType: NodePath
-                Value: "{Item}/Level"
-        - Name: Level1
+                Value: "{Item}/Tank 2 level"
+        - Name: Tank 1 level
           Type: DataGridColumn
           Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Tank 2 Level (gal)"}
+            Value: {"LocaleId":"en-US","Text":"Tank 1 level [gal]"}
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
@@ -5274,7 +5274,7 @@ Children:
           - Name: OrderBy
             Type: BaseDataVariableType
             DataType: NodePath
-            Value: "{Item}/Level1"
+            Value: "{Item}/Tank 1 level"
           - Name: DataItemTemplate
             Type: DataGridLabelItemTemplate
             Children:
@@ -5286,7 +5286,7 @@ Children:
               - Name: DynamicLink
                 Type: DataBind
                 DataType: NodePath
-                Value: "{Item}/Level1"
+                Value: "{Item}/Tank 1 level"
       - Name: SelectedItem
         Type: NodePointer
         DataType: NodeId
@@ -5347,12 +5347,17 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 50.0
+        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
+      - Name: AutoRefreshTime
+        Type: BaseDataVariableType
+        DataType: Duration
+        ModellingRule: Optional
+        Value: "0:00:00:1.0000000"
       - Name: SortColumn
         Type: BaseDataVariableType
         DataType: NodeId
@@ -5367,110 +5372,6 @@ Children:
         DataType: SortOrderEnum
         ModellingRule: Optional
         Value: 1
-      - Name: AutoRefreshTime
-        Type: BaseDataVariableType
-        DataType: Duration
-        ModellingRule: Optional
-        Value: "0:00:00:1.0000000"
-    - Name: Refresh
-      Type: Button
-      Children:
-      - Name: Text
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Refresh"}
-      - Name: HorizontalAlignment
-        Type: BaseVariableType
-        DataType: HorizontalAlignment
-        ModellingRule: Optional
-        Value: 1
-      - Name: VerticalAlignment
-        Type: BaseVariableType
-        DataType: VerticalAlignment
-        ModellingRule: Optional
-        Value: 1
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 90.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 30.0
-      - Name: MouseClickEventHandler1
-        Type: EventHandler
-        Children:
-        - Name: ListenEventType
-          Type: PropertyType
-          DataType: NodeId
-          Value: {"Id":16,"Namespace":7}
-        - Name: MethodsToCall
-          Type: BaseObjectType
-          Children:
-          - Name: MethodContainer1
-            Type: BaseObjectType
-            Children:
-            - Name: ns=6;ObjectPointer
-              Type: NodePointer
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-              Children:
-              - Name: Kind
-                Type: PropertyType
-                DataType: NodeId
-                Value: {"Id":58}
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../../DataGrid@NodeId"
-                Children:
-                - Name: Mode
-                  Type: BaseVariableType
-                  DataType: DataBindModeType
-                  ModellingRule: Optional
-                  Value: 2
-            - Name: ns=6;Method
-              Type: BaseDataVariableType
-              DataType: String
-              Value: "Refresh"
-        - Name: EventArguments
-          Type: MouseClickEvent
-          Children:
-          - Name: EventId
-            Type: PropertyType
-            DataType: ByteString
-            Value: ""
-          - Name: EventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
-          - Name: SourceNode
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
-          - Name: SourceName
-            Type: PropertyType
-            DataType: String
-            Value: ""
-          - Name: Time
-            Type: PropertyType
-            DataType: UtcTime
-            Value: "1601-01-01T00:00:00.0000000"
-          - Name: ReceiveTime
-            Type: PropertyType
-            DataType: UtcTime
-            Value: "1601-01-01T00:00:00.0000000"
-          - Name: Message
-            Type: PropertyType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Severity
-            Type: PropertyType
-            DataType: UInt16
-            Value: 0
   - Name: Trend
     Type: Panel
     Children:
@@ -5483,7 +5384,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 620.0
+      Value: 680.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -5493,7 +5394,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 40.0
     - Name: Title
       Type: Label
       Children:
@@ -5523,14 +5424,14 @@ Children:
       - Name: Pens
         Type: BaseObjectType
         Children:
-        - Name: TrendPen1
+        - Name: Boiler level
           Type: TrendPen
           DataType: BaseDataType
           Children:
           - Name: Thickness
             Type: BaseDataVariableType
             DataType: Size
-            Value: 3.0
+            Value: 2.0
           - Name: Enabled
             Type: BaseDataVariableType
             DataType: Boolean
@@ -5538,7 +5439,7 @@ Children:
           - Name: DynamicLink
             Type: DataBind
             DataType: NodePath
-            Value: "../../Model/VariablesToLog/FillLevel/LastValue"
+            Value: "../../Model/VariablesToLog/Boiler level/LastValue"
             Children:
             - Name: Mode
               Type: BaseVariableType
@@ -5549,15 +5450,15 @@ Children:
             Type: BaseDataVariableType
             DataType: Color
             ModellingRule: Optional
-            Value: "#ff0000"
-        - Name: TrendPen2
+            Value: "#29ff00"
+        - Name: Boiler temp
           Type: TrendPen
           DataType: BaseDataType
           Children:
           - Name: Thickness
             Type: BaseDataVariableType
             DataType: Size
-            Value: 3.0
+            Value: 2.0
           - Name: Enabled
             Type: BaseDataVariableType
             DataType: Boolean
@@ -5565,7 +5466,7 @@ Children:
           - Name: DynamicLink
             Type: DataBind
             DataType: NodePath
-            Value: "../../Model/VariablesToLog/Temperature/LastValue"
+            Value: "../../Model/VariablesToLog/Boiler temp/LastValue"
             Children:
             - Name: Mode
               Type: BaseVariableType
@@ -5576,15 +5477,15 @@ Children:
             Type: BaseDataVariableType
             DataType: Color
             ModellingRule: Optional
-            Value: "#008000"
-        - Name: TrendPen3
+            Value: "#ff490f"
+        - Name: Tank 1 level
           Type: TrendPen
           DataType: BaseDataType
           Children:
           - Name: Thickness
             Type: BaseDataVariableType
             DataType: Size
-            Value: 3.0
+            Value: 2.0
           - Name: Enabled
             Type: BaseDataVariableType
             DataType: Boolean
@@ -5592,7 +5493,7 @@ Children:
           - Name: DynamicLink
             Type: DataBind
             DataType: NodePath
-            Value: "../../Model/VariablesToLog/Level/LastValue"
+            Value: "../../Model/VariablesToLog/Tank 1 level/LastValue"
             Children:
             - Name: Mode
               Type: BaseVariableType
@@ -5603,15 +5504,15 @@ Children:
             Type: BaseDataVariableType
             DataType: Color
             ModellingRule: Optional
-            Value: "#0000ff"
-        - Name: TrendPen4
+            Value: "#007aff"
+        - Name: Tank 2 level
           Type: TrendPen
           DataType: BaseDataType
           Children:
           - Name: Thickness
             Type: BaseDataVariableType
             DataType: Size
-            Value: 3.0
+            Value: 2.0
           - Name: Enabled
             Type: BaseDataVariableType
             DataType: Boolean
@@ -5619,7 +5520,7 @@ Children:
           - Name: DynamicLink
             Type: DataBind
             DataType: NodePath
-            Value: "../../Model/VariablesToLog/Level1/LastValue"
+            Value: "../../Model/VariablesToLog/Tank 2 level/LastValue"
             Children:
             - Name: Mode
               Type: BaseVariableType
@@ -5630,7 +5531,7 @@ Children:
             Type: BaseDataVariableType
             DataType: Color
             ModellingRule: Optional
-            Value: "#ffa500"
+            Value: "#00e6ff"
       - Class: Reference
         Target: ns=7;i=1129
         Direction: Forward
@@ -5659,11 +5560,11 @@ Children:
         - Name: MinValue
           Type: BaseDataVariableType
           DataType: Size
-          Value: -5.0
+          Value: 0.0
         - Name: MaxValue
           Type: BaseDataVariableType
           DataType: Size
-          Value: 105.0
+          Value: 100.0
         - Name: AutoScale
           Type: BaseDataVariableType
           DataType: Boolean
@@ -5715,7 +5616,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 50.0
+        Value: 40.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment

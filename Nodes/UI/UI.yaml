@@ -753,8 +753,6 @@ Children:
     DataType: String
     ModellingRule: Optional
     Value: "Boiler Demo"
-- File: Templates/Templates.yaml
-- File: Pages/Pages.yaml
 - Name: AlarmList
   Id: g=b25c8edb35df2acb37220b8cb1c56e4d
   Supertype: Window
@@ -1873,3 +1871,5 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 5.0
+- File: Templates/Templates.yaml
+- File: Pages/Pages.yaml
