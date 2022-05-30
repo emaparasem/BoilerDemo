@@ -127,17 +127,5 @@ Project:
    Uri: 'urn:QPlatform:EthernetIP:Net'
    Module: QPlatform.EthernetIP.Net
    Version: 5.0.5.68
-  39:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC553.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  40:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://opcfoundation.org/UA/DI/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  41:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://PLCopen.org/OpcUa/IEC61131-3/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  42:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://www.unifiedautomation.com/DemoServer/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
  Nodes:
  - File: Nodes/BoilerDemo.yaml
