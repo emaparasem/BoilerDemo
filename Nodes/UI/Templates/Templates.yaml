@@ -1519,7 +1519,7 @@ Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
+      Value: {"IdType":2,"Id":"703a3a9e42f588a7d369ebad02cc69bc","Namespace":17}
   - Name: FillingCycle
     Type: Button
     Children:

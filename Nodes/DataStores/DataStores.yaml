@@ -38,23 +38,6 @@ Children:
           Type: StoreColumn
           DataType: Double
           Value: 0.0
-    - Name: EventLogger
-      Type: SQLiteStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=14;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=14;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=14;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=14;i=20
-        Direction: Forward
-      - Name: Columns
-        Type: BaseObjectType
     - Name: RecipeSchema
       Type: SQLiteStoreTable
       Children:
@@ -89,6 +72,68 @@ Children:
           Type: StoreColumn
           DataType: Int32
           Value: 0
+    - Name: AlarmsEventLogger
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=14;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: ActiveState_Id
+          Type: StoreColumn
+          DataType: Boolean
+          Value: false
+        - Name: AckedState_Id
+          Type: StoreColumn
+          DataType: Boolean
+          Value: false
+        - Name: ConfirmedState_Id
+          Type: StoreColumn
+          DataType: Boolean
+          Value: false
+        - Name: ConditionName
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: EnabledState_Id
+          Type: StoreColumn
+          DataType: Boolean
+          Value: false
+        - Name: SourceName
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: StoreColumn
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: 'Message_en-US'
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'Message_it-IT'
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: Severity
+          Type: StoreColumn
+          DataType: UInt16
+          Value: 0
+        - Name: LocalTime
+          Type: StoreColumn
+          DataType: DateTime
+          Value: "1601-01-01T00:00:00.0000000"
   - Class: Reference
     Target: ns=15;i=30
     Direction: Forward

@@ -2,6 +2,7 @@ Name: Tags
 Type: BaseObjectType
 Children:
 - Name: Tank2
+  Id: g=5482f146e2e52c80a9071452c82039e8
   Type: Tank1
   Children:
   - Name: ValveInStatus
@@ -119,6 +120,7 @@ Children:
       AccessLevel: Read
       Value: -2144272384
 - Name: Tank1
+  Id: g=069c398f18feb1e067ea9b2ca503eb75
   Type: Tank1
   Children:
   - Name: ValveInStatus

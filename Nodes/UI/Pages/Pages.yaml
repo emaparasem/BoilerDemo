@@ -3021,7 +3021,7 @@ Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
+        Value: {"IdType":2,"Id":"703a3a9e42f588a7d369ebad02cc69bc","Namespace":17}
       - Name: DynamicLink
         Type: DataBind
         DataType: NodePath
@@ -3512,21 +3512,21 @@ Children:
   - Name: MainTank1Alias
     Type: Alias
     DataType: NodeId
-    Value: {"IdType":2,"Id":"ccb5a8cd5e9e1a826b4d6f0bcb85c132","Namespace":17}
+    Value: {"IdType":2,"Id":"069c398f18feb1e067ea9b2ca503eb75","Namespace":17}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
+      Value: {"IdType":2,"Id":"703a3a9e42f588a7d369ebad02cc69bc","Namespace":17}
   - Name: MainTank2Alias
     Type: Alias
     DataType: NodeId
-    Value: {"IdType":2,"Id":"bba0219b478916ea57814a756630c61a","Namespace":17}
+    Value: {"IdType":2,"Id":"5482f146e2e52c80a9071452c82039e8","Namespace":17}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
+      Value: {"IdType":2,"Id":"703a3a9e42f588a7d369ebad02cc69bc","Namespace":17}
   - Name: TankWidget2
     Type: TankWidget
     Children:
@@ -4601,7 +4601,7 @@ Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":2,"Id":"582de8a34a8cde855dff62c2d2caa3d1","Namespace":17}
+        Value: {"IdType":2,"Id":"703a3a9e42f588a7d369ebad02cc69bc","Namespace":17}
       - Name: DynamicLink
         Type: DataBind
         DataType: NodePath
@@ -7170,7 +7170,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
-    - Name: AlarmGrid1
+    - Name: AlarmGrid
       Type: Panel
       WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
       Children:
@@ -7288,6 +7288,11 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: Appearance
+          Type: BaseVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: ""
       - Name: AcknowledgeAllButton
         Type: Button
         Children:
@@ -7382,6 +7387,11 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: Appearance
+          Type: BaseVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: ""
       - Name: ConfirmButton
         Type: Button
         Children:
@@ -7491,6 +7501,11 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: Appearance
+          Type: BaseVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: ""
       - Name: ConfirmAllButton
         Type: Button
         Children:
@@ -7585,6 +7600,11 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: Appearance
+          Type: BaseVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: ""
       - Name: AlarmGridLogic
         Type: NetLogic
       - Name: AlarmsDataGrid
@@ -7689,7 +7709,7 @@ Children:
             - Name: Width
               Type: BaseDataVariableType
               DataType: Size
-              Value: 150.0
+              Value: 110.0
             - Name: HeaderAlignment
               Type: BaseDataVariableType
               DataType: TextHorizontalAlignment
@@ -7728,7 +7748,7 @@ Children:
             - Name: Width
               Type: BaseDataVariableType
               DataType: Size
-              Value: 200.0
+              Value: 130.0
             - Name: HeaderAlignment
               Type: BaseDataVariableType
               DataType: TextHorizontalAlignment
@@ -8081,7 +8101,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 510.0
+          Value: 610.0
         - Name: Item
           Type: Alias
           DataType: NodeId
@@ -8091,11 +8111,6 @@ Children:
             Type: PropertyType
             DataType: NodeId
             Value: {"Id":2915}
-        - Name: HorizontalAlignment
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          ModellingRule: Optional
-          Value: 3
         - Name: SortOrder
           Type: BaseDataVariableType
           DataType: SortOrderEnum
@@ -8125,6 +8140,11 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 40.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -8135,6 +8155,21 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: BottomMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: -100.0
   - Name: Historical
     Type: Panel
     Children:
@@ -8147,7 +8182,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 620.0
+      Value: 720.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -8181,7 +8216,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
-    - Name: AlarmHistoryGrid1
+    - Name: AlarmHistoryGrid
       Type: DataGrid
       WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
       Children:
@@ -8723,16 +8758,16 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 590.0
+        Value: 1155.0
       - Name: Height
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 510.0
+        Value: 610.0
       - Name: AlarmEventsLogger
         Type: Alias
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Value: {"IdType":2,"Id":"5c0e323e6bf05aabd26cb311e39ed107","Namespace":17}
         Children:
         - Name: Kind
           Type: PropertyType
@@ -8747,7 +8782,7 @@ Children:
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
-        Value: 0
+        Value: 3
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -8781,3 +8816,102 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 40.0
+    - Name: Refresh
+      Type: Button
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"NamespaceIndex":17,"TextId":"Refresh"}
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 675.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 120.0
+      - Name: MouseClickEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":16,"Namespace":7}
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=6;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../../AlarmHistoryGrid@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DataBindModeType
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=6;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Refresh"
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+            Value: ""
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+            Value: ""
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+            Value: 0
+      - Name: Appearance
+        Type: BaseVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: ""
