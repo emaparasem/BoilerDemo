@@ -2751,12 +2751,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 20.0
+      Value: 96.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 455.0
+      Value: 460.0
     - Name: MouseClickEventHandler1
       Type: EventHandler
       Children:
@@ -2864,12 +2864,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 160.0
+      Value: 236.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 455.0
+      Value: 460.0
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -2977,12 +2977,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 300.0
+      Value: 376.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 455.0
+      Value: 460.0
     - Name: Width
       Type: BaseVariableType
       DataType: Size

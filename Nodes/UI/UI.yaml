@@ -7,6 +7,11 @@ Children:
   Children:
   - Name: ButtonStyle
     Type: ButtonStyle
+    Children:
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      Value: 14.0
   - Name: ButtonAccentStyle
     Type: ButtonStyle
   - Name: DataInputStyle
@@ -40,6 +45,11 @@ Children:
     Type: ChartStyle
   - Name: DataListStyle
     Type: DataListStyle
+    Children:
+    - Name: BorderColor
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#b3b3b3"
   - Name: ToolTipStyle
     Type: ToolTipStyle
   - Name: ScrollBarStyle
@@ -88,7 +98,7 @@ Children:
   - Name: StartWindow
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"b25c8edb35df2acb37220b8cb1c56e4d","Namespace":17}
+    Value: {"IdType":2,"Id":"4bb9384bacd6b235b0f0db477d0972cc","Namespace":17}
     Children:
     - Name: Kind
       Type: PropertyType

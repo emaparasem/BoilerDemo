@@ -5687,7 +5687,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 620.0
+      Value: 680.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -5697,7 +5697,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 40.0
     - Name: Title
       Type: Label
       Children:
@@ -5991,7 +5991,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 40.0
     - Name: Title
       Type: Label
       Children:
@@ -6015,6 +6015,39 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
+    - Name: Background
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 590.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 200.0
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#b3b3b3"
     - Name: RecipesEditor
       Type: Panel
       WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
@@ -6028,7 +6061,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 300.0
+        Value: 260.0
       - Name: RecipesEditorUISetup
         Type: NetLogic
         Children:
@@ -6050,7 +6083,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 50.0
+          Value: 120.0
         - Name: RecipesEditorSaveButtonLogic
           Type: NetLogic
           Children:
@@ -6155,16 +6188,11 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-        - Name: TopMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 0.0
         - Name: RightMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 210.0
+          Value: 420.0
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -6253,6 +6281,16 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 1
       - Name: ScrollView
         Type: ScrollView
         Children:
@@ -6332,6 +6370,21 @@ Children:
                 DataType: HorizontalAlignment
                 ModellingRule: Optional
                 Value: 1
+              - Name: RightMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 30.0
+              - Name: TopMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: -2.0
+              - Name: BottomMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 0.0
             - Name: SpinBox
               Type: SpinBox
               Children:
@@ -6422,6 +6475,21 @@ Children:
                 DataType: HorizontalAlignment
                 ModellingRule: Optional
                 Value: 1
+              - Name: RightMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 30.0
+              - Name: TopMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: -2.0
+              - Name: BottomMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 0.0
             - Name: SpinBox
               Type: SpinBox
               Children:
@@ -6512,6 +6580,21 @@ Children:
                 DataType: HorizontalAlignment
                 ModellingRule: Optional
                 Value: 1
+              - Name: RightMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 30.0
+              - Name: TopMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: -2.0
+              - Name: BottomMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 0.0
             - Name: SpinBox
               Type: SpinBox
               Children:
@@ -6573,7 +6656,12 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 66.0
+          Value: 60.0
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 70.0
       - Name: DeleteRecipeButton
         Type: Button
         Children:
@@ -6586,7 +6674,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 50.0
+          Value: 120.0
         - Name: EventHandler1
           Type: EventHandler
           Children:
@@ -6778,16 +6866,11 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-        - Name: TopMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 0.0
         - Name: RightMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 140.0
+          Value: 280.0
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -6876,6 +6959,16 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 1
       - Name: ApplyButton
         Type: Button
         Children:
@@ -6888,7 +6981,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 50.0
+          Value: 120.0
         - Name: EventHandler1
           Type: EventHandler
           Children:
@@ -7017,11 +7110,6 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-        - Name: TopMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 0.0
         - Name: RightMargin
           Type: BaseVariableType
           DataType: Size
@@ -7115,6 +7203,16 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 1
       - Name: LoadButton
         Type: Button
         Children:
@@ -7127,7 +7225,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 50.0
+          Value: 120.0
         - Name: EventHandler1
           Type: EventHandler
           Children:
@@ -7256,16 +7354,11 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-        - Name: TopMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 0.0
         - Name: RightMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 70.0
+          Value: 140.0
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -7354,6 +7447,16 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 1
       - Name: RecipesComboBox
         Type: ComboBox
         Children:
@@ -7434,12 +7537,12 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: -1.0
+          Value: 16.0
         - Name: LeftMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 0.0
+          Value: 16.0
         - Name: RecipesEditorComboBoxLogic
           Type: NetLogic
         - Name: UISelectedItem
@@ -7491,7 +7594,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 292.0
+          Value: 350.0
         - Name: Message
           Type: BaseDataVariableType
           DataType: String
@@ -7509,7 +7612,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 32.0
+          Value: 20.0
       - Name: RecipeSchema
         Type: NodePointer
         DataType: NodeId
@@ -7524,6 +7627,11 @@ Children:
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
   - Name: History
     Type: Panel
     Children:
@@ -7536,7 +7644,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 280.0
+      Value: 360.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -7546,7 +7654,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 370.0
+      Value: 360.0
     - Name: Title
       Type: Label
       Children:
@@ -7569,7 +7677,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
+        Value: -5.0
     - Name: DataGrid1
       Type: DataGrid
       Children:
@@ -7825,7 +7933,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 620.0
+      Value: 610.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -7835,7 +7943,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 40.0
     - Name: Title
       Type: Label
       Children:
@@ -7895,7 +8003,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 20.0
+          Value: 0.0
         - Name: EventHandler1
           Type: EventHandler
           Children:
@@ -7982,6 +8090,16 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: ""
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 420.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
       - Name: AcknowledgeAllButton
         Type: Button
         Children:
@@ -8000,16 +8118,11 @@ Children:
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 1
-        - Name: LeftMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 140.0
         - Name: BottomMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 20.0
+          Value: 0.0
         - Name: EventHandler1
           Type: EventHandler
           Children:
@@ -8081,6 +8194,16 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: ""
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 280.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
       - Name: ConfirmButton
         Type: Button
         Children:
@@ -8099,16 +8222,11 @@ Children:
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 1
-        - Name: LeftMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 280.0
         - Name: BottomMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 20.0
+          Value: 0.0
         - Name: EventHandler1
           Type: EventHandler
           Children:
@@ -8195,6 +8313,16 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: ""
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 140.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
       - Name: ConfirmAllButton
         Type: Button
         Children:
@@ -8213,16 +8341,11 @@ Children:
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 1
-        - Name: LeftMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 420.0
         - Name: BottomMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 20.0
+          Value: 0.0
         - Name: EventHandler1
           Type: EventHandler
           Children:
@@ -8294,6 +8417,16 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: ""
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 0.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
       - Name: AlarmGridLogic
         Type: NetLogic
       - Name: AlarmsDataGrid
@@ -8790,7 +8923,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 610.0
+          Value: 600.0
         - Name: Item
           Type: Alias
           DataType: NodeId
@@ -8834,6 +8967,16 @@ Children:
           DataType: HorizontalAlignment
           ModellingRule: Optional
           Value: 3
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -8858,7 +9001,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: -100.0
+        Value: -70.0
   - Name: Historical
     Type: Panel
     Children:
@@ -8871,7 +9014,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 720.0
+      Value: 680.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -8881,7 +9024,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 40.0
     - Name: Title
       Type: Label
       Children:
@@ -9476,7 +9619,7 @@ Children:
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
-        Value: 0
+        Value: 3
       - Name: SortColumn
         Type: BaseDataVariableType
         DataType: NodeId
@@ -9505,6 +9648,11 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 40.0
+      - Name: BottomMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
     - Name: Refresh
       Type: Button
       Children:
@@ -9518,11 +9666,6 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 675.0
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -9604,3 +9747,13 @@ Children:
         DataType: String
         ModellingRule: Optional
         Value: ""
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 1
