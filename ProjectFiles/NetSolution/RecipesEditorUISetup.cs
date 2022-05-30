@@ -1,12 +1,12 @@
 #region Using directives
 using System;
-using QPlatform.CoreBase;
-using QPlatform.HMIProject;
+using FTOptix.CoreBase;
+using FTOptix.HMIProject;
 using UAManagedCore;
 using OpcUa = UAManagedCore.OpcUa;
-using QPlatform.NetLogic;
-using QPlatform.UI;
-using QPlatform.Recipe;
+using FTOptix.NetLogic;
+using FTOptix.UI;
+using FTOptix.Recipe;
 using System.Linq;
 using System.Collections.Generic;
 #endregion
@@ -420,10 +420,10 @@ public class RecipesEditorUISetup : BaseNetLogic
 
     private void MakeDynamicLink(IUAVariable parent, string nodePath)
     {
-        var dataBind = InformationModel.MakeVariable<DataBind>("DynamicLink", QPlatform.Core.DataTypes.NodePath);
+        var dataBind = InformationModel.MakeVariable<DataBind>("DynamicLink", FTOptix.Core.DataTypes.NodePath);
         dataBind.Value = nodePath;
         dataBind.Mode = DynamicLinkMode.ReadWrite;
-        parent.Refs.AddReference(QPlatform.CoreBase.ReferenceTypes.HasDataBind, dataBind);
+        parent.Refs.AddReference(FTOptix.CoreBase.ReferenceTypes.HasDataBind, dataBind);
     }
 
     private void MakeDynamicLink(IUAVariable parent, string nodePath, uint index)

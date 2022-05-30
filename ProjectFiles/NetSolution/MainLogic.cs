@@ -2,23 +2,23 @@
 using System;
 using UAManagedCore;
 using OpcUa = UAManagedCore.OpcUa;
-using QPlatform.NetLogic;
-using QPlatform.HMIProject;
-using QPlatform.WebUI;
-using QPlatform.UI;
-using QPlatform.NativeUI;
-using QPlatform.Recipe;
-using QPlatform.Datalogger;
-using QPlatform.EventLogger;
-using QPlatform.SQLiteStore;
-using QPlatform.Store;
-using QPlatform.OPCUAClient;
-using QPlatform.CoreBase;
-using QPlatform.CommunicationDriver;
-using QPlatform.Alarm;
-using QPlatform.Core;
-using QPlatform.Logix;
-using QPlatform.EthernetIP;
+using FTOptix.NetLogic;
+using FTOptix.HMIProject;
+using FTOptix.WebUI;
+using FTOptix.UI;
+using FTOptix.NativeUI;
+using FTOptix.Recipe;
+using FTOptix.Datalogger;
+using FTOptix.EventLogger;
+using FTOptix.SQLiteStore;
+using FTOptix.Store;
+using FTOptix.OPCUAClient;
+using FTOptix.CoreBase;
+using FTOptix.CommunicationDriver;
+using FTOptix.Alarm;
+using FTOptix.Core;
+using FTOptix.Logix;
+using FTOptix.EthernetIP;
 #endregion
 
 public class MainLogic : BaseNetLogic
