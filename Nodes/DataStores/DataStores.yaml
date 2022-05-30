@@ -38,6 +38,14 @@ Children:
           Type: StoreColumn
           DataType: Double
           Value: 0.0
+        - Name: Level
+          Type: StoreColumn
+          DataType: Float
+          Value: 0.0
+        - Name: Level1
+          Type: StoreColumn
+          DataType: Float
+          Value: 0.0
     - Name: RecipeSchema
       Type: SQLiteStoreTable
       Children:

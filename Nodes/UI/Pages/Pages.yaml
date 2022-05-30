@@ -5095,7 +5095,7 @@ Children:
       - Name: Model
         Type: NodePointer
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Value: {"IdType":2,"Id":"b64b1a3c83f8b66c8afbfccb5cec04d9","Namespace":17}
         Children:
         - Name: ItemKind
           Type: PropertyType
@@ -5108,17 +5108,17 @@ Children:
       - Name: Query
         Type: BaseDataVariableType
         DataType: String
-        Value: ""
+        Value: "SELECT * FROM \"DataLogger\""
       - Name: Columns
         Type: BaseObjectType
         Children:
-        - Name: DataGridColumn1
+        - Name: Timestamp
           Type: DataGridColumn
           Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Value: {"LocaleId":"en-US","Text":"Timestamp"}
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
@@ -5134,7 +5134,7 @@ Children:
           - Name: OrderBy
             Type: BaseDataVariableType
             DataType: NodePath
-            Value: ""
+            Value: "{Item}/Timestamp"
           - Name: DataItemTemplate
             Type: DataGridLabelItemTemplate
             Children:
@@ -5142,6 +5142,151 @@ Children:
               Type: BaseDataVariableType
               DataType: LocalizedText
               Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{Item}/Timestamp"
+        - Name: FillLevel
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Boiler Level (gal)"}
+          - Name: Width
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: HeaderAlignment
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+            Value: 0
+          - Name: ContentAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            Value: 0
+          - Name: OrderBy
+            Type: BaseDataVariableType
+            DataType: NodePath
+            Value: "{Item}/FillLevel"
+          - Name: DataItemTemplate
+            Type: DataGridLabelItemTemplate
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{Item}/FillLevel"
+        - Name: Temperature
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Boiler Temp (F)"}
+          - Name: Width
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: HeaderAlignment
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+            Value: 0
+          - Name: ContentAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            Value: 0
+          - Name: OrderBy
+            Type: BaseDataVariableType
+            DataType: NodePath
+            Value: "{Item}/Temperature"
+          - Name: DataItemTemplate
+            Type: DataGridLabelItemTemplate
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{Item}/Temperature"
+        - Name: Level
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Tank 1 Level (gal)"}
+          - Name: Width
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: HeaderAlignment
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+            Value: 0
+          - Name: ContentAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            Value: 0
+          - Name: OrderBy
+            Type: BaseDataVariableType
+            DataType: NodePath
+            Value: "{Item}/Level"
+          - Name: DataItemTemplate
+            Type: DataGridLabelItemTemplate
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{Item}/Level"
+        - Name: Level1
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Tank 2 Level (gal)"}
+          - Name: Width
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: HeaderAlignment
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+            Value: 0
+          - Name: ContentAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            Value: 0
+          - Name: OrderBy
+            Type: BaseDataVariableType
+            DataType: NodePath
+            Value: "{Item}/Level1"
+          - Name: DataItemTemplate
+            Type: DataGridLabelItemTemplate
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{Item}/Level1"
       - Name: SelectedItem
         Type: NodePointer
         DataType: NodeId
@@ -5208,6 +5353,25 @@ Children:
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
+      - Name: SortColumn
+        Type: BaseDataVariableType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Children:
+        - Name: DynamicLink
+          Type: DataBind
+          DataType: NodePath
+          Value: "../Columns/Timestamp@NodeId"
+      - Name: SortOrder
+        Type: BaseDataVariableType
+        DataType: SortOrderEnum
+        ModellingRule: Optional
+        Value: 1
+      - Name: AutoRefreshTime
+        Type: BaseDataVariableType
+        DataType: Duration
+        ModellingRule: Optional
+        Value: "0:00:00:1.0000000"
     - Name: Refresh
       Type: Button
       Children:
@@ -5236,6 +5400,77 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 30.0
+      - Name: MouseClickEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":16,"Namespace":7}
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=6;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "../../../../../DataGrid@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DataBindModeType
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=6;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Refresh"
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+            Value: ""
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+            Value: ""
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+            Value: 0
   - Name: Trend
     Type: Panel
     Children:
@@ -5288,40 +5523,114 @@ Children:
       - Name: Pens
         Type: BaseObjectType
         Children:
-        - Name: Level
+        - Name: TrendPen1
           Type: TrendPen
           DataType: BaseDataType
           Children:
           - Name: Thickness
             Type: BaseDataVariableType
             DataType: Size
-            Value: -1.0
+            Value: 3.0
           - Name: Enabled
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
-          - Name: Color
-            Type: BaseDataVariableType
-            DataType: Color
-            ModellingRule: Optional
-            Value: "#0fafff"
-        - Name: Temperature
-          Type: TrendPen
-          DataType: BaseDataType
-          Children:
-          - Name: Thickness
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: -1.0
-          - Name: Enabled
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Model/VariablesToLog/FillLevel/LastValue"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DataBindModeType
+              ModellingRule: Optional
+              Value: 2
           - Name: Color
             Type: BaseDataVariableType
             DataType: Color
             ModellingRule: Optional
             Value: "#ff0000"
+        - Name: TrendPen2
+          Type: TrendPen
+          DataType: BaseDataType
+          Children:
+          - Name: Thickness
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: 3.0
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Model/VariablesToLog/Temperature/LastValue"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DataBindModeType
+              ModellingRule: Optional
+              Value: 2
+          - Name: Color
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#008000"
+        - Name: TrendPen3
+          Type: TrendPen
+          DataType: BaseDataType
+          Children:
+          - Name: Thickness
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: 3.0
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Model/VariablesToLog/Level/LastValue"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DataBindModeType
+              ModellingRule: Optional
+              Value: 2
+          - Name: Color
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#0000ff"
+        - Name: TrendPen4
+          Type: TrendPen
+          DataType: BaseDataType
+          Children:
+          - Name: Thickness
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: 3.0
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: DynamicLink
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../Model/VariablesToLog/Level1/LastValue"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DataBindModeType
+              ModellingRule: Optional
+              Value: 2
+          - Name: Color
+            Type: BaseDataVariableType
+            DataType: Color
+            ModellingRule: Optional
+            Value: "#ffa500"
       - Class: Reference
         Target: ns=7;i=1129
         Direction: Forward
@@ -5335,7 +5644,7 @@ Children:
         - Name: Window
           Type: BaseDataVariableType
           DataType: Duration
-          Value: "0:00:00:5.0000000"
+          Value: "0:00:05:0.0000000"
         - Name: Interactive
           Type: BaseDataVariableType
           DataType: Boolean
@@ -5350,11 +5659,11 @@ Children:
         - Name: MinValue
           Type: BaseDataVariableType
           DataType: Size
-          Value: -100.0
+          Value: -5.0
         - Name: MaxValue
           Type: BaseDataVariableType
           DataType: Size
-          Value: 100.0
+          Value: 105.0
         - Name: AutoScale
           Type: BaseDataVariableType
           DataType: Boolean
@@ -5381,7 +5690,7 @@ Children:
         Type: BaseDataVariableType
         DataType: ReferenceTimeZone
         ModellingRule: Optional
-        Value: 1
+        Value: 2
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -5412,6 +5721,24 @@ Children:
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
+      - Name: Model
+        Type: NodePointer
+        DataType: NodeId
+        Value: {"IdType":2,"Id":"ff2352bd4e543d470adadc94ca9748b1","Namespace":17}
+        Children:
+        - Name: ItemKind
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: RefreshTime
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: Optional
+        Value: 1100
 - Name: Recipes
   Id: g=a6df1077edf001fbadcd01964c0ff666
   Supertype: BasePage
@@ -5551,13 +5878,13 @@ Children:
                 Type: DataBind
                 DataType: NodePath
                 Value: "{Item}/Name"
-        - Name: /FillLevelSetPoint
+        - Name: /BoilerSetpoint
           Type: DataGridColumn
           Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"/FillLevelSetPoint"}
+            Value: {"LocaleId":"en-US","Text":"Boiler Setpoint"}
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
@@ -5573,7 +5900,7 @@ Children:
           - Name: OrderBy
             Type: BaseDataVariableType
             DataType: NodePath
-            Value: "{Item}/&/FillLevelSetPoint"
+            Value: "{Item}/&/BoilerSetpoint"
           - Name: DataItemTemplate
             Type: DataGridLabelItemTemplate
             Children:
@@ -5585,14 +5912,14 @@ Children:
               - Name: DynamicLink
                 Type: DataBind
                 DataType: NodePath
-                Value: "{Item}/&/FillLevelSetPoint"
-        - Name: /TemperatureSetPoint
+                Value: "{Item}/&/BoilerSetpoint"
+        - Name: /BoilerHeatTemp
           Type: DataGridColumn
           Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"/TemperatureSetPoint"}
+            Value: {"LocaleId":"en-US","Text":"Boiler Heat Temp"}
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
@@ -5608,7 +5935,7 @@ Children:
           - Name: OrderBy
             Type: BaseDataVariableType
             DataType: NodePath
-            Value: "{Item}/&/TemperatureSetPoint"
+            Value: "{Item}/&/BoilerHeatTemp"
           - Name: DataItemTemplate
             Type: DataGridLabelItemTemplate
             Children:
@@ -5620,7 +5947,42 @@ Children:
               - Name: DynamicLink
                 Type: DataBind
                 DataType: NodePath
-                Value: "{Item}/&/TemperatureSetPoint"
+                Value: "{Item}/&/BoilerHeatTemp"
+        - Name: /BoilerChillTemp
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Boiler Chill Temp"}
+          - Name: Width
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: HeaderAlignment
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+            Value: 0
+          - Name: ContentAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            Value: 0
+          - Name: OrderBy
+            Type: BaseDataVariableType
+            DataType: NodePath
+            Value: "{Item}/&/BoilerChillTemp"
+          - Name: DataItemTemplate
+            Type: DataGridLabelItemTemplate
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "{Item}/&/BoilerChillTemp"
       - Name: SelectedItem
         Type: NodePointer
         DataType: NodeId
@@ -5701,6 +6063,11 @@ Children:
         DataType: SortOrderEnum
         ModellingRule: Optional
         Value: 0
+      - Name: AutoRefreshTime
+        Type: BaseDataVariableType
+        DataType: Duration
+        ModellingRule: Optional
+        Value: "0:00:00:5.0000000"
   - Name: Editor
     Type: Panel
     Children:

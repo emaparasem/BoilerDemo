@@ -2,6 +2,7 @@ Name: Loggers
 Type: FolderType
 Children:
 - Name: DataLogger
+  Id: g=ff2352bd4e543d470adadc94ca9748b1
   Type: Datalogger
   Children:
   - Name: SamplingMode
@@ -69,6 +70,60 @@ Children:
         Type: DataBind
         DataType: NodePath
         Value: "../../../../OPC-UA/OPCUAClient/Objects/Demo/BoilerDemo/Boiler1/TemperatureSensor/Temperature"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          Value: 2
+    - Name: Level
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastOperationCode
+        Type: PropertyType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: 0
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../../../CommDrivers/EthernetIPDriver/EthernetIPStation/Tags/Tank2/Level"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DataBindModeType
+          Value: 2
+    - Name: Level1
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastOperationCode
+        Type: PropertyType
+        DataType: TagOperationCode
+        AccessLevel: Read
+        Value: 0
+      - Name: DynamicLink
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../../../CommDrivers/EthernetIPDriver/EthernetIPStation/Tags/Tank1/Level"
         Children:
         - Name: Mode
           Type: BaseVariableType
