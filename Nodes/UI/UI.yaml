@@ -599,7 +599,7 @@ Children:
   - Name: EnableVirtualKeyboard
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
+    Value: true
   - Name: StartingUser
     Type: NodePointer
     DataType: NodeId
