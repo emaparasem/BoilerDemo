@@ -1,0 +1,19 @@
+Name: Recipes
+Id: g=d3b4a10b5eff7364d74782c172a65b8e
+Type: FolderType
+Children:
+- Name: BoilerSetpoint
+  Id: g=cf5748509df58728db93be2a33b28bd3
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 100
+- Name: BoilerHeatTemp
+  Id: g=2d2c36fd6206438ab7cd4b59ef9d6941
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 90
+- Name: BoilerChillTemp
+  Id: g=8deda6b426eb4178b4f87a409017cefd
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 50

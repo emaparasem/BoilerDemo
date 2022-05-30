@@ -2,19 +2,24 @@ Name: Recipes
 Type: FolderType
 Children:
 - Name: RecipeSchema
+  Id: g=21cc33b08070fdf105c085f939188c50
   Type: RecipeSchema
   Children:
   - Name: Root
     Type: BaseObjectType
     Children:
-    - Name: FillLevelSetPoint
+    - Name: BoilerSetpoint
       Type: BaseDataVariableType
-      DataType: Double
-      Value: 0.0
-    - Name: TemperatureSetPoint
+      DataType: Int32
+      Value: 0
+    - Name: BoilerHeatTemp
       Type: BaseDataVariableType
-      DataType: Double
-      Value: 0.0
+      DataType: Int32
+      Value: 0
+    - Name: BoilerChillTemp
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 0
   - Class: Reference
     Target: ns=11;i=27
     Direction: Forward
@@ -60,21 +65,25 @@ Children:
   - Name: TargetNode
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
+    Value: {"IdType":2,"Id":"d3b4a10b5eff7364d74782c172a65b8e","Namespace":17}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
       Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: EditModel
-    Id: g=6e92df5365a242ea9a45b1efe8bdd220
+    Id: g=c68b6cc0b498e2748054a02c38180ec7
     Type: BaseObjectType
     Children:
-    - Name: FillLevelSetPoint
+    - Name: BoilerSetpoint
       Type: BaseDataVariableType
-      DataType: Double
-      Value: 0.0
-    - Name: TemperatureSetPoint
+      DataType: Int32
+      Value: 0
+    - Name: BoilerHeatTemp
       Type: BaseDataVariableType
-      DataType: Double
-      Value: 0.0
+      DataType: Int32
+      Value: 0
+    - Name: BoilerChillTemp
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 0

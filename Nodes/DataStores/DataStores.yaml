@@ -77,14 +77,18 @@ Children:
           Type: StoreColumn
           DataType: String
           Value: ""
-        - Name: /FillLevelSetPoint
+        - Name: /BoilerSetpoint
           Type: StoreColumn
-          DataType: Double
-          Value: 0.0
-        - Name: /TemperatureSetPoint
+          DataType: Int32
+          Value: 0
+        - Name: /BoilerHeatTemp
           Type: StoreColumn
-          DataType: Double
-          Value: 0.0
+          DataType: Int32
+          Value: 0
+        - Name: /BoilerChillTemp
+          Type: StoreColumn
+          DataType: Int32
+          Value: 0
   - Class: Reference
     Target: ns=15;i=30
     Direction: Forward

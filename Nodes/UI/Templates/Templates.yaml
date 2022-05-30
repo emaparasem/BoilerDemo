@@ -2778,6 +2778,17 @@ Children:
               DataType: Double
               Description: {"LocaleId":"","Text":"FillLevel Setpoint [l]"}
               Value: 100.0
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "100"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DataBindModeType
+                  ModellingRule: Optional
+                  Value: 2
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
@@ -2885,6 +2896,17 @@ Children:
               DataType: Double
               Description: {"LocaleId":"","Text":"Temperature Setpoint [°C]"}
               Value: 90.0
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "90"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DataBindModeType
+                  ModellingRule: Optional
+                  Value: 2
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
@@ -2987,6 +3009,17 @@ Children:
               DataType: Double
               Description: {"LocaleId":"","Text":"Temperature Setpoint [°C]"}
               Value: 50.0
+              Children:
+              - Name: DynamicLink
+                Type: DataBind
+                DataType: NodePath
+                Value: "30"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DataBindModeType
+                  ModellingRule: Optional
+                  Value: 2
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
