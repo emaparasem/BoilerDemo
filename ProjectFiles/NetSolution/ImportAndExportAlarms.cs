@@ -16,6 +16,7 @@ using QPlatform.UI;
 using QPlatform.Core;
 using QPlatform.WebUI;
 using QPlatform.Logix;
+using QPlatform.EthernetIP;
 #endregion
 
 public class ImportAndExportAlarms : BaseNetLogic

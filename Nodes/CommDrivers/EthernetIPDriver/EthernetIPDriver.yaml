@@ -1,0 +1,4 @@
+Name: EthernetIPDriver
+Type: EthernetIPDriver
+Children:
+- File: EthernetIPStation/EthernetIPStation.yaml

@@ -1,6 +1,6 @@
-Name: LogixTagImporter
-Type: LogixDriverTagImporter
-OwnerId: ns=2;g=462c0f7997d840db92ad492a48164480
+Name: TagImporter
+Type: EthernetIPDriverTagImporter
+OwnerId: ns=2;g=d3f86636d527f9c9f7b18deed51ad1c5
 Children:
 - Name: FilePath
   Type: BaseDataVariableType

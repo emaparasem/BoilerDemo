@@ -49,6 +49,29 @@ Children:
       DataType: FillModeEnum
       ModellingRule: Optional
       Value: 1
+  - Name: Line
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 3.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#0fafff"
 - Name: TankWidget
   Id: g=d3eef2c71f1165f50ef7fdb13b83ff87
   Supertype: Panel

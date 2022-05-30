@@ -131,13 +131,13 @@ Project:
    Uri: 'urn:QPlatform:WebUI:Net'
    Module: QPlatform.WebUI.Net
    Version: 1.0.0.48
-  35:
-   Uri: 'urn:QPlatform:LogixDriver'
-   Module: QPlatform.LogixDriver
-   Version: 0.0.3.68
-  36:
-   Uri: 'urn:QPlatform:Logix:Net'
-   Module: QPlatform.Logix.Net
-   Version: 0.0.3.68
+  37:
+   Uri: 'urn:QPlatform:EthernetIPDriver'
+   Module: QPlatform.EthernetIPDriver
+   Version: 5.0.5.68
+  38:
+   Uri: 'urn:QPlatform:EthernetIP:Net'
+   Module: QPlatform.EthernetIP.Net
+   Version: 5.0.5.68
  Nodes:
  - File: Nodes/BoilerDemo.yaml

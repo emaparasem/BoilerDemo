@@ -1,7 +1,11 @@
-Name: LogixStation
-Id: g=462c0f7997d840db92ad492a48164480
-Type: LogixDriverStation
+Name: EthernetIPStation
+Id: g=d3f86636d527f9c9f7b18deed51ad1c5
+Type: EthernetIPDriverStation
 Children:
+- Name: MaximumJobSizeInBytes
+  Type: BaseDataVariableType
+  DataType: UInt32
+  Value: 504
 - Name: IPAddress
   Type: BaseDataVariableType
   DataType: String
@@ -14,6 +18,10 @@ Children:
   Type: BaseDataVariableType
   DataType: Duration
   Value: "0:00:01:0.0000000"
+- Name: PhysicalAddressOptimization
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
 - Name: OperationCode
   Type: BaseDataVariableType
   DataType: CommunicationOperationCode
@@ -42,11 +50,11 @@ Children:
   Type: BaseObjectType
   Children:
   - Name: Tank1
-    Id: g=582de8a34a8cde855dff62c2d2caa3d1
+    Id: g=703a3a9e42f588a7d369ebad02cc69bc
     Supertype: TagStructure
     Children:
     - Name: ValveInStatus
-      Type: LogixDriverTag
+      Type: EthernetIPDriverTag
       DataType: Boolean
       Value: false
       Children:
@@ -65,7 +73,7 @@ Children:
         AccessLevel: Read
         Value: -2144272384
     - Name: ValveInCmd
-      Type: LogixDriverTag
+      Type: EthernetIPDriverTag
       DataType: Boolean
       Value: false
       Children:
@@ -84,7 +92,7 @@ Children:
         AccessLevel: Read
         Value: -2144272384
     - Name: ValveOutStatus
-      Type: LogixDriverTag
+      Type: EthernetIPDriverTag
       DataType: Boolean
       Value: false
       Children:
@@ -103,7 +111,7 @@ Children:
         AccessLevel: Read
         Value: -2144272384
     - Name: ValveOutCmd
-      Type: LogixDriverTag
+      Type: EthernetIPDriverTag
       DataType: Boolean
       Value: false
       Children:
@@ -122,7 +130,7 @@ Children:
         AccessLevel: Read
         Value: -2144272384
     - Name: Level
-      Type: LogixDriverTag
+      Type: EthernetIPDriverTag
       DataType: Float
       Value: 0.0
       Children:
@@ -141,7 +149,7 @@ Children:
         AccessLevel: Read
         Value: -2144272384
     - Name: SetPoint
-      Type: LogixDriverTag
+      Type: EthernetIPDriverTag
       DataType: Float
       Value: 0.0
       Children:

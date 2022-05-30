@@ -46,10 +46,10 @@ Project:
    Uri: 'urn:QPlatform:Core:Net'
    Module: QPlatform.Core.Net
    Version: 6.2.2.68
-  14:
-   Uri: 'urn:QPlatform:LogixDriverTagImporter'
-   Module: QPlatform.LogixDriverTagImporter
-   Version: 0.0.2.68
+  15:
+   Uri: 'urn:QPlatform:EthernetIPDriverTagImporter'
+   Module: QPlatform.EthernetIPDriverTagImporter
+   Version: 4.0.2.68
  Nodes:
- - File: DesignTimeNodes/CommDrivers/LogixDriver/LogixStation/LogixTagImporter.yaml
+ - File: DesignTimeNodes/CommDrivers/EthernetIPDriver/EthernetIPStation/TagImporter.yaml
  - File: 'DesignTimeNodes/OPC-UA/OPCUAClient/OPCUATagImporter.yaml'
