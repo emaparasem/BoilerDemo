@@ -60,7 +60,7 @@ Children:
   - Name: TargetNode
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":81}
+    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
     Children:
     - Name: Kind
       Type: PropertyType
