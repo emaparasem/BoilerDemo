@@ -142,6 +142,36 @@ Children:
           Type: StoreColumn
           DataType: DateTime
           Value: "1601-01-01T00:00:00.0000000"
+    - Name: RecipesAudit
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=14;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: Timestamp
+          Type: StoreColumn
+          DataType: DateTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: RecipeName
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: Action
+          Type: StoreColumn
+          DataType: String
+          Value: ""
   - Class: Reference
     Target: ns=15;i=30
     Direction: Forward
