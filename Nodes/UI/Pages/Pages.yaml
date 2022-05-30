@@ -1610,7 +1610,7 @@ Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":1003,"Namespace":81}
+        Value: {"Id":1003,"Namespace":42}
       - Name: DynamicLink
         Type: DataBind
         DataType: NodePath
@@ -1640,7 +1640,7 @@ Children:
             - Name: ObjectPointer
               Type: NodePointer
               DataType: NodeId
-              Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":81}
+              Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":42}
               Children:
               - Name: Kind
                 Type: PropertyType
@@ -3503,12 +3503,12 @@ Children:
   - Name: MainBoilerAlias
     Type: Alias
     DataType: NodeId
-    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":81}
+    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":42}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":1003,"Namespace":81}
+      Value: {"Id":1003,"Namespace":42}
   - Name: MainTank1Alias
     Type: Alias
     DataType: NodeId

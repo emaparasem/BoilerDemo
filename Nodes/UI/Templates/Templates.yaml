@@ -2738,7 +2738,7 @@ Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":1003,"Namespace":81}
+      Value: {"Id":1003,"Namespace":42}
   - Name: Fill
     Type: Button
     Children:
@@ -2773,7 +2773,7 @@ Children:
           - Name: ns=6;ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":81}
+            Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":42}
             Children:
             - Name: Kind
               Type: PropertyType
