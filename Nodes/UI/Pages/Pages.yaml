@@ -1610,7 +1610,7 @@ Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":1003,"Namespace":5}
+        Value: {"Id":1003,"Namespace":81}
       - Name: DynamicLink
         Type: DataBind
         DataType: NodePath
@@ -1640,7 +1640,7 @@ Children:
             - Name: ObjectPointer
               Type: NodePointer
               DataType: NodeId
-              Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
+              Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":81}
               Children:
               - Name: Kind
                 Type: PropertyType
@@ -1661,6 +1661,11 @@ Children:
                 Type: BaseDataVariableType
                 DataType: Double
                 Value: 100.0
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "100"
         - Name: EventArguments
           Type: MouseClickEvent
           Children:
@@ -1736,6 +1741,11 @@ Children:
                 Type: BaseDataVariableType
                 DataType: Double
                 Value: 90.0
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "90"
         - Name: EventArguments
           Type: MouseClickEvent
           Children:
@@ -1811,6 +1821,11 @@ Children:
                 Type: BaseDataVariableType
                 DataType: Double
                 Value: 50.0
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "30"
         - Name: EventArguments
           Type: MouseClickEvent
           Children:
@@ -3488,12 +3503,12 @@ Children:
   - Name: MainBoilerAlias
     Type: Alias
     DataType: NodeId
-    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":5}
+    Value: {"IdType":1,"Id":"Demo.BoilerDemo.Boiler1","Namespace":81}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":1003,"Namespace":5}
+      Value: {"Id":1003,"Namespace":81}
   - Name: MainTank1Alias
     Type: Alias
     DataType: NodeId
@@ -5732,7 +5747,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
-    - Name: RecipesEditor1
+    - Name: RecipesEditor
       Type: Panel
       WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
       Children:
@@ -5740,15 +5755,17 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 590.0
+        Value: 624.0
       - Name: Height
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 260.0
+        Value: 300.0
       - Name: RecipesEditorUISetup
         Type: NetLogic
         Children:
+        - Class: Method
+          Name: Setup
         - Name: BehaviourStartPriority
           Type: BehaviourStartPriorityVariableType
           DataType: Byte
@@ -5768,6 +5785,17 @@ Children:
           Value: 50.0
         - Name: RecipesEditorSaveButtonLogic
           Type: NetLogic
+          Children:
+          - Class: Method
+            Name: CreateOrSaveRecipe
+            Children:
+            - Name: ns=0;InputArguments
+              Type: BaseVariableType
+              DataType: Argument
+              ReferenceType: HasProperty
+              ValueRank: OneDimension
+              ArrayDimensions: [0]
+              Value: [{"TypeId":{"Id":296},"Body":{"Name":"recipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"recipeSchema","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
         - Name: EventHandler1
           Type: EventHandler
           Children:
@@ -5894,12 +5922,282 @@ Children:
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
-            Value: 0.0
+            Value: 120.0
           - Name: HorizontalAlignment
             Type: BaseVariableType
             DataType: HorizontalAlignment
             ModellingRule: Optional
             Value: 3
+          - Name: BoilerSetpoint
+            Type: Panel
+            Children:
+            - Name: Height
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 40.0
+            - Name: HorizontalAlignment
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: Path
+              Type: Label
+              Children:
+              - Name: Text
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ModellingRule: Optional
+                Value: {"LocaleId":"en-US","Text":"BoilerSetpoint"}
+              - Name: LeftMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 20.0
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+            - Name: CurrentValue
+              Type: Label
+              Children:
+              - Name: Text
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{NodeId:ns=17;g=cf574850-9df5-8728-db93-be2a33b28bd3}"
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+              - Name: HorizontalAlignment
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 1
+            - Name: SpinBox
+              Type: SpinBox
+              Children:
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Double
+                Value: 0.0
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{RecipeSchema}/BoilerSetpoint"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DataBindModeType
+                    Value: 2
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+              - Name: HorizontalAlignment
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 1
+              - Name: RightMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 100.0
+              - Name: Width
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 100.0
+          - Name: BoilerHeatTemp
+            Type: Panel
+            Children:
+            - Name: Height
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 40.0
+            - Name: HorizontalAlignment
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: Path
+              Type: Label
+              Children:
+              - Name: Text
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ModellingRule: Optional
+                Value: {"LocaleId":"en-US","Text":"BoilerHeatTemp"}
+              - Name: LeftMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 20.0
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+            - Name: CurrentValue
+              Type: Label
+              Children:
+              - Name: Text
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{NodeId:ns=17;g=2d2c36fd-6206-438a-b7cd-4b59ef9d6941}"
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+              - Name: HorizontalAlignment
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 1
+            - Name: SpinBox
+              Type: SpinBox
+              Children:
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Double
+                Value: 0.0
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{RecipeSchema}/BoilerHeatTemp"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DataBindModeType
+                    Value: 2
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+              - Name: HorizontalAlignment
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 1
+              - Name: RightMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 100.0
+              - Name: Width
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 100.0
+          - Name: BoilerChillTemp
+            Type: Panel
+            Children:
+            - Name: Height
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 40.0
+            - Name: HorizontalAlignment
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: Path
+              Type: Label
+              Children:
+              - Name: Text
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ModellingRule: Optional
+                Value: {"LocaleId":"en-US","Text":"BoilerChillTemp"}
+              - Name: LeftMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 20.0
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+            - Name: CurrentValue
+              Type: Label
+              Children:
+              - Name: Text
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{NodeId:ns=17;g=8deda6b4-26eb-4178-b4f8-7a409017cefd}"
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+              - Name: HorizontalAlignment
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 1
+            - Name: SpinBox
+              Type: SpinBox
+              Children:
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Double
+                Value: 0.0
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "{RecipeSchema}/BoilerChillTemp"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DataBindModeType
+                    Value: 2
+              - Name: VerticalAlignment
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 2
+              - Name: HorizontalAlignment
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 1
+              - Name: RightMargin
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 100.0
+              - Name: Width
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 100.0
         - Name: ScrollAxesEnabled
           Type: BaseDataVariableType
           DataType: ScrollAxesEnabledEnum
@@ -6207,7 +6505,7 @@ Children:
                 - Name: DestinationNode
                   Type: BaseDataVariableType
                   DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Value: {"IdType":2,"Id":"d3b4a10b5eff7364d74782c172a65b8e","Namespace":17}
                 - Name: ErrorPolicy
                   Type: BaseDataVariableType
                   DataType: CopyErrorPolicy
@@ -6354,7 +6652,7 @@ Children:
                 - Name: SourceNode
                   Type: BaseDataVariableType
                   DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Value: {"IdType":2,"Id":"d3b4a10b5eff7364d74782c172a65b8e","Namespace":17}
                 - Name: DestinationNode
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -6472,7 +6770,7 @@ Children:
         - Name: Model
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Value: {"IdType":2,"Id":"b64b1a3c83f8b66c8afbfccb5cec04d9","Namespace":17}
           Children:
           - Name: ItemKind
             Type: PropertyType
@@ -6553,6 +6851,11 @@ Children:
           Type: BaseDataVariableType
           DataType: BaseDataType
           AccessLevel: Read
+        - Name: Query
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "SELECT * FROM \"RecipeSchema\""
       - Name: OutputMessage
         Type: Label
         Children:
@@ -6563,6 +6866,27 @@ Children:
           Value: 0
         - Name: RecipesEditorOutputMessageLogic
           Type: NetLogic
+          Children:
+          - Class: Method
+            Name: SetOutputMessage
+            Children:
+            - Name: ns=0;InputArguments
+              Type: BaseVariableType
+              DataType: Argument
+              ReferenceType: HasProperty
+              ValueRank: OneDimension
+              ArrayDimensions: [0]
+              Value: [{"TypeId":{"Id":296},"Body":{"Name":"message","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+          - Class: Method
+            Name: SetOutputLocalizedMessage
+            Children:
+            - Name: ns=0;InputArguments
+              Type: BaseVariableType
+              DataType: Argument
+              ReferenceType: HasProperty
+              ValueRank: OneDimension
+              ArrayDimensions: [0]
+              Value: [{"TypeId":{"Id":296},"Body":{"Name":"message","DataType":{"Id":21},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
         - Name: LeftMargin
           Type: BaseVariableType
           DataType: Size
@@ -6589,17 +6913,17 @@ Children:
       - Name: RecipeSchema
         Type: NodePointer
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Value: {"IdType":2,"Id":"21cc33b08070fdf105c085f939188c50","Namespace":17}
         Children:
         - Name: Kind
           Type: PropertyType
           DataType: NodeId
           Value: {"Id":2,"Namespace":11}
-      - Name: TopMargin
+      - Name: HorizontalAlignment
         Type: BaseVariableType
-        DataType: Size
+        DataType: HorizontalAlignment
         ModellingRule: Optional
-        Value: 40.0
+        Value: 3
   - Name: History
     Type: Panel
     Children:

@@ -1,2 +1,4 @@
 Name: Model
 Type: FolderType
+Children:
+- File: Recipes/Recipes.yaml
