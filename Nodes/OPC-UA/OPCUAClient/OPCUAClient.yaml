@@ -5,7 +5,7 @@ Children:
 - Name: ServerEndpointURL
   Type: BaseDataVariableType
   DataType: String
-  Value: "opc.tcp://172.19.17.67::48020"
+  Value: "opc.tcp://172.19.17.67:48020"
 - Name: MinimumMessageSecurityMode
   Type: BaseDataVariableType
   DataType: MessageSecurityModeEnum
