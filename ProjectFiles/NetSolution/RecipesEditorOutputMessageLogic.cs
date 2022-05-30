@@ -1,14 +1,14 @@
 #region Using directives
 using System;
-using FTOptix.CoreBase;
-using FTOptix.HMIProject;
+using QPlatform.CoreBase;
+using QPlatform.HMIProject;
 using UAManagedCore;
 using OpcUa = UAManagedCore.OpcUa;
-using FTOptix.NetLogic;
-using FTOptix.UI;
-using FTOptix.Recipe;
-using FTOptix.OPCUAServer;
-using FTOptix.Store;
+using QPlatform.NetLogic;
+using QPlatform.UI;
+using QPlatform.Recipe;
+using QPlatform.OPCUAServer;
+using QPlatform.Store;
 using System.Timers;
 #endregion
 

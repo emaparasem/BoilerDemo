@@ -5,18 +5,18 @@ using System.IO;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
-using FTOptix.CoreBase;
-using FTOptix.HMIProject;
+using QPlatform.CoreBase;
+using QPlatform.HMIProject;
 using UAManagedCore;
 using OpcUa = UAManagedCore.OpcUa;
-using FTOptix.Alarm;
-using FTOptix.NetLogic;
-using FTOptix.OPCUAServer;
-using FTOptix.UI;
-using FTOptix.Core;
-using FTOptix.WebUI;
-using FTOptix.Logix;
-using FTOptix.EthernetIP;
+using QPlatform.Alarm;
+using QPlatform.NetLogic;
+using QPlatform.OPCUAServer;
+using QPlatform.UI;
+using QPlatform.Core;
+using QPlatform.WebUI;
+using QPlatform.Logix;
+using QPlatform.EthernetIP;
 #endregion
 
 public class ImportAndExportAlarms : BaseNetLogic
@@ -525,31 +525,31 @@ public class ImportAndExportAlarms : BaseNetLogic
     {
         var alarms = new List<AlarmController>();
 
-        var digitalAlarms = GetAlarmsByType(FTOptix.Alarm.ObjectTypes.OffNormalAlarmController);
+        var digitalAlarms = GetAlarmsByType(QPlatform.Alarm.ObjectTypes.OffNormalAlarmController);
         foreach (var digitalAlarm in digitalAlarms)
             alarms.Add((DigitalAlarm)digitalAlarm);
 
-        var exclusiveLevelAlarms = GetAlarmsByType(FTOptix.Alarm.ObjectTypes.ExclusiveLevelAlarmController);
+        var exclusiveLevelAlarms = GetAlarmsByType(QPlatform.Alarm.ObjectTypes.ExclusiveLevelAlarmController);
         foreach (var exclusiveLevelAlarm in exclusiveLevelAlarms)
             alarms.Add((ExclusiveLevelAlarmController)exclusiveLevelAlarm);
 
-        var nonExclusiveLevelAlarms = GetAlarmsByType(FTOptix.Alarm.ObjectTypes.NonExclusiveLevelAlarmController);
+        var nonExclusiveLevelAlarms = GetAlarmsByType(QPlatform.Alarm.ObjectTypes.NonExclusiveLevelAlarmController);
         foreach (var nonExclusiveLevelAlarm in nonExclusiveLevelAlarms)
             alarms.Add((NonExclusiveLevelAlarmController)nonExclusiveLevelAlarm);
 
-        var exclusiveDeviationAlarms = GetAlarmsByType(FTOptix.Alarm.ObjectTypes.ExclusiveDeviationAlarmController);
+        var exclusiveDeviationAlarms = GetAlarmsByType(QPlatform.Alarm.ObjectTypes.ExclusiveDeviationAlarmController);
         foreach (var exclusiveDeviationAlarm in exclusiveDeviationAlarms)
             alarms.Add((ExclusiveDeviationAlarmController)exclusiveDeviationAlarm);
 
-        var nonExclusiveDeviationAlarms = GetAlarmsByType(FTOptix.Alarm.ObjectTypes.NonExclusiveDeviationAlarmController);
+        var nonExclusiveDeviationAlarms = GetAlarmsByType(QPlatform.Alarm.ObjectTypes.NonExclusiveDeviationAlarmController);
         foreach (var nonExclusiveDeviationAlarm in nonExclusiveDeviationAlarms)
             alarms.Add((NonExclusiveDeviationAlarmController)nonExclusiveDeviationAlarm);
 
-        var exclusiveRateOfChangeAlarms = GetAlarmsByType(FTOptix.Alarm.ObjectTypes.ExclusiveRateOfChangeAlarmController);
+        var exclusiveRateOfChangeAlarms = GetAlarmsByType(QPlatform.Alarm.ObjectTypes.ExclusiveRateOfChangeAlarmController);
         foreach (var exclusiveRateOfChangeAlarm in exclusiveRateOfChangeAlarms)
             alarms.Add((ExclusiveRateOfChangeAlarmController)exclusiveRateOfChangeAlarm);
 
-        var nonExclusiveRateOfChangeAlarms = GetAlarmsByType(FTOptix.Alarm.ObjectTypes.NonExclusiveRateOfChangeAlarmController);
+        var nonExclusiveRateOfChangeAlarms = GetAlarmsByType(QPlatform.Alarm.ObjectTypes.NonExclusiveRateOfChangeAlarmController);
         foreach (var nonExclusiveRateOfChangeAlarm in nonExclusiveRateOfChangeAlarms)
             alarms.Add((NonExclusiveRateOfChangeAlarmController)nonExclusiveRateOfChangeAlarm);
 

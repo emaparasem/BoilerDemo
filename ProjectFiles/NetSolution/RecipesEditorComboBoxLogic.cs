@@ -1,15 +1,15 @@
 #region Using directives
 using System;
-using FTOptix.CoreBase;
-using FTOptix.HMIProject;
+using QPlatform.CoreBase;
+using QPlatform.HMIProject;
 using UAManagedCore;
 using OpcUa = UAManagedCore.OpcUa;
-using FTOptix.NetLogic;
-using FTOptix.OPCUAServer;
-using FTOptix.Recipe;
-using FTOptix.UI;
-using FTOptix.Store;
-using FTOptix.SQLiteStore;
+using QPlatform.NetLogic;
+using QPlatform.OPCUAServer;
+using QPlatform.Recipe;
+using QPlatform.UI;
+using QPlatform.Store;
+using QPlatform.SQLiteStore;
 #endregion
 
 public class RecipesEditorComboBoxLogic : BaseNetLogic

@@ -1,11 +1,11 @@
 #region Using directives
 using System;
-using FTOptix.HMIProject;
+using QPlatform.HMIProject;
 using UAManagedCore;
-using FTOptix.NetLogic;
-using FTOptix.UI;
-using FTOptix.Recipe;
-using Store = FTOptix.Store;
+using QPlatform.NetLogic;
+using QPlatform.UI;
+using QPlatform.Recipe;
+using Store = QPlatform.Store;
 using System.Linq;
 using System.Collections.Generic;
 #endregion
