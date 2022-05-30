@@ -80,11 +80,11 @@ Children:
   - Name: IPAddress
     Type: BaseDataVariableType
     DataType: String
-    Value: "0.0.0.0"
+    Value: "127.0.0.1"
   - Name: Port
     Type: BaseDataVariableType
     DataType: UInt16
-    Value: 0
+    Value: 8443
   - Name: StartWindow
     Type: NodePointer
     DataType: NodeId
