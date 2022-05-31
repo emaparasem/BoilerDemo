@@ -110,6 +110,11 @@ Children:
     Type: BaseDataVariableType
     DataType: Float
     Value: 14.0
+  - Name: DisabledOpacity
+    Id: g=92dc390e0e8d7caebe759b79d49e2f4b
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 0.699999988079071
 - Name: WebPresentationEngine
   Id: g=fd123dfcbf54033bd90ab2a897ac901a
   Type: ns=33;PresentationEngine
