@@ -47,7 +47,7 @@ Children:
       Id: g=cb029e8542cdfd5cc383dedbdb6ade83
       Type: BaseDataVariableType
       DataType: Size
-      Value: 14.0
+      Value: 16.0
     - Name: BackgroundColor
       Id: g=0a4a4a81af4ee094e70f24edf7d9e9cc
       Type: BaseDataVariableType

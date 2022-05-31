@@ -6308,7 +6308,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 680.0
+      Value: 670.0
     - Name: LeftMargin
       Id: g=413977e85aa45eb5f51ddf5324866084
       Type: BaseVariableType
@@ -6715,7 +6715,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 680.0
+      Value: 670.0
     - Name: LeftMargin
       Id: g=fc5bd742279f257342b10c385b9f35f2
       Type: BaseVariableType
@@ -7085,7 +7085,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 680.0
+      Value: 670.0
     - Name: LeftMargin
       Id: g=4260301a328203f0839acd3706bd25c8
       Type: BaseVariableType
@@ -9501,7 +9501,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 360.0
+      Value: 350.0
     - Name: LeftMargin
       Id: g=06f0110d2a3cfa6a3ea3da497459c2d0
       Type: BaseVariableType
@@ -11185,7 +11185,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: -70.0
+        Value: -60.0
   - Name: Historical
     Id: g=0c0f72b5d6d2217fafa1ae8f867b6db9
     Type: Panel
@@ -11201,7 +11201,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 680.0
+      Value: 670.0
     - Name: LeftMargin
       Id: g=2722334c8b68a74f5ec5c86a67250cbe
       Type: BaseVariableType

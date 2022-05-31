@@ -19,7 +19,7 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 762.0
+    Value: 758.0
   - Name: Background
     Id: g=11270c159950d6ac98a3da452667e7d8
     Type: Image
