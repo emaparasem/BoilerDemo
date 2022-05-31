@@ -9,7 +9,7 @@ Project:
  Dependencies:
   2:
    Uri: BoilerDemo
-   RelativePath: BoilerDemo.uniqo
+   RelativePath: BoilerDemo.optix
   3:
    Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC553.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
    ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
