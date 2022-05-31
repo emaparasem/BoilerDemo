@@ -105,6 +105,11 @@ Children:
     Type: BaseDataVariableType
     DataType: Color
     Value: "#3b3b3b"
+  - Name: FontPixelSize
+    Id: g=f25eacb1a1c23571a6be701b002ef776
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 14.0
 - Name: WebPresentationEngine
   Id: g=fd123dfcbf54033bd90ab2a897ac901a
   Type: ns=33;PresentationEngine
@@ -936,6 +941,12 @@ Children:
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
+      - Name: TabPosition
+        Id: g=035895b9e5694cd8a3b887106e3e1674
+        Type: BaseVariableType
+        DataType: NavigationPanelTabPositionEnum
+        ModellingRule: Optional
+        Value: 1
   - Name: Caption
     Id: g=ba0b69e5a7d0906af86696fc509772f8
     Type: BaseDataVariableType

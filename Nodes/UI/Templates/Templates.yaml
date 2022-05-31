@@ -87,6 +87,45 @@ Children:
       DataType: Color
       ModellingRule: Optional
       Value: "#0fafff"
+    - Name: VerticalAlignment
+      Id: g=c3d80e65479eb3986dda9ca063051243
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+  - Name: FTOptixLogo
+    Id: g=1de2575b252a83a07acae958111c3877
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=16b93e24696329cee2712afcad323ec9
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=17;%PROJECTDIR%/FTOptixLogo_cyan.svg"
+    - Name: Width
+      Id: g=71a634b0c2e561da1f571df8e5e1bb74
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 140.0
+    - Name: Height
+      Id: g=c9869f6e6509dd83bbaabc2727681db1
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Id: g=ecd10d1d95237cb79ef1f12185de8252
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 15.0
+    - Name: TopMargin
+      Id: g=f762d946cf65b584c66c88e7e7886d42
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
 - Name: TankWidget
   Id: g=d3eef2c71f1165f50ef7fdb13b83ff87
   Supertype: Panel
@@ -1755,34 +1794,41 @@ Children:
       Type: Label
       Children:
       - Name: Text
-        Id: g=7516c4df398d46706d6760687bea500b
+        Id: g=2e4a1a2c5b4680b41df0a6a67583d6b2
         Type: BaseDataVariableType
         DataType: LocalizedText
         Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: StringFormatter1
-          Id: g=fb3475c547c4547056c3e35f921efac9
+          Id: g=fd1f5338e947ebaa047b91ca51b23f11
           Type: StringFormatter
           Children:
+          - Name: Format
+            Id: g=f4227609a491848b0b0a9c0669d1718e
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0} {1}"}
           - Name: Source0
-            Id: g=ee1fe9ce51a1ca5563b13e614ed74b17
+            Id: g=dfd23770b87504d9017a6830e2ca8832
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=2cecbca218248e0a6c00406e17f9b4d9
+              Id: g=e958d24d569f0075c3496def7c62e70f
               Type: DataBind
               DataType: NodePath
               Value: "../../../../Setpoint"
           - Name: Source1
-            Id: g=e6c8f9edc022dbd857184934e8b8f7b6
+            Id: g=737b13e4d773c7e4236221f29de00bc8
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=460734ae2c9bf397cfa20b30301ee212
+              Id: g=327f193e3c6dcfbb6867232a1ad022a0
               Type: DataBind
               DataType: NodePath
               Value: "../../../../MeasurementUnit"
@@ -2524,7 +2570,7 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 590.0
+    Value: 530.0
   - Name: ItemName
     Id: g=0701b8ffbaa61ace3a3ee5c2d6755ea7
     Type: Label
@@ -2866,34 +2912,41 @@ Children:
       Type: Label
       Children:
       - Name: Text
-        Id: g=97966f244b25e6da6e6f53ba3f2f07df
+        Id: g=8b04997f20962f8ec22af98311e39ce3
         Type: BaseDataVariableType
         DataType: LocalizedText
         Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: StringFormatter1
-          Id: g=e5da315bff15684fefc818dce41e8c2b
+          Id: g=609f0d44b24897be0c6716654940aef5
           Type: StringFormatter
           Children:
+          - Name: Format
+            Id: g=69cdcb15d628d2bc74cb7455160692f8
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0} {1}"}
           - Name: Source0
-            Id: g=37fb8dd7b96dfe5f613149b69fece1eb
+            Id: g=9c15853f2b5351492ede314f2b83647e
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=733cfdf010422387289e5647c00ef848
+              Id: g=9a7d0e1a7b58e0643db34300c23e87c4
               Type: DataBind
               DataType: NodePath
               Value: "../../../../Setpoint"
           - Name: Source1
-            Id: g=38480de36e0e4a7544327c629924ca33
+            Id: g=0b682ddace81f5de126e394f72ef75e5
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=99d85c8d025872205dfead88c0b157be
+              Id: g=5121bf21bfd4ff351762fdef39298f98
               Type: DataBind
               DataType: NodePath
               Value: "../../../../MeasurementUnit"
@@ -3044,34 +3097,41 @@ Children:
       Type: Label
       Children:
       - Name: Text
-        Id: g=3f1c73b5c61a3f5c5a66d59cae7f6e4d
+        Id: g=bb68a62a314ef9f5f6a72ead90edda37
         Type: BaseDataVariableType
         DataType: LocalizedText
         Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: StringFormatter1
-          Id: g=c043fa8ed2fedad0dd561942b7282f06
+          Id: g=7a7c1ffbf1447189fa514c014eb989e0
           Type: StringFormatter
           Children:
+          - Name: Format
+            Id: g=5b0d40dc8ea2775e956ef6e15e758000
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0} {1}"}
           - Name: Source0
-            Id: g=98f3b8c946849b302100dc70ca81e011
+            Id: g=58198dc1c2f0acbd32f9a667ab15a51a
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=e573105c1a2bf111d0d9c8975c648b38
+              Id: g=7cac27985bb1d2b3ab005e911e7f8f66
               Type: DataBind
               DataType: NodePath
               Value: "../../../../Setpoint"
           - Name: Source1
-            Id: g=8f6bc618a560b6845118303c1265ace7
+            Id: g=ab3734e71c10e01ae2bf0722e21682f9
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=85a8b01b5ab7755c4fe4816977794414
+              Id: g=2b90bd96c57868001aaf8935e40615e2
               Type: DataBind
               DataType: NodePath
               Value: "../../../../MeasurementUnit"
@@ -3965,57 +4025,63 @@ Children:
     Id: g=eec19de7119f872240fa3cff66d99e3d
     Type: Label
     Children:
+    - Name: LeftMargin
+      Id: g=95fc2a3e5fc4d69b7d159e394197c83e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 39.0
+    - Name: TopMargin
+      Id: g=9f71222e9214f10a36e6a75cf1e44808
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 88.0
+    - Name: Width
+      Id: g=85dfa2b45d235a4ece48046da7fd8095
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
     - Name: Text
-      Id: g=6fc8c606428097eb12d6a16b74bc7e42
+      Id: g=d2620b786ca2c11deb677933b54b09ec
       Type: BaseDataVariableType
       DataType: LocalizedText
       Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
       - Name: StringFormatter1
-        Id: g=c2c5c7adcad9189fff8bfed96716648f
+        Id: g=e2b51273d5eed2742803c2910f4fc89e
         Type: StringFormatter
         Children:
         - Name: Format
-          Id: g=100faf26cc7c786f10ff75cfd1ae52f7
+          Id: g=405f34be517782d7966f5c588d27fff8
           Type: BaseDataVariableType
           DataType: LocalizedText
           ReferenceType: HasParameter
           ModellingRule: Optional
           Value: {"LocaleId":"en-US","Text":"{0} {1}"}
         - Name: ns=6;Source0
-          Id: g=1480f198608cf8a2796212e7da066b21
+          Id: g=083be31943f48c54203671691a5fe95e
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
-            Id: g=69f77b9f6d9e5632c00cdab3ff1ae445
+            Id: g=cae16ba2920b2bdd453fbb3f42493da1
             Type: DataBind
             DataType: NodePath
             Value: "../../../../Setpoint"
         - Name: ns=6;Source1
-          Id: g=7e9b9851435432fb3674f5e8c5c1b4d2
+          Id: g=de5a507fdd51b3d14a7db7d680b0c0c0
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
-            Id: g=33781323ea7b64d5e3e9d002875812ce
+            Id: g=71b343339c4025ceaba90f50e54089b1
             Type: DataBind
             DataType: NodePath
             Value: "../../../../MeasurementUnit"
-    - Name: LeftMargin
-      Id: g=95fc2a3e5fc4d69b7d159e394197c83e
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 40.0
-    - Name: TopMargin
-      Id: g=9f71222e9214f10a36e6a75cf1e44808
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 90.0
   - Name: Chevron1
     Id: g=5c7c6c3d27b7cf59e1426fc17b33104f
     Type: Chevron
