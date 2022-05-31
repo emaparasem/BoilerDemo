@@ -1893,6 +1893,12 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
         Value: true
+      - Name: ImagePath
+        Id: g=633c85582915bfb15188e6918b3e2377
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: Optional
+        Value: "ns=17;%PROJECTDIR%/res/SetpointGray.svg"
   - Name: TankAlias
     Id: g=3b552ccb2212bb045f2b794642cfb158
     Type: Alias
@@ -2966,6 +2972,127 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 88.0
+      - Name: TextChanged
+        Id: g=0278bd3ea4cc5cfda93731f414d3275b
+        Type: VariableChangedEventDispatcher
+        Children:
+        - Name: VariableNodePath
+          Id: g=38e334f03dd689338673e2d3665c041e
+          Type: BaseVariableType
+          DataType: NodePath
+          Value: "../Text"
+        - Name: VariableValueChangedEventHandler1
+          Id: g=541e0f627397f65dfa730e4c784f1929
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=64d6d79678412bfd1a917a5b8d151d9b
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"Id":42,"Namespace":6}
+          - Name: MethodsToCall
+            Id: g=f376163264ee506e3ddfd83c9a80cd1f
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=d0245a6e6f4ff9d7bfbe5419d21ab4cd
+              Type: BaseObjectType
+              Children:
+              - Name: ns=6;ObjectPointer
+                Id: g=8c1dbd7f7ecea0044513be2384e09e25
+                Type: NodePointer
+                DataType: NodeId
+                Value: {"Id":22,"Namespace":6}
+                Children:
+                - Name: Kind
+                  Id: g=7c5dfd87dcfb164493dc94fb6b1b5b8e
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: {"Id":58}
+              - Name: ns=6;Method
+                Id: g=961326c40fc08d6252acce927ba5672d
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Id: g=68614967a0d1b64467b7f5d45aafe060
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=86dc766d807f4e39a67039dc2449d285
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":6,"TextId":"SetVariableToModifyDescription"}
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                - Name: Value
+                  Id: g=a1727500c9595cafa25d95ec2168cfc3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  Description: {"NamespaceIndex":6,"TextId":"SetValueDescription"}
+                - Name: ArrayIndex
+                  Id: g=3981bfb18559402f0eac5676eef40d2f
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":6,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=fdb976ad08da4a577ae291be28635630
+            Type: VariableValueChangedEvent
+            Children:
+            - Name: VariableNodeId
+              Id: g=1ba2dc6b0c497950f85166fc26951e0f
+              Type: BaseVariableType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: NewValue
+              Id: g=3e76a443f0b0e7998a1c672cc9c29848
+              Type: BaseVariableType
+              DataType: BaseDataType
+            - Name: OldValue
+              Id: g=c605a90dbd3b845043a29fb0f9e9bde1
+              Type: BaseVariableType
+              DataType: BaseDataType
+            - Name: EventId
+              Id: g=85dedbe8c6226a675d643a3c4693eb8d
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=b7eab6c98c6eb2510d685de55526403a
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=e8d051a1be0ff4a95ad47dec0f2225ef
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=85ee85f0a8fa54d7034885279201ef2e
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=846b52c40b7b71d856b6fc342dfeacad
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=70f648d9ac4caef644e8d96f042da250
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=2ae64445feb3e71a252fe0e8cb190aec
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=28d8755a8e9a3a2ec917455276bc279c
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
     - Name: Unit
       Id: g=02562956863adbf58e2e7cc82df0baba
       Type: Label
@@ -3109,6 +3236,99 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+      - Name: ImagePath
+        Id: g=201461ea4d2c8f972ce9883ab21a580f
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=17;%PROJECTDIR%/res/SetpointGray.svg"
+        Children:
+        - Name: KeyValueConverter1
+          Id: g=1aa390588634f6d0e358752fdcd19858
+          Type: ValueMapConverter
+          Children:
+          - Name: Source
+            Id: g=7b870e74c022518f99a2c59cf91456bf
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: ExpressionEvaluator1
+              Id: g=56df3d1095b9766cabd787a0aaa5c95c
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Id: g=33e893f44b14d0e2c6a75c007feefc95
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "{0} != {1}"
+              - Name: ns=6;Source0
+                Id: g=dd0dfe75866fce32c6cbb57f472db1c2
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=c77973028747f2c1b5321e34dde00662
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Actual"
+              - Name: ns=6;Source1
+                Id: g=e196dc52de91275608f1954a5fa6a6d0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=353bda4d867c707d02096a7e8bffe899
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Setpoint"
+          - Name: Pairs
+            Id: g=78112e7987954b9058290e610d3fdb6f
+            Type: BaseObjectType
+            ModellingRule: None
+            Children:
+            - Name: Pair
+              Id: g=78c796340552144fea35438b591f348a
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=49b72e32ae122774d163c4d6e68667e9
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+              - Name: Value
+                Id: g=35835bf484b3ca8cdbbccdb84bad833f
+                Type: BaseDataVariableType
+                DataType: ResourceUri
+                Value: "ns=17;%PROJECTDIR%/res/SetpointGray.svg"
+            - Name: Pair1
+              Id: g=ca1973bc5f12ad712ede7102e5c058dd
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=cbd52473bed1d555bdcfd30a02c6a35d
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: true
+              - Name: Value
+                Id: g=b9b777a33eb2b92b053b64ef25ed98a5
+                Type: BaseDataVariableType
+                DataType: ResourceUri
+                Value: "ns=17;%PROJECTDIR%/res/SetpointCyan.svg"
+      - Name: Appearance
+        Id: g=6e640e1bd5fcb1d2c1d4009b9cee0695
+        Type: BaseVariableType
+        DataType: String
+        Value: "transparent"
+      - Name: TopMargin
+        Id: g=20dc6d30828aacb445351a509b3848b5
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 83.0
   - Name: Temperature
     Id: g=481ecce26e3af107c9bd907f6b26b557
     Type: StatusWidget
@@ -3275,34 +3495,6 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 22.0
-      - Name: Visible
-        Id: g=71edb8371679a197e544fe3048bc172f
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-        Children:
-        - Name: ExpressionEvaluator1
-          Id: g=94783bca8ff23ad9be5cc1c25bc57168
-          Type: ExpressionEvaluator
-          Children:
-          - Name: Expression
-            Id: g=024b59b93e3d732b83acea5b87558caf
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "{0} == 90"
-          - Name: ns=6;Source0
-            Id: g=028997aa6154269ab748dd626006a5af
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Id: g=96a83a6f72c4d5b03bd7043fdc324ebc
-              Type: DataBind
-              DataType: NodePath
-              Value: "{BoilerAlias}/TemperatureSetPoint"
       - Name: HorizontalAlignment
         Id: g=84a169bb36416c6d4d66e49a784662fe
         Type: BaseVariableType
@@ -3327,6 +3519,94 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 12.0
+      - Name: Enabled
+        Id: g=56abc61a951172273db48069509a0da7
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: Visible
+        Id: g=6e727949024b0909a2a84052b76f79f7
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: KeyValueConverter1
+          Id: g=d2cfea21bd36b31626c06ca40df72153
+          Type: ValueMapConverter
+          Children:
+          - Name: Source
+            Id: g=5ee1f94db4babd54ebaf9b7ccc69d3b9
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: ExpressionEvaluator1
+              Id: g=848341bd0a91f29f7c8d4cadd06f1ad0
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Id: g=179a86699b48e7ba89c026ba63f3ed7c
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "({0} - {1}) < 3"
+              - Name: ns=6;Source0
+                Id: g=2ef515db30d481b25bb56d46ff26f723
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=70c726a0a824da73e78dffc59245b8d5
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Actual"
+              - Name: ns=6;Source1
+                Id: g=ea82f55d356fcbb96c9e4d4ccd8f2e9d
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=e945a43bb3f7737cd638953818f51005
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Setpoint"
+          - Name: Pairs
+            Id: g=2616ea4cdb203b94e497030e47c1dbf8
+            Type: BaseObjectType
+            ModellingRule: None
+            Children:
+            - Name: Pair
+              Id: g=884fc8187da6a60a77b3fd42753d069b
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=2dab2d696cea67740a81608362a4f5be
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+              - Name: Value
+                Id: g=35ffeb348d4b5df59318d4b86e5bdda3
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+            - Name: Pair1
+              Id: g=5a64e6f92c443934911aff9cc460f905
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=346542f576dcc05285c1ffe829374e1c
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: true
+              - Name: Value
+                Id: g=148401af760ce1d72470c112ea64994a
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: true
     - Name: LowTemperatureSymbol1
       Id: g=f29d917a1d8a23260b6e00438f5a3442
       Type: LowTemperatureSymbol
@@ -3386,28 +3666,82 @@ Children:
         DataType: Boolean
         Value: true
         Children:
-        - Name: ExpressionEvaluator1
-          Id: g=0a0d375297294ea0ac3e29e530325312
-          Type: ExpressionEvaluator
+        - Name: KeyValueConverter1
+          Id: g=30b638982b6aedece53ee9a454279afd
+          Type: ValueMapConverter
           Children:
-          - Name: Expression
-            Id: g=d253cb9ee8f065dcca772cf547155837
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "{0} == 50"
-          - Name: ns=6;Source0
-            Id: g=b8a26a0980ed1678556286c02c52e349
+          - Name: Source
+            Id: g=f056639c7574a79fb233c94b3eecb3af
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
-            - Name: DynamicLink
-              Id: g=7462579d7c843fe3e81343d85d39a341
-              Type: DataBind
-              DataType: NodePath
-              Value: "{BoilerAlias}/TemperatureSetPoint"
+            - Name: ExpressionEvaluator1
+              Id: g=e636dc5d1ee58ebe77ca634443014ecd
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Id: g=ceeac30fed9cbd5c8106345467525021
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "({0} - {1}) > 3"
+              - Name: ns=6;Source0
+                Id: g=8a4b783865a2b5a8f8ad14318d54d18e
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=9cde855efdb89a5b8fb4d42e141c6b09
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Actual"
+              - Name: ns=6;Source1
+                Id: g=5d29ce940cc10cb9eab7c3ec4114aa01
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=638530b5ed4ad5b83511c429c2d75986
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Setpoint"
+          - Name: Pairs
+            Id: g=b193b1dceed6287828c1a3f386594a90
+            Type: BaseObjectType
+            ModellingRule: None
+            Children:
+            - Name: Pair
+              Id: g=e5cf811843c560e93f6ecf0b53abf7f2
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=7fdc4ef3eaf2344cf278cd1994f3588e
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+              - Name: Value
+                Id: g=c1e5663655fe63658be3287f86a0ae3f
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+            - Name: Pair1
+              Id: g=75d50fd1d87ffc7b638ec1387551c28b
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=78e2ed36acb2a49e2efc87eaee5a405b
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: true
+              - Name: Value
+                Id: g=ebfa3b41a7dc38b3075f79c05344d0ca
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: true
       - Name: HorizontalAlignment
         Id: g=b01f7d14706ae799fb56d4e6eb248a92
         Type: BaseVariableType
@@ -3447,6 +3781,141 @@ Children:
           Type: DataBind
           DataType: NodePath
           Value: "../../Setpoint"
+      - Name: TextChanged
+        Id: g=99da7bed23dddc204839626c1d211c73
+        Type: VariableChangedEventDispatcher
+        Children:
+        - Name: VariableNodePath
+          Id: g=015b4bcbfd8dee6dd56a519654ea4f04
+          Type: BaseVariableType
+          DataType: NodePath
+          Value: "../Text"
+        - Name: VariableValueChangedEventHandler1
+          Id: g=112c4c9e0ad529ada9f848f5a30984ae
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=d38407a8d4aa0ec2ae438e6cfa50b57a
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"Id":42,"Namespace":6}
+          - Name: MethodsToCall
+            Id: g=88764f77f991f9a5b26138306f254f61
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=5540f2fe27650712de59c5f31397ae5e
+              Type: BaseObjectType
+              Children:
+              - Name: ns=6;ObjectPointer
+                Id: g=71496aeec4c97652fdd6b04b884c1fe8
+                Type: NodePointer
+                DataType: NodeId
+                Value: {"Id":22,"Namespace":6}
+                Children:
+                - Name: Kind
+                  Id: g=3363ba9e11fa9b62e5fd9aa1a3ac7d66
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: {"Id":58}
+              - Name: ns=6;Method
+                Id: g=ed38c9c1ef4de0d31ecf27fe6125650b
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Id: g=9cc9c308a88badee8933275fdc6ea4d2
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=9725fd0fba711b3410ce48328b9a6250
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":6,"TextId":"SetVariableToModifyDescription"}
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=5f5ec3f3428efd034fa1f21733512f30
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../../../../ExecuteMethod/Appearance@NodeId"
+                    Children:
+                    - Name: Mode
+                      Id: g=bee9c3642c38029d14a9497fbb460cc2
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: Value
+                  Id: g=96e9977647d052e6434580a57e62cef7
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Description: {"NamespaceIndex":6,"TextId":"SetValueDescription"}
+                  Value: ""
+                - Name: ArrayIndex
+                  Id: g=d49385aeda5dd7608a8998c75887bdb2
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":6,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=cdf9e6073e68b74338a87b1b6c3d4860
+            Type: VariableValueChangedEvent
+            Children:
+            - Name: VariableNodeId
+              Id: g=08587a57eff63ace7ba64c04f63cffb0
+              Type: BaseVariableType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: NewValue
+              Id: g=5a1a5618a9516e3d9c5c48622dde227e
+              Type: BaseVariableType
+              DataType: BaseDataType
+            - Name: OldValue
+              Id: g=d80239555529e56c1f0601a7d7d749f1
+              Type: BaseVariableType
+              DataType: BaseDataType
+            - Name: EventId
+              Id: g=4cb46e587b28cfe7e072691386395b54
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=d9330b9ecd7d00aa4dd0f6d130f8c517
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=1912abfb4010269d4bc797b82e78c96f
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=b798bdccc998a6bafac45e97197ddc61
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=7df19f423751b1d0646079c836ad36e2
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=f57513f2547b1b7c413a9e8dc8a6192e
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=d1c87b674f142538a458287f9579513b
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=318dd7ee1846418cf3a7cbaa40ecafdd
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
     - Name: Unit
       Id: g=114f0c8af2ad17c965e8754131b6c595
       Type: Label
@@ -3584,6 +4053,94 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+      - Name: ImagePath
+        Id: g=1ab1795bdc3951466d851436793f957f
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=17;%PROJECTDIR%/res/SetpointGray.svg"
+        Children:
+        - Name: KeyValueConverter1
+          Id: g=a32b579a3ab6bd67b4db6545b2804e25
+          Type: ValueMapConverter
+          Children:
+          - Name: Source
+            Id: g=db600461f2f89ac3d6e96d3324f4b639
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: ExpressionEvaluator1
+              Id: g=7875b47a7cee7957872932d876220efc
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Id: g=1eb0b093dc4dc0e6796f6063119224d1
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "(abs ({0} - {1})) > 3"
+              - Name: ns=6;Source0
+                Id: g=e40e79becfb828032b5a288863c87e2f
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=6a0ca6979b911987a90f4059cb4b3ce6
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Actual"
+              - Name: ns=6;Source1
+                Id: g=4d87041c44c6e11c507ec3e8fb1db6a4
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=046495782f0e5f04f8514df59ea3fa82
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Setpoint"
+          - Name: Pairs
+            Id: g=e30483421c82a9f238cbe2168f6587be
+            Type: BaseObjectType
+            ModellingRule: None
+            Children:
+            - Name: Pair
+              Id: g=52cc818e019a9a1aa5c5f6293088cc76
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=efaa76658d7b5f72b0b9fcef277358b3
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+              - Name: Value
+                Id: g=7076a265cc153730c39e53616a90b7e8
+                Type: BaseDataVariableType
+                DataType: ResourceUri
+                Value: "ns=17;%PROJECTDIR%/res/SetpointGray.svg"
+            - Name: Pair1
+              Id: g=e722e2cee740e2a63fff60914b1c1ffd
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=bd755c62537ebc21ff5a4292e30d8e45
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: true
+              - Name: Value
+                Id: g=54cc0d6a2e081f7fe6208ecbc28d250e
+                Type: BaseDataVariableType
+                DataType: ResourceUri
+                Value: "ns=17;%PROJECTDIR%/res/SetpointCyan.svg"
+      - Name: ImageWidth
+        Id: g=a1c479d8b246ebb330c1405af995276a
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
   - Name: BoilerAlias
     Id: g=a18812ce54e7be223e65e7b08fdafd2c
     Type: Alias
@@ -3874,18 +4431,18 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 27.0
-    - Name: ImagePath
-      Id: g=45f91772d7a636c184dee1ef084bb994
-      Type: BaseDataVariableType
-      DataType: ResourceUri
-      ModellingRule: Optional
-      Value: "ns=17;%PROJECTDIR%/res/Setpoint.svg"
     - Name: ImageWidth
       Id: g=9238c23ac05b38c600b788496bed069f
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 20.0
+  - Name: Blink
+    Id: g=cf1798d8d5d2641655a118d1ca2bed8d
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: false
 - Name: ParametersWidget
   Id: g=396574c3e0c82e19c9342bcb616d23fb
   Supertype: Rectangle
