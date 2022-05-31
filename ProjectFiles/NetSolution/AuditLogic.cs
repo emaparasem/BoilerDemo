@@ -1,34 +1,17 @@
 #region Using directives
+using FTOptix.HMIProject;
+using FTOptix.NetLogic;
+using FTOptix.Store;
 using System;
 using UAManagedCore;
-using OpcUa = UAManagedCore.OpcUa;
-using FTOptix.Alarm;
-using FTOptix.NetLogic;
-using FTOptix.HMIProject;
-using FTOptix.WebUI;
-using FTOptix.UI;
-using FTOptix.NativeUI;
-using FTOptix.Recipe;
-using FTOptix.Datalogger;
-using FTOptix.EventLogger;
-using FTOptix.SQLiteStore;
-using FTOptix.Store;
-using FTOptix.OPCUAClient;
-using FTOptix.EthernetIP;
-using FTOptix.CoreBase;
-using FTOptix.CommunicationDriver;
-using FTOptix.Core;
 #endregion
 
-public class AuditLogic : BaseNetLogic
-{
-    public override void Start()
-    {
+public class AuditLogic : BaseNetLogic {
+    public override void Start() {
         // Insert code to be executed when the user-defined logic is started
     }
 
-    public override void Stop()
-    {
+    public override void Stop() {
         // Insert code to be executed when the user-defined logic is stopped
     }
 
