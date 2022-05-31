@@ -31,7 +31,7 @@ Children:
 - Name: Events
   Type: BaseDataVariableType
   DataType: EventsEnum
-  Value: 1
+  Value: 0
 - Name: RuntimeConfigurations
   Type: BaseObjectType
 - Class: Reference
