@@ -1,4 +1,5 @@
 Name: Recipes
+Id: g=1aadf45ab7ec31aaa239bfe313ed89bd
 Type: FolderType
 Children:
 - Name: RecipeSchema
@@ -6,17 +7,21 @@ Children:
   Type: RecipeSchema
   Children:
   - Name: Root
+    Id: g=511f8014c7b300b87c1b00728e630965
     Type: BaseObjectType
     Children:
     - Name: BoilerSetpoint
+      Id: g=80480020c277cf2fc42d2d8c445c24d9
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
     - Name: BoilerHeatTemp
+      Id: g=34934cfe9cea24e43382b4056c997af1
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
     - Name: BoilerChillTemp
+      Id: g=ff49af9d2cae9ca82455ee9b6b25d917
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
@@ -54,20 +59,24 @@ Children:
     Target: ns=11;i=60
     Direction: Forward
   - Name: Store
+    Id: g=caf353f161a57fcd6849ef5d3a2102b1
     Type: NodePointer
     DataType: NodeId
     Value: {"IdType":2,"Id":"b64b1a3c83f8b66c8afbfccb5cec04d9","Namespace":17}
     Children:
     - Name: Kind
+      Id: g=d2613d8ab5251ffdb95397f526f521cb
       Type: PropertyType
       DataType: NodeId
       Value: {"Id":1,"Namespace":14}
   - Name: TargetNode
+    Id: g=10ed49e2c0231ec0b0b0c4c94ff6e9b5
     Type: NodePointer
     DataType: NodeId
     Value: {"IdType":2,"Id":"d3b4a10b5eff7364d74782c172a65b8e","Namespace":17}
     Children:
     - Name: Kind
+      Id: g=e2399b1b4480348e5fe1223256c21d5a
       Type: PropertyType
       DataType: NodeId
       Value: {"IdType":0,"Id":0,"Namespace":-1}
@@ -76,14 +85,17 @@ Children:
     Type: BaseObjectType
     Children:
     - Name: BoilerSetpoint
+      Id: g=b1300aea0ba08e1af2b0926dcb2aca77
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
     - Name: BoilerHeatTemp
+      Id: g=9a237cd3e74b7b785090b74f7d5a83de
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
     - Name: BoilerChillTemp
+      Id: g=572a6bd09da1c6d4593408697c362a6a
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0

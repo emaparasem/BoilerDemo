@@ -4,6 +4,7 @@ using FTOptix.NetLogic;
 using FTOptix.Store;
 using System;
 using UAManagedCore;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class AuditLogic : BaseNetLogic {

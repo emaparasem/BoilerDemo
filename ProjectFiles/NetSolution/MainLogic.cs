@@ -2,6 +2,7 @@
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using UAManagedCore;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class MainLogic : BaseNetLogic {

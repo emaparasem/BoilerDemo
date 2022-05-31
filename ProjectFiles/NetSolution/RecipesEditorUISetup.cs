@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UAManagedCore;
+using FTOptix.OPCUAServer;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 

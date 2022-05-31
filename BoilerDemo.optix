@@ -139,5 +139,13 @@ Project:
   42:
    Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://www.unifiedautomation.com/DemoServer/'
    ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  43:
+   Uri: 'urn:FTOptix:OPCUAServer'
+   Module: FTOptix.OPCUAServer
+   Version: 5.1.0.0
+  44:
+   Uri: 'urn:FTOptix:OPCUAServer:Net'
+   Module: FTOptix.OPCUAServer.Net
+   Version: 3.1.0.0
  Nodes:
  - File: Nodes/BoilerDemo.yaml

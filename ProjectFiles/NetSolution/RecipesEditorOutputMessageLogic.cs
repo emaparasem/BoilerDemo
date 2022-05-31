@@ -3,6 +3,7 @@ using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using System;
 using UAManagedCore;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class RecipesEditorOutputMessageLogic : BaseNetLogic {

@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UAManagedCore;
+using FTOptix.OPCUAServer;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 
