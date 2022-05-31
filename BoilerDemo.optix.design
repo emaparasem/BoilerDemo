@@ -42,14 +42,5 @@ Project:
    Uri: 'urn:FTOptix:NetLogic'
    Module: FTOptix.NetLogic
    Version: 5.0.0.0
-  13:
-   Uri: 'urn:FTOptix:Core:Net'
-   Module: FTOptix.Core.Net
-   Version: 6.2.0.0
-  15:
-   Uri: 'urn:FTOptix:EthernetIPDriverTagImporter'
-   Module: FTOptix.EthernetIPDriverTagImporter
-   Version: 4.0.0.0
  Nodes:
- - File: DesignTimeNodes/CommDrivers/EthernetIPDriver/EthernetIPStation/TagImporter.yaml
  - File: 'DesignTimeNodes/OPC-UA/OPCUAClient/OPCUATagImporter.yaml'
