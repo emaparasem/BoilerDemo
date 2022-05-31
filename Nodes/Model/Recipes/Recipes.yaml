@@ -2,18 +2,63 @@ Name: Recipes
 Id: g=d3b4a10b5eff7364d74782c172a65b8e
 Type: FolderType
 Children:
-- Name: BoilerSetpoint
+- Name: BoilerLevelSetpoint
   Id: g=cf5748509df58728db93be2a33b28bd3
   Type: BaseDataVariableType
   DataType: Int32
   Value: 100
-- Name: BoilerHeatTemp
+  Children:
+  - Name: ns=0;EURange
+    Id: g=0b36b6cf8b58f4975ef84ce1c222e6af
+    Type: RangeType
+    DataType: EURange
+    Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+    Children:
+    - Name: Low
+      Id: g=a47029eea9ba74d1c9b58f399df3f00c
+      Type: BaseVariableType
+      DataType: Double
+      ReferenceType: HasProperty
+      Value: 2.0
+    - Name: High
+      Id: g=aebf5d8ba473c75250035fbf3d4308f2
+      Type: BaseVariableType
+      DataType: Double
+      ReferenceType: HasProperty
+      Value: 100.0
+    - Name: Constrain
+      Id: g=9b806555f784550ef0e9c0a4d0a06fff
+      Type: BaseVariableType
+      DataType: Boolean
+      ReferenceType: HasProperty
+      Value: true
+- Name: BoilerTempSetpoint
   Id: g=2d2c36fd6206438ab7cd4b59ef9d6941
   Type: BaseDataVariableType
   DataType: Int32
   Value: 90
-- Name: BoilerChillTemp
-  Id: g=8deda6b426eb4178b4f87a409017cefd
-  Type: BaseDataVariableType
-  DataType: Int32
-  Value: 50
+  Children:
+  - Name: ns=0;EURange
+    Id: g=603b539d9a1f3e6238e92a7f62759a8f
+    Type: RangeType
+    DataType: EURange
+    Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+    Children:
+    - Name: Low
+      Id: g=9ce8bd2c3fbfefb0a1943db2ea0051ac
+      Type: BaseVariableType
+      DataType: Double
+      ReferenceType: HasProperty
+      Value: 30.0
+    - Name: High
+      Id: g=049253e7e684f614b0548a5033a9daa1
+      Type: BaseVariableType
+      DataType: Double
+      ReferenceType: HasProperty
+      Value: 90.0
+    - Name: Constrain
+      Id: g=67d254577812fdeec6d903c3979b9f66
+      Type: BaseVariableType
+      DataType: Boolean
+      ReferenceType: HasProperty
+      Value: true

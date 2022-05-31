@@ -10,18 +10,13 @@ Children:
     Id: g=511f8014c7b300b87c1b00728e630965
     Type: BaseObjectType
     Children:
-    - Name: BoilerSetpoint
-      Id: g=80480020c277cf2fc42d2d8c445c24d9
+    - Name: BoilerLevelSetpoint
+      Id: g=e49ded143d5e38bedad89d2f34fb2d23
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
-    - Name: BoilerHeatTemp
-      Id: g=34934cfe9cea24e43382b4056c997af1
-      Type: BaseDataVariableType
-      DataType: Int32
-      Value: 0
-    - Name: BoilerChillTemp
-      Id: g=ff49af9d2cae9ca82455ee9b6b25d917
+    - Name: BoilerTempSetpoint
+      Id: g=d7fc3a83e39761a41d802325f5711ea3
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
@@ -81,21 +76,16 @@ Children:
       DataType: NodeId
       Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: EditModel
-    Id: g=c68b6cc0b498e2748054a02c38180ec7
+    Id: g=e75a581c78bcfb3bf5d1f26f14b1514f
     Type: BaseObjectType
     Children:
-    - Name: BoilerSetpoint
-      Id: g=b1300aea0ba08e1af2b0926dcb2aca77
+    - Name: BoilerLevelSetpoint
+      Id: g=622101413ed31e366c116f40dc478b7f
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
-    - Name: BoilerHeatTemp
-      Id: g=9a237cd3e74b7b785090b74f7d5a83de
-      Type: BaseDataVariableType
-      DataType: Int32
-      Value: 0
-    - Name: BoilerChillTemp
-      Id: g=572a6bd09da1c6d4593408697c362a6a
+    - Name: BoilerTempSetpoint
+      Id: g=69343b71941bae758bdfde45be0d3b88
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
