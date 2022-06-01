@@ -7743,7 +7743,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Duration
         ModellingRule: Optional
-        Value: "0:00:00:5.0000000"
+        Value: "0:00:00:1.0000000"
       - Name: SortColumn
         Id: g=55ca94536c98e8ab7be1786a77c81080
         Type: BaseDataVariableType
