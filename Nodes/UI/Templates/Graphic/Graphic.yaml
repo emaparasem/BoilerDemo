@@ -1546,60 +1546,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 12.244000434875488
-- Name: Nav_Close
-  Id: g=1dceb680cff345dbb785a809eb7a1915
-  Supertype: ScaleLayout
-  ReferenceType: HasComponent
-  Children:
-  - Name: FillColor
-    Id: g=b4b36f8d131fd874b591bf64d93d8284
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#d1d3d4"
-  - Name: Width
-    Id: g=e200d4c58b94d25683e5cd6f195f2d76
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 18.0
-  - Name: Height
-    Id: g=daccc8986c2d57144c3676d218be79c4
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 18.0
-  - Name: Icon_border
-    Id: g=eb7499daedb54c06ebad8e31dee2f453
-    Type: Image
-    Children:
-    - Name: Path
-      Id: g=1ce668e9bc2542360f1f3eebc0e330cf
-      Type: BaseDataVariableType
-      DataType: ResourceUri
-      Value: "ns=17;%PROJECTDIR%/res/Nav_Close_Icon_border.svg"
-    - Name: DynamicColor
-      Id: g=473794f9257c287102f74337a7c40277
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#d1d3d4"
-      Children:
-      - Name: DynamicLink
-        Id: g=0d925ac32a8d88b14e5d27203484b2e7
-        Type: DataBind
-        DataType: NodePath
-        Value: "../../FillColor"
-    - Name: Width
-      Id: g=e588e2546f7b3d57d32893b8f2b55c89
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 18.0
-    - Name: Height
-      Id: g=81af23c1ee75e4ebb1940343aa47c81b
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 18.0
 - Name: HotSurfaceSymbol2
   Id: g=52490a9efa8b43bbacfc2c6ed12361dc
   Supertype: ScaleLayout
@@ -1708,3 +1654,57 @@ Children:
         Type: DataBind
         DataType: NodePath
         Value: "../../FillColor"
+- Name: DoubleWave
+  Id: g=902a2674b8b0483d81998a82be8647d8
+  Supertype: ScaleLayout
+  ReferenceType: HasComponent
+  Children:
+  - Name: FillColor
+    Id: g=f1d434cf86f1808d375d4d357b97a579
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#d1d3d4"
+  - Name: Width
+    Id: g=0611b2c82c949a5a2f2997bff9edb742
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 18.0
+  - Name: Height
+    Id: g=f3ba2b4660d021af9ee4c0d2ec8e2074
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 14.394000053405762
+  - Name: shape
+    Id: g=4d86f35440d91fcb9bbafbcec65febdb
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=8d0812691332d5976744be8fd28512d6
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=17;%PROJECTDIR%/res/DoubleWave_shape.svg"
+    - Name: DynamicColor
+      Id: g=649b24fd0fe9fc373aeb555052f4df55
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#d1d3d4"
+      Children:
+      - Name: DynamicLink
+        Id: g=2a17c342ea32d2407a4a15ecad531b03
+        Type: DataBind
+        DataType: NodePath
+        Value: "../../FillColor"
+    - Name: Width
+      Id: g=80397112241fd57b8d7b52001be4dc42
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 18.0
+    - Name: Height
+      Id: g=9258063739c131cf775caae78bf9376e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 14.394000053405762
