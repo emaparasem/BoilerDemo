@@ -1721,7 +1721,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 140.0
+      Value: 107.0
     - Name: TopMargin
       Id: g=8b09b61c49ec5c468fdb8b88260e3f6f
       Type: BaseVariableType
@@ -1883,6 +1883,15 @@ Children:
           Type: DataBind
           DataType: NodePath
           Value: "../../MeasurementUnit"
+    - Name: Arrow
+      Id: g=dd75c57bdda2c048b621f89a014f2641
+      Type: Image
+      Children:
+      - Name: Path
+        Id: g=0669e342347ab953b7dd5cf829ae2976
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=17;%PROJECTDIR%/res/Setpoint.svg"
     - Name: ExecuteMethod
       Id: g=515a970538f57955f8e1e0492de60e73
       Type: Button
@@ -1892,13 +1901,45 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: Optional
-        Value: true
+        Value: false
       - Name: ImagePath
         Id: g=633c85582915bfb15188e6918b3e2377
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: Optional
         Value: "ns=17;%PROJECTDIR%/res/SetpointGray.svg"
+      - Name: Visible
+        Id: g=7b9dfcc969d3b960b1593fadbcf4808b
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=e7d2b018d813b7ab911f57411b142077
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Id: g=cbe20d0bdbf2a87cdb59514eb024c5c4
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=01459f669bfc090ee42f0376df29ef0d
+              Type: DataBind
+              DataType: NodePath
+              Value: "../../../../Actual"
+          - Name: Source1
+            Id: g=c5239a6f1f222631a5c4cefdd9800013
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=6b2cc2aef0c7d57ff0bf80abdf38a277
+              Type: DataBind
+              DataType: NodePath
+              Value: "../../../../Setpoint"
   - Name: TankAlias
     Id: g=3b552ccb2212bb045f2b794642cfb158
     Type: Alias
@@ -2583,7 +2624,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: -414.0
+      Value: -418.0
     - Name: RightMargin
       Id: g=1b91cd379c0bd4548404bd79812eac33
       Type: BaseVariableType
@@ -2595,7 +2636,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 111.0
+      Value: 127.0
   - Name: Boiler
     Id: g=eabe8314ff9cf77ceb34287d6b6fa00b
     Type: Boiler
@@ -3120,6 +3161,15 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 70.0
+    - Name: Arrow
+      Id: g=0deb15e4a364b8f15c0d11bfd15bbb02
+      Type: Image
+      Children:
+      - Name: Path
+        Id: g=031c18af72812642a2599a5b81055798
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=17;%PROJECTDIR%/res/Setpoint.svg"
     - Name: ExecuteMethod
       Id: g=ee6469ed005abac59e68df25a0c7091e
       Type: Button
@@ -3322,13 +3372,45 @@ Children:
         Id: g=6e640e1bd5fcb1d2c1d4009b9cee0695
         Type: BaseVariableType
         DataType: String
-        Value: "transparent"
+        Value: ""
       - Name: TopMargin
         Id: g=20dc6d30828aacb445351a509b3848b5
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 83.0
+        Value: 84.0
+      - Name: Visible
+        Id: g=9144d5311da2df340cc129e8a7b1a07d
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=3206b794461fb9f3dd600cb3564b3741
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Id: g=6f638a61773ba5faa07b717f595feb16
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=45643969b09f115bf769ef42e0ea3060
+              Type: DataBind
+              DataType: NodePath
+              Value: "../../../../Actual"
+          - Name: Source1
+            Id: g=4424528e2d11d42713435151aebe8948
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=a06197bdfd44e0d4ecf970c3a387c3c5
+              Type: DataBind
+              DataType: NodePath
+              Value: "../../../../Setpoint"
   - Name: Temperature
     Id: g=481ecce26e3af107c9bd907f6b26b557
     Type: StatusWidget
@@ -3512,7 +3594,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 12.0
+        Value: 10.0
       - Name: BottomMargin
         Id: g=333961a5411deae2576a9d33e9491c78
         Type: BaseVariableType
@@ -3551,7 +3633,7 @@ Children:
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: "({0} - {1}) < 3"
+                Value: "((abs ({0} - {1})) > 3) && ({1} > {0})"
               - Name: ns=6;Source0
                 Id: g=2ef515db30d481b25bb56d46ff26f723
                 Type: BaseDataVariableType
@@ -3686,7 +3768,7 @@ Children:
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: "({0} - {1}) > 3"
+                Value: "((abs ({0} - {1})) > 3) && ({1} < {0})"
               - Name: ns=6;Source0
                 Id: g=8a4b783865a2b5a8f8ad14318d54d18e
                 Type: BaseDataVariableType
@@ -3759,7 +3841,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 12.0
+        Value: 10.0
       - Name: BottomMargin
         Id: g=ed9dd157278b49a9f27819ea100fe3b9
         Type: BaseVariableType
@@ -3916,6 +3998,18 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+      - Name: LeftMargin
+        Id: g=0fefea3c519a60e89f72a2b5ff68eec0
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 42.0
+      - Name: TopMargin
+        Id: g=cfe7af23637797c6f9c9576af2c4ef17
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 88.0
     - Name: Unit
       Id: g=114f0c8af2ad17c965e8754131b6c595
       Type: Label
@@ -3937,6 +4031,21 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 88.0
+      - Name: LeftMargin
+        Id: g=6225b288e1185acd8b7a7fed39ca3e6d
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 63.0
+    - Name: Arrow
+      Id: g=ca8be3560765ef90529c9c6457c6cc90
+      Type: Image
+      Children:
+      - Name: Path
+        Id: g=5e2cc140ba48f02309984ba3dabdd755
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=17;%PROJECTDIR%/res/Setpoint.svg"
     - Name: ExecuteMethod
       Id: g=ff451c3290db37991febcc2ecef17389
       Type: Button
@@ -4140,7 +4249,39 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 20.0
+        Value: 18.0
+      - Name: Visible
+        Id: g=b8f947ccebe73f8c1e8398afce049939
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=3dbc13cb39f6124c26304c6d89135119
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Id: g=351fce5ee56272d037689d54f4d2557d
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=16ea6dc2591bc0551a4bb000af984491
+              Type: DataBind
+              DataType: NodePath
+              Value: "../../../../Actual"
+          - Name: Source1
+            Id: g=107d4ca1dcfa5160306659843aa66c1d
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=c3d3d610e74192b10ac8f0792dac53d2
+              Type: DataBind
+              DataType: NodePath
+              Value: "../../../../Setpoint"
   - Name: BoilerAlias
     Id: g=a18812ce54e7be223e65e7b08fdafd2c
     Type: Alias
@@ -4397,6 +4538,39 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 88.0
+  - Name: Arrow
+    Id: g=a9eaa596f3f527e16583d7c27b312536
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=e2fc8282bf9c4bf73238143afea1b042
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=17;%PROJECTDIR%/res/Setpoint.svg"
+    - Name: Width
+      Id: g=8eb68499f69da98a41daece91a05bc96
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 18.0
+    - Name: Height
+      Id: g=16c279cff2e78ababc53e4c182a603ec
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 18.0
+    - Name: LeftMargin
+      Id: g=588e4cc1a38bcde2035627f028ebd8f8
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 13.0
+    - Name: TopMargin
+      Id: g=03dcb9bbe5ee2b1c9d1ed6d4422e2329
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 88.0
   - Name: ExecuteMethod
     Id: g=3fcb0a6c63e762b0a4d9041ff6c10447
     Type: Button
@@ -4406,75 +4580,85 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 5.0
+      Value: 9.0
     - Name: TopMargin
       Id: g=e9917df33a1fe6d01a633689ab5276e6
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 83.0
+      Value: 84.0
     - Name: Width
       Id: g=f924fdd526635b255a15107d6d775135
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 25.0
     - Name: Appearance
       Id: g=bc5bc980bda0472dffb740f9f350a699
       Type: BaseVariableType
       DataType: String
       ModellingRule: Optional
-      Value: "transparent"
+      Value: ""
     - Name: Height
       Id: g=9907daffaf8ec79a450787041e692c99
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 27.0
+      Value: 25.0
     - Name: ImageWidth
       Id: g=9238c23ac05b38c600b788496bed069f
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 20.0
+      Value: 18.0
+    - Name: ImagePath
+      Id: g=b26cfe8805afc3d4c33dfc6fab91b0f9
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      ModellingRule: Optional
+      Value: "ns=17;%PROJECTDIR%/res/SetpointCyan.svg"
+    - Name: Visible
+      Id: g=2cd9b347bef39afdb85739b8b29a4d76
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Id: g=330f1168df769f7d6c2bf8f646b6eb89
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Id: g=831be6db69625046e0c32a7641cdce6f
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "(abs ({0} - {1})) > 3"
+        - Name: ns=6;Source0
+          Id: g=9fb692f41193b51fe35930c9da562708
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=4bf9bd48fc63f442ab4ef51e6885a92e
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../../../Actual"
+        - Name: ns=6;Source1
+          Id: g=ed2699836c0af9e36083731c0dfbdb65
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=e4d620f6d83fdc8c4f48b95e88ec0519
+            Type: DataBind
+            DataType: NodePath
+            Value: "../../../../Setpoint"
   - Name: Blink
     Id: g=cf1798d8d5d2641655a118d1ca2bed8d
     Type: BaseDataVariableType
     DataType: Boolean
     ModellingRule: Optional
     Value: false
-- Name: ParametersWidget
-  Id: g=396574c3e0c82e19c9342bcb616d23fb
-  Supertype: Rectangle
-  ReferenceType: HasComponent
-  Children:
-  - Name: Width
-    Id: g=bcd91029ad6e7b648175e5145fbf072e
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 120.0
-  - Name: Height
-    Id: g=b5091907b37bc6bd3edd144a66578a60
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 120.0
-  - Name: BorderThickness
-    Id: g=c9975d945e51e899157d0c7f0ce8548c
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 1.0
-  - Name: FillColor
-    Id: g=72885c15528db097f40a7c303e0babc4
-    Type: BaseDataVariableType
-    DataType: Color
-    ModellingRule: Optional
-    Value: "#ffffffdd"
-  - Name: CornerRadius
-    Id: g=0565bc3028de90514eada0836dfb0f69
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 5.0
