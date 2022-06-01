@@ -2635,6 +2635,9 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "B2003"
+    - Name: Button1
+      Id: g=869a3303b40090d08283de7046c0f71d
+      Type: Button
   - Name: TankWidget1
     Id: g=2e527df5e141bf6c0fc80fd7ae2d446f
     Type: TankWidget
