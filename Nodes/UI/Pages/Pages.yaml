@@ -6706,7 +6706,7 @@ Children:
         Id: g=6bc3135b02896a1eb97c31d43ed35190
         Type: BaseDataVariableType
         DataType: String
-        Value: "SELECT * FROM \"DataLogger\""
+        Value: "SELECT * FROM \"DataLogger\" LIMIT 100"
       - Name: Columns
         Id: g=52ad68e4e9e8de1a692984ba3ea2160c
         Type: BaseObjectType
@@ -11796,7 +11796,7 @@ Children:
             DataType: LocalizedText
             ReferenceType: HasParameter
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"SELECT ActiveState_Id, EnabledState_Id, AckedState_Id, ConfirmedState_Id, ConditionName, SourceName, {1:sql_identifier} AS Message, Severity, LocalTime FROM {0:sql_identifier} ORDER BY LocalTime DESC"}
+            Value: {"LocaleId":"en-US","Text":"SELECT ActiveState_Id, EnabledState_Id, AckedState_Id, ConfirmedState_Id, ConditionName, SourceName, {1:sql_identifier} AS Message, Severity, LocalTime FROM {0:sql_identifier} ORDER BY LocalTime DESC LIMIT 100"}
           - Name: Source0
             Id: g=a015450e585bec08ac3356b0c13044e2
             Type: BaseDataVariableType
