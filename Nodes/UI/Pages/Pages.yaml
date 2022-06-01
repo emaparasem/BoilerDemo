@@ -4341,13 +4341,6 @@ Children:
                       Type: DataBind
                       DataType: NodePath
                       Value: "{MainBoilerAlias}/FillLevelSensor/FillLevel"
-                      Children:
-                      - Name: Mode
-                        Id: g=b0c692b606533b47cea466dcf36fefb2
-                        Type: BaseVariableType
-                        DataType: DataBindModeType
-                        ModellingRule: Optional
-                        Value: 2
                   - Name: Mode
                     Id: g=b685e35e13b481259502978f80718636
                     Type: PropertyType
@@ -4514,13 +4507,6 @@ Children:
                   Type: DataBind
                   DataType: NodePath
                   Value: "../../../../../../TankAlias/ValveInCmd@NodeId"
-                  Children:
-                  - Name: Mode
-                    Id: g=62a2acf56a1e5e2976b6d92d5f34731e
-                    Type: BaseVariableType
-                    DataType: DataBindModeType
-                    ModellingRule: Optional
-                    Value: 2
               - Name: Value
                 Id: g=ea5897a858a227cc0d703373c9dd70a1
                 Type: BaseDataVariableType
@@ -4570,13 +4556,6 @@ Children:
                   Type: DataBind
                   DataType: NodePath
                   Value: "../../../../../../TankAlias/ValveOutCmd@NodeId"
-                  Children:
-                  - Name: Mode
-                    Id: g=6381f2e6b35d9d9873e1e5a1e43babaf
-                    Type: BaseVariableType
-                    DataType: DataBindModeType
-                    ModellingRule: Optional
-                    Value: 2
               - Name: Value
                 Id: g=acda93c0a761e7d9d9611ca5ac10d8c8
                 Type: BaseDataVariableType
@@ -11808,12 +11787,6 @@ Children:
               Type: DataBind
               DataType: NodePath
               Value: "{AlarmEventsLogger}@BrowseName"
-              Children:
-              - Name: Mode
-                Id: g=de9499d0396f7443e15d44d6530acbe8
-                Type: BaseVariableType
-                DataType: DataBindModeType
-                Value: 0
           - Name: Source1
             Id: g=d4836d3ecd3f52a55861fe6295944af8
             Type: BaseDataVariableType
@@ -11842,12 +11815,6 @@ Children:
                   Type: DataBind
                   DataType: NodePath
                   Value: "{Session}/ActualLocaleIds[0]"
-                  Children:
-                  - Name: Mode
-                    Id: g=7ae22d51b6f99e0313cbc83465caeef8
-                    Type: BaseVariableType
-                    DataType: DataBindModeType
-                    Value: 0
               - Name: Mode
                 Id: g=c8d38818b563c590b92b5d681056dbe9
                 Type: PropertyType
@@ -12108,13 +12075,6 @@ Children:
                     Type: DataBind
                     DataType: NodePath
                     Value: "{Item}/ActiveState_Id"
-                    Children:
-                    - Name: Mode
-                      Id: g=ca2f64c74de902e12603d642501de335
-                      Type: BaseVariableType
-                      DataType: DataBindModeType
-                      ModellingRule: Optional
-                      Value: 2
                 - Name: Pairs
                   Id: g=8d0c453fa374687f35b9c8269f41b7e5
                   Type: BaseObjectType
@@ -12211,13 +12171,6 @@ Children:
                     Type: DataBind
                     DataType: NodePath
                     Value: "{Item}/AckedState_Id"
-                    Children:
-                    - Name: Mode
-                      Id: g=5abd7ffd1e83c3d7b2b91862d3f87cb3
-                      Type: BaseVariableType
-                      DataType: DataBindModeType
-                      ModellingRule: Optional
-                      Value: 2
                 - Name: Pairs
                   Id: g=2ec2577be97f3a8d8c0a57098effbab9
                   Type: BaseObjectType
@@ -12314,13 +12267,6 @@ Children:
                     Type: DataBind
                     DataType: NodePath
                     Value: "{Item}/ConfirmedState_Id"
-                    Children:
-                    - Name: Mode
-                      Id: g=7a9d55c4568375c34ec42a094922d131
-                      Type: BaseVariableType
-                      DataType: DataBindModeType
-                      ModellingRule: Optional
-                      Value: 2
                 - Name: Pairs
                   Id: g=f3868883c1d2e76df893ba1aa6e0e4ce
                   Type: BaseObjectType

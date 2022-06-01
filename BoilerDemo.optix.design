@@ -1,0 +1,55 @@
+Project:
+ Name: BoilerDemo_Design
+ ProjectNamespaceIndex: 4
+ Description: ''
+ Company: ''
+ Copyright: ''
+ FormatVersion: 1
+ CoreVersion: 8.0.0.0
+ Dependencies:
+  6:
+   Uri: 'urn:FTOptix:CoreBase'
+   Module: FTOptix.CoreBase
+   Version: 8.0.0.0
+  17:
+   Uri: BoilerDemo
+   RelativePath: BoilerDemo.optix
+  18:
+   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC553.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
+   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  19:
+   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://opcfoundation.org/UA/DI/'
+   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  20:
+   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://PLCopen.org/OpcUa/IEC61131-3/'
+   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  21:
+   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://www.unifiedautomation.com/DemoServer/'
+   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+  22:
+   Uri: 'urn:FTOptix:CoreBase:Net'
+   Module: FTOptix.CoreBase.Net
+   Version: 5.0.0.0
+  23:
+   Uri: 'urn:FTOptix:NetLogic'
+   Module: FTOptix.NetLogic
+   Version: 5.0.0.0
+  24:
+   Uri: 'urn:FTOptix:Core:Net'
+   Module: FTOptix.Core.Net
+   Version: 6.2.0.0
+  25:
+   Uri: 'urn:FTOptix:TagImporter'
+   Module: FTOptix.TagImporter
+   Version: 2.0.0.0
+  26:
+   Uri: 'urn:FTOptix:EthernetIPDriverTagImporter'
+   Module: FTOptix.EthernetIPDriverTagImporter
+   Version: 4.0.0.0
+  27:
+   Uri: 'urn:FTOptix:OPCUAImporter'
+   Module: FTOptix.OPCUAImporter
+   Version: 3.0.0.0
+ Nodes:
+ - File: DesignTimeNodes/CommDrivers/EthernetIPDriver/EthernetIPStation/EthernetIPTagImporter.yaml
+ - File: 'DesignTimeNodes/OPC-UA/OPCUAClient/OPCUATagImporter.yaml'

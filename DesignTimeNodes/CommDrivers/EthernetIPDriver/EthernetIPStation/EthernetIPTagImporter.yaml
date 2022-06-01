@@ -1,0 +1,28 @@
+Name: EthernetIPTagImporter
+Id: g=e30a6fc3ba2d205254cb8597e443f72e
+Type: EthernetIPDriverTagImporter
+OwnerId: ns=17;g=d3f86636d527f9c9f7b18deed51ad1c5
+Children:
+- Name: FilePath
+  Id: g=391ec42da7ca662f177c1cf99921ffba
+  Type: BaseDataVariableType
+  DataType: AbsoluteResourceUri
+  Value: ""
+- Name: Mode
+  Id: g=1eade97b802dfb52e5dd63b672884d2c
+  Type: BaseDataVariableType
+  DataType: FetchModes
+  Value: 0
+- Name: IgnoredPLCItems
+  Id: g=3b48c34ad4faf1a7c6dac12e58a0303e
+  Type: BaseDataVariableType
+  DataType: BaseDataType
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+- Name: IgnoredHMIItems
+  Id: g=2082010eab07567b7af284c2e3f92f3b
+  Type: BaseDataVariableType
+  DataType: NodeId
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+  Value: []

@@ -18,3 +18,66 @@ Children:
       ValueRank: OneDimension
       ArrayDimensions: [0]
       Value: [{"TypeId":{"Id":296},"Body":{"Name":"recipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"recipeAction","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: ProjectOptimizer
+  Id: g=d6b5c5f803f9f2678ccd761c34a76d74
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=4258951c3f810a28447e2397a4a3f7e7
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: Verify_1_DataItemTemplates
+    Id: g=44f01e764adada0a25e6b622059d8f69
+  - Class: Method
+    Name: Optimize_1_DataItemTemplates
+    Id: g=1808a6f55a341fa88016cea0c07511b8
+  - Class: Method
+    Name: Verify_2_DuplicatedProperties
+    Id: g=ee6f1fc34f65e6b0bc81d71c492bb611
+  - Class: Method
+    Name: Optimize_2_DuplicatedProperties
+    Id: g=0ae954461ad90b15667beffa137234b4
+  - Class: Method
+    Name: Verify_3_OptionalInstanceDeclarations
+    Id: g=e07a8434f97ffbb9387ca4b8afd1b514
+  - Class: Method
+    Name: Optimize_3_OptionalInstanceDeclarations
+    Id: g=381ab40786001a3bfc5d4d3ecdf865d2
+  - Class: Method
+    Name: Verify_4_InheritanceGraph
+    Id: g=658f6a1c2b40c4588ce11422629eb9fa
+  - Class: Method
+    Name: Optimize_4_InheritanceGraph
+    Id: g=4e07e330ed84e93d8db5bb50489e320d
+  - Class: Method
+    Name: Verify_5_ModellingRules
+    Id: g=c32f96e65a29b9c31cf2dce30d05fbe6
+  - Class: Method
+    Name: Optimize_5_ModellingRules
+    Id: g=82b535b199b2d43151fd61aa71f3bd46
+  - Class: Method
+    Name: Verify_7_DynamicLinkModes
+    Id: g=a7e0c401e0b994ada3093a25f5b34778
+  - Class: Method
+    Name: Optimize_7_DynamicLinkModes
+    Id: g=956789c5c39bac7ad6f3eaf7f3593838
+  - Class: Method
+    Name: VerifyProject
+    Id: g=df7e39abcd47295ee5121d8ae92ae263
+  - Class: Method
+    Name: OptimizeProject
+    Id: g=e645542a8c3c62aac5f424a32e91536a
+  - Name: OptimizationLogFilePath
+    Id: g=37ad29b1b76138bba5f684f57046096c
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+    Value: "file:///C:/Users/lucben/Desktop/asd.txt"
+  - Class: Method
+    Name: Verify_6_ReadWriteModes
+    Id: g=fda7c59fefaf429da2087b7605b45699
+  - Class: Method
+    Name: Optimize_6_ReadWriteModes
+    Id: g=881e4c3b966387ae1cdc340fe3c4545b

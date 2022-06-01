@@ -16,7 +16,7 @@ Children:
     Id: ns=42;s=Demo.BoilerDemo.Boiler1.Fill
     DisplayName: {"LocaleId":"","Text":"Fill"}
     Children:
-    - Name: ns=0;InputArguments
+    - Name: InputArguments
       Id: ns=42;i=6032
       Type: BaseDataVariableType
       DataType: Argument
@@ -97,7 +97,7 @@ Children:
     Id: ns=42;s=Demo.BoilerDemo.Boiler1.Heat
     DisplayName: {"LocaleId":"","Text":"Heat"}
     Children:
-    - Name: ns=0;InputArguments
+    - Name: InputArguments
       Id: ns=42;i=6036
       Type: BaseDataVariableType
       DataType: Argument
