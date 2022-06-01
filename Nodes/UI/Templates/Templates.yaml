@@ -1868,6 +1868,18 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
         Value: false
+      - Name: LeftMargin
+        Id: g=1474b5c2535d32c9dace071989bf2d9b
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 42.0
+      - Name: TopMargin
+        Id: g=5dc451d561e68c7b1985576f44aeb007
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 88.0
     - Name: Unit
       Id: g=6e94daca61ac23e725462d2ad2c876bb
       Type: Label
@@ -1883,6 +1895,18 @@ Children:
           Type: DataBind
           DataType: NodePath
           Value: "../../MeasurementUnit"
+      - Name: LeftMargin
+        Id: g=855300e70d0be6c1f09b645c7fdc9d00
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 63.0
+      - Name: TopMargin
+        Id: g=06a71cecf117af5f30193c4da73ce064
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 88.0
     - Name: Arrow
       Id: g=dd75c57bdda2c048b621f89a014f2641
       Type: Image

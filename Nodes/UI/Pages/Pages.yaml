@@ -6724,7 +6724,7 @@ Children:
             Id: g=12ce2beffa49058495580be8c04194b8
             Type: BaseDataVariableType
             DataType: Size
-            Value: -1.0
+            Value: 150.0
           - Name: HeaderAlignment
             Id: g=f32fd3f3c5d1538d9f3eace65484ae06
             Type: BaseDataVariableType
@@ -6763,12 +6763,12 @@ Children:
             Id: g=125063c9a47d03ae9c60f62b7491b2c7
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Boiler level [gal]"}
+            Value: {"LocaleId":"en-US","Text":"Boiler [gal]"}
           - Name: Width
             Id: g=6e2902814fc2ed743f44e6a09fe91e6a
             Type: BaseDataVariableType
             DataType: Size
-            Value: -1.0
+            Value: 100.0
           - Name: HeaderAlignment
             Id: g=61911d9018c757cf5229d6736e20ece7
             Type: BaseDataVariableType
@@ -6807,12 +6807,12 @@ Children:
             Id: g=07d9d8641a2294caed657e15fe95e578
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Boiler temp [°F]"}
+            Value: {"LocaleId":"en-US","Text":"Boiler [°F]"}
           - Name: Width
             Id: g=c6ea41ee889b9c7567dcd37f634be1f7
             Type: BaseDataVariableType
             DataType: Size
-            Value: -1.0
+            Value: 100.0
           - Name: HeaderAlignment
             Id: g=d3afc501e7009bb1b9c885108fb18781
             Type: BaseDataVariableType
@@ -6851,12 +6851,12 @@ Children:
             Id: g=64380137db065731c13d8d5ea8c5e38f
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Tank 2 level [gal]"}
+            Value: {"LocaleId":"en-US","Text":"Tank 2 [gal]"}
           - Name: Width
             Id: g=7428cfb87b86c3d74a232e467182e560
             Type: BaseDataVariableType
             DataType: Size
-            Value: -1.0
+            Value: 100.0
           - Name: HeaderAlignment
             Id: g=22a9c80ff5452c350348ecf3eaee39b9
             Type: BaseDataVariableType
@@ -6895,12 +6895,12 @@ Children:
             Id: g=85b1531a419cc55951b0edf03a0d2361
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Tank 1 level [gal]"}
+            Value: {"LocaleId":"en-US","Text":"Tank 1 [gal]"}
           - Name: Width
             Id: g=ae80b67fc0511527b516a7a9c94658e4
             Type: BaseDataVariableType
             DataType: Size
-            Value: -1.0
+            Value: 100.0
           - Name: HeaderAlignment
             Id: g=629216bc366c048c7a3cad70d5637a75
             Type: BaseDataVariableType
@@ -7241,7 +7241,7 @@ Children:
           Id: g=5f5dd0b9ed3dedf628f123959d8ce6c2
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: false
+          Value: true
         - Name: Interactive
           Id: g=edb7bd474083e0fb61237b7fcdcadc69
           Type: BaseDataVariableType
@@ -7414,7 +7414,7 @@ Children:
           Id: g=277b014cdf9e5dd16b6460303e59fedd
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: false
+          Value: true
         - Name: Interactive
           Id: g=eb80b644730ca3ec970c8f7c456cb208
           Type: BaseDataVariableType
@@ -7522,13 +7522,13 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 500.0
+        Value: 40.0
       - Name: TopMargin
         Id: g=268a7284aa7edccacd424c1de274049e
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 240.0
+        Value: 61.0
       - Name: Level
         Id: g=059dda2c2a869da89e8c5f79e5827f6e
         Type: Label
@@ -7584,13 +7584,13 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 450.0
+        Value: 40.0
       - Name: TopMargin
         Id: g=90d881277f89dc9e2a9d9631cb161649
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 540.0
+        Value: 361.0
       - Name: Temperature
         Id: g=74967b322770a7d7fb09ebf2095cf2d5
         Type: Label
