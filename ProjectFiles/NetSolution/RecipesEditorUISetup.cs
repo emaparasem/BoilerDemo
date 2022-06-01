@@ -1,26 +1,13 @@
 #region Using directives
-<<<<<<< HEAD
-using System;
-using QPlatform.CoreBase;
-using QPlatform.HMIProject;
-using UAManagedCore;
-using OpcUa = UAManagedCore.OpcUa;
-using QPlatform.NetLogic;
-using QPlatform.UI;
-using QPlatform.Recipe;
-using System.Linq;
-=======
 using FTOptix.CoreBase;
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using FTOptix.Recipe;
 using FTOptix.UI;
 using System;
->>>>>>> 1363862374e586794e48f462c33b07a3d60e64bf
 using System.Collections.Generic;
 using System.Linq;
 using UAManagedCore;
-using FTOptix.OPCUAServer;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 
@@ -387,18 +374,11 @@ public class RecipesEditorUISetup : BaseNetLogic {
 
         return result;
     }
-
-<<<<<<< HEAD
-    private void MakeDynamicLink(IUAVariable parent, string nodePath)
-    {
-        var dataBind = InformationModel.MakeVariable<DataBind>("DynamicLink", QPlatform.Core.DataTypes.NodePath);
-=======
     private void MakeDynamicLink(IUAVariable parent, string nodePath) {
         var dataBind = InformationModel.MakeVariable<DataBind>("DynamicLink", FTOptix.Core.DataTypes.NodePath);
->>>>>>> 1363862374e586794e48f462c33b07a3d60e64bf
         dataBind.Value = nodePath;
         dataBind.Mode = DynamicLinkMode.ReadWrite;
-        parent.Refs.AddReference(QPlatform.CoreBase.ReferenceTypes.HasDataBind, dataBind);
+        parent.Refs.AddReference(FTOptix.CoreBase.ReferenceTypes.HasDataBind, dataBind);
     }
 
     private void MakeDynamicLink(IUAVariable parent, string nodePath, uint index) {

@@ -1,14 +1,7 @@
 #region Using directives
-<<<<<<< HEAD
-using UAManagedCore;
-using QPlatform.NetLogic;
-using QPlatform.UI;
-=======
 using FTOptix.NetLogic;
 using FTOptix.UI;
 using UAManagedCore;
-using FTOptix.OPCUAServer;
->>>>>>> 1363862374e586794e48f462c33b07a3d60e64bf
 #endregion
 
 public class AlarmGridLogic : BaseNetLogic {
