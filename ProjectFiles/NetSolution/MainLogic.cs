@@ -1,8 +1,31 @@
 #region Using directives
+<<<<<<< HEAD
+using System;
+using UAManagedCore;
+using OpcUa = UAManagedCore.OpcUa;
+using QPlatform.NetLogic;
+using QPlatform.HMIProject;
+using QPlatform.WebUI;
+using QPlatform.UI;
+using QPlatform.NativeUI;
+using QPlatform.Recipe;
+using QPlatform.Datalogger;
+using QPlatform.EventLogger;
+using QPlatform.SQLiteStore;
+using QPlatform.Store;
+using QPlatform.OPCUAClient;
+using QPlatform.CoreBase;
+using QPlatform.CommunicationDriver;
+using QPlatform.Alarm;
+using QPlatform.Core;
+using QPlatform.Logix;
+using QPlatform.EthernetIP;
+=======
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using UAManagedCore;
 using FTOptix.OPCUAServer;
+>>>>>>> 1363862374e586794e48f462c33b07a3d60e64bf
 #endregion
 
 public class MainLogic : BaseNetLogic {

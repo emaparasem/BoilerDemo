@@ -4,7 +4,27 @@ using FTOptix.NetLogic;
 using FTOptix.Store;
 using System;
 using UAManagedCore;
+<<<<<<< HEAD
+using OpcUa = UAManagedCore.OpcUa;
+using QPlatform.Alarm;
+using QPlatform.NetLogic;
+using QPlatform.HMIProject;
+using QPlatform.WebUI;
+using QPlatform.UI;
+using QPlatform.NativeUI;
+using QPlatform.Recipe;
+using QPlatform.Datalogger;
+using QPlatform.EventLogger;
+using QPlatform.SQLiteStore;
+using QPlatform.Store;
+using QPlatform.OPCUAClient;
+using QPlatform.EthernetIP;
+using QPlatform.CoreBase;
+using QPlatform.CommunicationDriver;
+using QPlatform.Core;
+=======
 using FTOptix.OPCUAServer;
+>>>>>>> 1363862374e586794e48f462c33b07a3d60e64bf
 #endregion
 
 public class AuditLogic : BaseNetLogic {

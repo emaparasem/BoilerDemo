@@ -958,6 +958,11 @@ Children:
     DataType: String
     ModellingRule: Optional
     Value: "Boiler Demo"
+  - Name: FullScreen
+    Id: g=5efe3d7fe1c53b58899087fa66c28a5d
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
 - Name: AlarmList
   Id: g=b25c8edb35df2acb37220b8cb1c56e4d
   Supertype: Window
