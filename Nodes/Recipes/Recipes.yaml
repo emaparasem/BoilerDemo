@@ -1,4 +1,5 @@
 Name: Recipes
+Id: g=1aadf45ab7ec31aaa239bfe313ed89bd
 Type: FolderType
 Children:
 - Name: RecipeSchema
@@ -6,17 +7,16 @@ Children:
   Type: RecipeSchema
   Children:
   - Name: Root
+    Id: g=511f8014c7b300b87c1b00728e630965
     Type: BaseObjectType
     Children:
-    - Name: BoilerSetpoint
+    - Name: BoilerLevelSetpoint
+      Id: g=e49ded143d5e38bedad89d2f34fb2d23
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
-    - Name: BoilerHeatTemp
-      Type: BaseDataVariableType
-      DataType: Int32
-      Value: 0
-    - Name: BoilerChillTemp
+    - Name: BoilerTempSetpoint
+      Id: g=d7fc3a83e39761a41d802325f5711ea3
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
@@ -54,36 +54,38 @@ Children:
     Target: ns=11;i=60
     Direction: Forward
   - Name: Store
+    Id: g=caf353f161a57fcd6849ef5d3a2102b1
     Type: NodePointer
     DataType: NodeId
     Value: {"IdType":2,"Id":"b64b1a3c83f8b66c8afbfccb5cec04d9","Namespace":17}
     Children:
     - Name: Kind
+      Id: g=d2613d8ab5251ffdb95397f526f521cb
       Type: PropertyType
       DataType: NodeId
       Value: {"Id":1,"Namespace":14}
   - Name: TargetNode
+    Id: g=10ed49e2c0231ec0b0b0c4c94ff6e9b5
     Type: NodePointer
     DataType: NodeId
     Value: {"IdType":2,"Id":"d3b4a10b5eff7364d74782c172a65b8e","Namespace":17}
     Children:
     - Name: Kind
+      Id: g=e2399b1b4480348e5fe1223256c21d5a
       Type: PropertyType
       DataType: NodeId
       Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: EditModel
-    Id: g=c68b6cc0b498e2748054a02c38180ec7
+    Id: g=e75a581c78bcfb3bf5d1f26f14b1514f
     Type: BaseObjectType
     Children:
-    - Name: BoilerSetpoint
+    - Name: BoilerLevelSetpoint
+      Id: g=622101413ed31e366c116f40dc478b7f
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
-    - Name: BoilerHeatTemp
-      Type: BaseDataVariableType
-      DataType: Int32
-      Value: 0
-    - Name: BoilerChillTemp
+    - Name: BoilerTempSetpoint
+      Id: g=69343b71941bae758bdfde45be0d3b88
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0

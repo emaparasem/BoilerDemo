@@ -1,4 +1,5 @@
 Name: NetLogic
+Id: g=6a96deddc16e9647e90618d79df80db2
 Type: FolderType
 Children:
 - Name: AuditLogic
@@ -7,8 +8,10 @@ Children:
   Children:
   - Class: Method
     Name: InsertRow
+    Id: g=294a64617fb849add751d30a9a091a1c
     Children:
     - Name: ns=0;InputArguments
+      Id: g=c89353ca4c16fb4a595730fed23f8715
       Type: BaseVariableType
       DataType: Argument
       ReferenceType: HasProperty

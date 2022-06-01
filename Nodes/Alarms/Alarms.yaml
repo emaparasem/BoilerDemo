@@ -1,52 +1,66 @@
 Name: Alarms
+Id: g=af5ca2fcbb16c30a3e66fa65d067be2b
 Type: FolderType
 Children:
 - Name: ImportAndExportAlarms
+  Id: g=6d898892d541813e8abae2a0b2defff8
   Type: NetLogic
   WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
   Children:
   - Name: BehaviourStartPriority
+    Id: g=1710503c6180be716da02d9d675fee5f
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
   - Class: Method
     Name: ImportAlarms
+    Id: g=8e9d2855fa9f65b7d0c6edc4b019cee5
   - Class: Method
     Name: ExportAlarms
+    Id: g=891182da66cbf251252d580792c92ef3
   - Name: CSVPath
+    Id: g=fc85eed0efb6aa13abcfd23719789671
     Type: BaseDataVariableType
     DataType: AbsoluteResourceUri
     Value: ""
   - Name: CharacterSeparator
+    Id: g=cd037899b834f48b7728b330bf668fcf
     Type: BaseDataVariableType
     DataType: String
     Value: ","
   - Name: WrapFields
+    Id: g=d99898afd5c230b4a96f536cb4ca9ad2
     Type: BaseDataVariableType
     DataType: Boolean
     Value: false
   - Name: MessageAsTranslationKey
+    Id: g=257d7d6325fac7e5d3dc9218330d81dc
     Type: BaseDataVariableType
     DataType: Boolean
     Value: false
 - Name: LowLevelTank1
+  Id: g=9e38b1dedd83af6e437b620cdd9b273e
   Type: ExclusiveLevelAlarmController
   Children:
   - Name: InputValue
+    Id: g=a7e7a784ed0c4f9cee97f3a435975d51
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
+      Id: g=38170b78ef93fa71df1f07758ced589e
       Type: DataBind
       DataType: NodePath
       Value: "../../../CommDrivers/EthernetIPDriver/EthernetIPStation/Tags/Tank1/Level"
       Children:
       - Name: Mode
+        Id: g=dda642fb80e0b926d566101d17de4350
         Type: BaseVariableType
         DataType: DataBindModeType
         Value: 2
   - Name: LastEvent
+    Id: g=9297cca7767ee36f5b4fe3fdbb3ebcfe
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
@@ -61,31 +75,38 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: LowLimit
+    Id: g=e4f945287c7340fe1e03f81206ffb728
     Type: BaseDataVariableType
     DataType: Double
     Value: 5.0
   - Name: Message
+    Id: g=f073e8263ca254b77f60fb6d5c34043f
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"LL1001 - Warning: Tank 1 Low level"}
 - Name: LowLevelTank2
+  Id: g=1a3b2a18e132cdffc499702b79c86ca9
   Type: ExclusiveLevelAlarmController
   Children:
   - Name: InputValue
+    Id: g=17cbcd686aeb1743c8c1c005ca42c894
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
+      Id: g=a2dc1e3568fc6188e6bbcf14d630d3d7
       Type: DataBind
       DataType: NodePath
       Value: "../../../CommDrivers/EthernetIPDriver/EthernetIPStation/Tags/Tank2/Level"
       Children:
       - Name: Mode
+        Id: g=6885f738fe5e7ef9e4561bafbfd9fb3c
         Type: BaseVariableType
         DataType: DataBindModeType
         Value: 2
   - Name: LastEvent
+    Id: g=2cfa28c676b05538db1966621615cd00
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
@@ -100,31 +121,38 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: LowLimit
+    Id: g=f730f43aa264d7f2c0eef78e90ce8778
     Type: BaseDataVariableType
     DataType: Double
     Value: 5.0
   - Name: Message
+    Id: g=16c06b75d635a722fc6e38b34c41af86
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"LL1002 - Warning: Tank 2 Low level"}
 - Name: LowLevelBoiler
+  Id: g=002e57dac91dbd80913ed7c631d28d0f
   Type: ExclusiveLevelAlarmController
   Children:
   - Name: InputValue
+    Id: g=39dd81494cd5efcb3e797bdfd16a2178
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
+      Id: g=0eb478a51403dc77e8c9e61ed375ed70
       Type: DataBind
       DataType: NodePath
       Value: "../../../OPC-UA/OPCUAClient/Objects/Demo/BoilerDemo/Boiler1/FillLevelSensor/FillLevel"
       Children:
       - Name: Mode
+        Id: g=5d20b5ef4e1f8fdf3135ef3c836c95f1
         Type: BaseVariableType
         DataType: DataBindModeType
         Value: 2
   - Name: LastEvent
+    Id: g=6ae03192b9c345eeb718da0b4ddd67d0
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
@@ -139,10 +167,12 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: Message
+    Id: g=bd21a86c5faad433e6063c01441f3cb8
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"LL2003 - Warning: Boiler Low level"}
   - Name: LowLimit
+    Id: g=992e2a1092bcfab0274f2d3a6492ecbf
     Type: BaseDataVariableType
     DataType: Double
     Value: 5.0

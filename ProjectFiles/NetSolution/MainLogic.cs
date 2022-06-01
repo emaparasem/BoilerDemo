@@ -1,4 +1,5 @@
 #region Using directives
+<<<<<<< HEAD
 using System;
 using UAManagedCore;
 using OpcUa = UAManagedCore.OpcUa;
@@ -19,12 +20,16 @@ using QPlatform.Alarm;
 using QPlatform.Core;
 using QPlatform.Logix;
 using QPlatform.EthernetIP;
+=======
+using FTOptix.HMIProject;
+using FTOptix.NetLogic;
+using UAManagedCore;
+using FTOptix.OPCUAServer;
+>>>>>>> 1363862374e586794e48f462c33b07a3d60e64bf
 #endregion
 
-public class MainLogic : BaseNetLogic
-{
-    public override void Start()
-    {
+public class MainLogic : BaseNetLogic {
+    public override void Start() {
         var highLevel = Project.Current.GetVariable("OPC-UA/OPCUAClient/Objects/Demo/BoilerDemo/Boiler1/FillLevelSensor/FillLevel/EURange/High");
         if (highLevel != null)
             highLevel.Value = 100;
@@ -39,8 +44,7 @@ public class MainLogic : BaseNetLogic
             lowTemperature.Value = -10;
     }
 
-    public override void Stop()
-    {
+    public override void Stop() {
         // Insert code to be executed when the user-defined logic is stopped
     }
 }

@@ -1,7 +1,9 @@
 Name: Translations
+Id: g=6f3da805eee577c8578d06ab0be06bf8
 Type: FolderType
 Children:
 - Name: LocalizationDictionary1
+  Id: g=5d2efe56e40b443d216a4c161312a8b3
   Type: LocalizationDictionary
   DataType: String
   ValueRank: OneOrMoreDimensions

@@ -1,17 +1,21 @@
 Name: BoilerDemo
+Id: g=7552f9d326d044d670694582c6d00622
 Type: ProjectFolder
 Children:
 - Name: BranchingEnabled
+  Id: g=2cfcf3e6db90513c94a34b1a102cb8e5
   Type: BaseDataVariableType
   DataType: Boolean
   Value: false
 - Name: Locales
+  Id: g=38ecea323c7650c1035f010d9b62afcf
   Type: BaseDataVariableType
   DataType: String
   ValueRank: OneDimension
   ArrayDimensions: [0]
   Value: ["en-US","it-IT"]
 - Name: LocaleFallbackList
+  Id: g=0cb34e9bb9ca0cb973e162877c78dfc9
   Type: BaseDataVariableType
   DataType: String
   ValueRank: OneDimension
@@ -32,24 +36,29 @@ Children:
 - File: Translations/Translations.yaml
 - File: Retentivity/Retentivity.yaml
 - Name: DefaultUserFolder
+  Id: g=883d5df8410ef6cbd4ff1b3a05c8562f
   Type: NodePointer
   DataType: NodeId
   Value: {"IdType":2,"Id":"4ab8a898655d1fdff87d6980ad47e730","Namespace":17}
   Children:
   - Name: Kind
+    Id: g=17b3a40067b51cb4f64eaea4af96c762
     Type: PropertyType
     DataType: NodeId
     Value: {"Id":61}
 - Name: RecipeSchema
+  Id: g=c1937ac47afd4b70b674a970185817f3
   Type: Alias
   DataType: NodeId
-  Value: {"IdType":2,"Id":"c68b6cc0b498e2748054a02c38180ec7","Namespace":17}
+  Value: {"IdType":2,"Id":"e75a581c78bcfb3bf5d1f26f14b1514f","Namespace":17}
   Children:
   - Name: Kind
+    Id: g=9afbb306e524dd47bba40efc1bfaa9a5
     Type: PropertyType
     DataType: NodeId
     Value: {"IdType":2,"Id":"6e92df5365a242ea9a45b1efe8bdd220","Namespace":17}
 - Name: MeasurementSystemMap
+  Id: g=be9be95f4a0297bfe8bd56d4667bc3eb
   Type: BaseDataVariableType
   DataType: MeasurementSystemMapItem
   ValueRank: OneDimension

@@ -1,4 +1,5 @@
 Name: DataStores
+Id: g=a4df5772d0d34da0855742229b7dc3a2
 Type: FolderType
 Children:
 - Name: EmbeddedDatabase
@@ -6,9 +7,11 @@ Children:
   Type: SQLiteStore
   Children:
   - Name: Tables
+    Id: g=4aab55581a22080d6b5f6204703798d1
     Type: BaseObjectType
     Children:
     - Name: DataLogger
+      Id: g=32d6b85d6f2743be52c60396db92409d
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -24,63 +27,36 @@ Children:
         Target: ns=14;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=ab2e3191d3f258017dd21bad17b2bdf7
         Type: BaseObjectType
         Children:
         - Name: Timestamp
+          Id: g=eb681ac38b806b2060fe43c3bd8a7fbe
           Type: StoreColumn
           DataType: UtcTime
           Value: "1601-01-01T00:00:00.0000000"
         - Name: Boiler level
+          Id: g=70cedc9f788af1dd79eea0ba0c355f31
           Type: StoreColumn
           DataType: Double
           Value: 0.0
         - Name: Boiler temp
+          Id: g=03261a27e9bec8e2b27947c4103f62bf
           Type: StoreColumn
           DataType: Double
           Value: 0.0
         - Name: Tank 2 level
+          Id: g=97ffd17f0b0e056fd366df879b2ad733
           Type: StoreColumn
           DataType: Float
           Value: 0.0
         - Name: Tank 1 level
+          Id: g=32783c5a54b12e6cc555039872b3b1c8
           Type: StoreColumn
           DataType: Float
           Value: 0.0
-    - Name: RecipeSchema
-      Type: SQLiteStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=14;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=14;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=14;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=14;i=20
-        Direction: Forward
-      - Name: Columns
-        Type: BaseObjectType
-        Children:
-        - Name: Name
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: /BoilerSetpoint
-          Type: StoreColumn
-          DataType: Int32
-          Value: 0
-        - Name: /BoilerHeatTemp
-          Type: StoreColumn
-          DataType: Int32
-          Value: 0
-        - Name: /BoilerChillTemp
-          Type: StoreColumn
-          DataType: Int32
-          Value: 0
     - Name: AlarmsEventLogger
+      Id: g=da4d7db75efdeb1760ebd3c7e3a177d1
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -96,53 +72,66 @@ Children:
         Target: ns=14;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=22ec1de9c548d0c88df7693049692e84
         Type: BaseObjectType
         Children:
         - Name: ActiveState_Id
+          Id: g=0b83efae9dbbd54bb4bfb8e75907cc3f
           Type: StoreColumn
           DataType: Boolean
           Value: false
         - Name: AckedState_Id
+          Id: g=a569cbb7362bc8786c2f2fa5c32f6920
           Type: StoreColumn
           DataType: Boolean
           Value: false
         - Name: ConfirmedState_Id
+          Id: g=5715898c00b834eb4778bdab434795fc
           Type: StoreColumn
           DataType: Boolean
           Value: false
         - Name: ConditionName
+          Id: g=f19bce4a9c1c39fadd2c1acdf9a7f67f
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: EnabledState_Id
+          Id: g=088d9830a2a99c6cbf6b5f1af845e07c
           Type: StoreColumn
           DataType: Boolean
           Value: false
         - Name: SourceName
+          Id: g=95a5a899c99202c4e27d57c5d4b83cb6
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Time
+          Id: g=eae9997ba61657ecbc9efebfe2738465
           Type: StoreColumn
           DataType: UtcTime
           Value: "1601-01-01T00:00:00.0000000"
         - Name: 'Message_en-US'
+          Id: g=51d7844e076b8bc30d53b0e54a3fd390
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_it-IT'
+          Id: g=570a266655ad8abad16d1bed8c2f5e84
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Severity
+          Id: g=f4688e3688831c7a4e9dd24b9acce3f6
           Type: StoreColumn
           DataType: UInt16
           Value: 0
         - Name: LocalTime
+          Id: g=a8fbca04dbfda9fba5b67b9aee98ca01
           Type: StoreColumn
           DataType: DateTime
           Value: "1601-01-01T00:00:00.0000000"
     - Name: RecipesAudit
+      Id: g=98f62d15279007b36800e2a2356be36d
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -158,20 +147,59 @@ Children:
         Target: ns=14;i=20
         Direction: Forward
       - Name: Columns
+        Id: g=0d97455ec72258eef0d0ab0e3a9a1f1e
         Type: BaseObjectType
         Children:
         - Name: Timestamp
+          Id: g=127d2a11bb9ffdcd8bfae690097dbdcf
           Type: StoreColumn
           DataType: DateTime
           Value: "1601-01-01T00:00:00.0000000"
         - Name: RecipeName
+          Id: g=cfcdbeae24f7a8dc758a5a3dd45768f6
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Action
+          Id: g=d4555ed3d53ba3a7b6b011cc048b7c45
           Type: StoreColumn
           DataType: String
           Value: ""
+    - Name: RecipeSchema
+      Id: g=baf01e14b1a97b0d35b22fec166169f3
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=14;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=14;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=4e181122b2af99b078963f6fb7aa41b3
+        Type: BaseObjectType
+        Children:
+        - Name: Name
+          Id: g=89193d43906081d4efcd492c1f3fc31e
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: /BoilerLevelSetpoint
+          Id: g=afcc46d7acae6d7f60f8dddcb887bcc2
+          Type: StoreColumn
+          DataType: Int32
+          Value: 0
+        - Name: /BoilerTempSetpoint
+          Id: g=13d35bd4ff17cb747cabdc230d5ccb20
+          Type: StoreColumn
+          DataType: Int32
+          Value: 0
   - Class: Reference
     Target: ns=15;i=30
     Direction: Forward
@@ -179,16 +207,19 @@ Children:
     Target: ns=15;i=33
     Direction: Forward
   - Name: MaxColumnNameLength
+    Id: g=6f8690d44ebd5e71fdafd184c3c01564
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
     Value: 0
   - Name: MaxColumnCount
+    Id: g=ba2d30820296fc4496ba3882ba43c98c
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
     Value: 0
   - Name: DataTypeCompatibilityMap
+    Id: g=577e3fe3bea3d1db20889fd0bb92f2d3
     Type: BaseDataVariableType
     DataType: NodeId
     AccessLevel: Read
@@ -196,6 +227,7 @@ Children:
     ArrayDimensions: [0,0]
     Value: {"Type":17,"Dimensions":[0,0],"Body":[]}
   - Name: Status
+    Id: g=8b098c6a25f2b890d6e279e81ff81ce3
     Type: PropertyType
     DataType: StoreStatus
     AccessLevel: Read

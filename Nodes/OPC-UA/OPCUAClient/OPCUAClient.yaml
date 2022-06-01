@@ -3,36 +3,44 @@ Id: g=9f78eb2f1f373feb2ad5ccb7e29a5e21
 Type: OPCUAClient
 Children:
 - Name: ServerEndpointURL
+  Id: g=c7d26f3c54d53d336582e2ac9324189a
   Type: BaseDataVariableType
   DataType: String
   Value: "opc.tcp://172.19.17.67:48020"
 - Name: MinimumMessageSecurityMode
+  Id: g=202202f64855412795b7e5705e83fa8b
   Type: BaseDataVariableType
-  DataType: MessageSecurityModeEnum
+  DataType: ns=13;MessageSecurityModeEnum
   Value: 0
 - Name: MinimumSecurityPolicy
+  Id: g=f91cb4827ed4bda204d82d2a1450ed68
   Type: BaseDataVariableType
-  DataType: SecurityPolicyEnum
+  DataType: ns=13;SecurityPolicyEnum
   Value: 0
 - Name: UserIdentityType
+  Id: g=144dbeb4962d8640764476c5d7f365ac
   Type: BaseDataVariableType
   DataType: UserIdentityTypeEnum
   Value: 0
 - Name: ConnectionStatus
+  Id: g=de6ea9081ed09938b426d1697622ee9f
   Type: BaseDataVariableType
   DataType: ConnectionStatusEnum
   AccessLevel: Read
   Value: 0
 - Name: ServerUri
+  Id: g=c908cd9b7a587c67993bc332cc820614
   Type: BaseDataVariableType
   DataType: String
   AccessLevel: Read
   Value: ""
 - Name: Events
+  Id: g=42f1d02ea8d8d58f3c2cdd683b014ba3
   Type: BaseDataVariableType
   DataType: EventsEnum
-  Value: 1
+  Value: 0
 - Name: RuntimeConfigurations
+  Id: g=f28fb14595ae509456d7e8d13db0ace1
   Type: BaseObjectType
 - Class: Reference
   Target: ns=13;i=8
@@ -62,10 +70,12 @@ Children:
   Target: ns=13;i=75
   Direction: Forward
 - Name: VerifyServerIdentity
+  Id: g=2a335f464efbee5841c989acef7fd744
   Type: BaseDataVariableType
   DataType: Boolean
   Value: false
 - Name: Objects
+  Id: g=2ff7d5bfa8d38520b405bdab2281df48
   Type: BaseObjectType
   Children:
   - File: Demo/Demo.yaml
@@ -99,18 +109,21 @@ Children:
         Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
         Children:
         - Name: UnitId
+          Id: g=b7a6f1318c7f13ed72e4bc5b92ffb22e
           Type: BaseVariableType
           DataType: Int32
           OwnerId: ns=42;i=6002
           ReferenceType: HasProperty
           Value: 0
         - Name: DisplayName
+          Id: g=45bb6bd0f33bfbc0391f03d037293483
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=42;i=6002
           ReferenceType: HasProperty
           Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Description
+          Id: g=4a166b889da1dbcf2dd52d8ec77c1175
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=42;i=6002
@@ -124,12 +137,14 @@ Children:
         Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":100.0}}
         Children:
         - Name: Low
+          Id: g=7360ae1aa420a52a950ef6e5fd0e396f
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;i=6003
           ReferenceType: HasProperty
           Value: 0.0
         - Name: High
+          Id: g=f9406c86860c26ab46554cf7a2033d1e
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;i=6003
@@ -144,12 +159,14 @@ Children:
         Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
         Children:
         - Name: Low
+          Id: g=0b6e6d2135659f0332d1013751a5c66b
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;i=6004
           ReferenceType: HasProperty
           Value: 0.0
         - Name: High
+          Id: g=3cc5db608a6d01272cb7a7f7188086bb
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;i=6004
@@ -209,18 +226,21 @@ Children:
         Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
         Children:
         - Name: UnitId
+          Id: g=eea61a9b24d258572cc081cff94ed6f3
           Type: BaseVariableType
           DataType: Int32
           OwnerId: ns=42;i=6008
           ReferenceType: HasProperty
           Value: 0
         - Name: DisplayName
+          Id: g=58f57a80475762930e7056e53adf716d
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=42;i=6008
           ReferenceType: HasProperty
           Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Description
+          Id: g=9165f2793fa55e1b68f0b4fcf093fcd6
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=42;i=6008
@@ -234,12 +254,14 @@ Children:
         Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
         Children:
         - Name: Low
+          Id: g=0a76c53764cb01ecee4fdbe7957f659f
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;i=6009
           ReferenceType: HasProperty
           Value: 0.0
         - Name: High
+          Id: g=08fc72f4c876fd491809191d8f6eda5c
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;i=6009
@@ -254,12 +276,14 @@ Children:
         Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
         Children:
         - Name: Low
+          Id: g=6bfe4721731d2593927d58e05312cfcb
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;i=6010
           ReferenceType: HasProperty
           Value: 0.0
         - Name: High
+          Id: g=27f1ef80ca8b28b36b0b6079de1a14ca
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;i=6010
@@ -323,18 +347,21 @@ Children:
           Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
           Children:
           - Name: UnitId
+            Id: g=96bcc90061d1f90347c922dfe547a6a4
             Type: BaseVariableType
             DataType: Int32
             OwnerId: ns=42;i=6021
             ReferenceType: HasProperty
             Value: 0
           - Name: DisplayName
+            Id: g=d4902ab7fe6a4e81f7087585777256b4
             Type: BaseVariableType
             DataType: LocalizedText
             OwnerId: ns=42;i=6021
             ReferenceType: HasProperty
             Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           - Name: Description
+            Id: g=7f4e6638aae45770ed2569fa65f9e49b
             Type: BaseVariableType
             DataType: LocalizedText
             OwnerId: ns=42;i=6021
@@ -348,12 +375,14 @@ Children:
           Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
           Children:
           - Name: Low
+            Id: g=67954354a6014e64ec0f3bc7d58d86c5
             Type: BaseVariableType
             DataType: Double
             OwnerId: ns=42;i=6022
             ReferenceType: HasProperty
             Value: 0.0
           - Name: High
+            Id: g=b087a8b7ce59fca1a2315078ba52775f
             Type: BaseVariableType
             DataType: Double
             OwnerId: ns=42;i=6022
@@ -368,12 +397,14 @@ Children:
           Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
           Children:
           - Name: Low
+            Id: g=d9a788a2c668f9e91d92a76ffa0f4b18
             Type: BaseVariableType
             DataType: Double
             OwnerId: ns=42;i=6023
             ReferenceType: HasProperty
             Value: 0.0
           - Name: High
+            Id: g=5fa5fbaf08d1072b2bcf08d9e6835134
             Type: BaseVariableType
             DataType: Double
             OwnerId: ns=42;i=6023
@@ -444,18 +475,21 @@ Children:
           Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
           Children:
           - Name: UnitId
+            Id: g=5b81d7b148bf849b19d64a64b20e6b3b
             Type: BaseVariableType
             DataType: Int32
             OwnerId: ns=42;i=6015
             ReferenceType: HasProperty
             Value: 0
           - Name: DisplayName
+            Id: g=1e9e3823dccb15173e4a0aed314fe675
             Type: BaseVariableType
             DataType: LocalizedText
             OwnerId: ns=42;i=6015
             ReferenceType: HasProperty
             Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           - Name: Description
+            Id: g=6ba3a859184f83f1f67f70533a8f4986
             Type: BaseVariableType
             DataType: LocalizedText
             OwnerId: ns=42;i=6015
@@ -469,12 +503,14 @@ Children:
           Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":100.0}}
           Children:
           - Name: Low
+            Id: g=bc125a62c63364fbd1d9194df1a42ae0
             Type: BaseVariableType
             DataType: Double
             OwnerId: ns=42;i=6016
             ReferenceType: HasProperty
             Value: 0.0
           - Name: High
+            Id: g=4a9fed25fe63ba969df2183036e584c5
             Type: BaseVariableType
             DataType: Double
             OwnerId: ns=42;i=6016
@@ -489,12 +525,14 @@ Children:
           Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
           Children:
           - Name: Low
+            Id: g=afcc87be1d78959adfbab70336accfae
             Type: BaseVariableType
             DataType: Double
             OwnerId: ns=42;i=6017
             ReferenceType: HasProperty
             Value: 0.0
           - Name: High
+            Id: g=0ba5bb0e68a40f9b9ace694cf70f34cb
             Type: BaseVariableType
             DataType: Double
             OwnerId: ns=42;i=6017

@@ -7,11 +7,13 @@ Children:
   Type: UserType
   Children:
   - Name: Password
+    Id: g=3d464415df5780ace582e170acbabeb6
     Type: BaseVariableType
     DataType: Password
     ReferenceType: HasProperty
     Value: ""
   - Name: LocaleIds
+    Id: g=25bb9363c78046bea641588972588b6b
     Type: BaseVariableType
     DataType: LocaleId
     ReferenceType: HasProperty

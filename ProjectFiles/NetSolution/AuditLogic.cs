@@ -1,6 +1,10 @@
 #region Using directives
+using FTOptix.HMIProject;
+using FTOptix.NetLogic;
+using FTOptix.Store;
 using System;
 using UAManagedCore;
+<<<<<<< HEAD
 using OpcUa = UAManagedCore.OpcUa;
 using QPlatform.Alarm;
 using QPlatform.NetLogic;
@@ -18,17 +22,17 @@ using QPlatform.EthernetIP;
 using QPlatform.CoreBase;
 using QPlatform.CommunicationDriver;
 using QPlatform.Core;
+=======
+using FTOptix.OPCUAServer;
+>>>>>>> 1363862374e586794e48f462c33b07a3d60e64bf
 #endregion
 
-public class AuditLogic : BaseNetLogic
-{
-    public override void Start()
-    {
+public class AuditLogic : BaseNetLogic {
+    public override void Start() {
         // Insert code to be executed when the user-defined logic is started
     }
 
-    public override void Stop()
-    {
+    public override void Stop() {
         // Insert code to be executed when the user-defined logic is stopped
     }
 

@@ -45,18 +45,21 @@ Children:
         Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"http://www.opcfoundation.org/UA/units/un/cefact","unitId":5002322,"displayName":{"LocaleId":"en-US","Text":"l"},"description":{"LocaleId":"en-US","Text":"litre"}}}
         Children:
         - Name: UnitId
+          Id: g=97bac88cd5ffc36ea0b46d07c05f078b
           Type: BaseVariableType
           DataType: Int32
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
           ReferenceType: HasProperty
           Value: 5002322
         - Name: DisplayName
+          Id: g=93d9dc3e68c88b611e47fe1a9ce190e6
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
           ReferenceType: HasProperty
           Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Description
+          Id: g=2a5f6e16f952b1f75a67e6f1cebfe1e4
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
@@ -70,12 +73,14 @@ Children:
         Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
         Children:
         - Name: Low
+          Id: g=c5fd5371203f40b90c0233b350892a9a
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
           ReferenceType: HasProperty
           Value: 0.0
         - Name: High
+          Id: g=7349d1f938951a42a9df958e1b5d950f
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
@@ -127,18 +132,21 @@ Children:
         Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"http://www.opcfoundation.org/UA/units/un/cefact","unitId":4408652,"displayName":{"LocaleId":"en-US","Text":"°C"},"description":{"LocaleId":"en-US","Text":"degree Celsius"}}}
         Children:
         - Name: UnitId
+          Id: g=32bf7433ed2e548931167b1276b2d138
           Type: BaseVariableType
           DataType: Int32
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
           ReferenceType: HasProperty
           Value: 4408652
         - Name: DisplayName
+          Id: g=8270c81f5063a5bf063e7a2ade7cdbc7
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
           ReferenceType: HasProperty
           Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Description
+          Id: g=f989bccc2ba1cae4f2fae121608ec311
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
@@ -152,12 +160,14 @@ Children:
         Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":100.0}}
         Children:
         - Name: Low
+          Id: g=a55466971a6f63585a938d631e5a1c3b
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EURange
           ReferenceType: HasProperty
           Value: 0.0
         - Name: High
+          Id: g=07b4b7edbe974dbff4112bf67dba38c1
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=42;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EURange
