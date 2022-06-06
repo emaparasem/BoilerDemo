@@ -3402,7 +3402,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 84.0
+        Value: 83.0
       - Name: Visible
         Id: g=9144d5311da2df340cc129e8a7b1a07d
         Type: BaseDataVariableType
@@ -5039,19 +5039,19 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 9.0
+      Value: 8.0
     - Name: TopMargin
       Id: g=e9917df33a1fe6d01a633689ab5276e6
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 84.0
+      Value: 83.0
     - Name: Width
       Id: g=f924fdd526635b255a15107d6d775135
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 25.0
+      Value: 27.0
     - Name: Appearance
       Id: g=bc5bc980bda0472dffb740f9f350a699
       Type: BaseVariableType
@@ -5063,7 +5063,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 25.0
+      Value: 27.0
     - Name: ImageWidth
       Id: g=9238c23ac05b38c600b788496bed069f
       Type: BaseDataVariableType
