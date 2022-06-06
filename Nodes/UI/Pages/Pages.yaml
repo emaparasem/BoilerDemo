@@ -58,7 +58,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 15.0
+      Value: 14.0
     - Name: TopMargin
       Id: g=b828dfdd66563ee15f190211074fe987
       Type: BaseVariableType
