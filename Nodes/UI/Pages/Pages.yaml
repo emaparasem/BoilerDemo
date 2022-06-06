@@ -58,7 +58,13 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 470.0
+      Value: 15.0
+    - Name: TopMargin
+      Id: g=b828dfdd66563ee15f190211074fe987
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
   - Name: Pipes
     Id: g=e029df34bebac61ae14321be5146091f
     Type: Panel
