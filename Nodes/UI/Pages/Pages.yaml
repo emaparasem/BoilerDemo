@@ -53,12 +53,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       Value: "ns=17;%PROJECTDIR%/FTOptixLogo_cyan.svg"
-    - Name: LeftMargin
-      Id: g=b7147cb4ecf0a33a9f8e399d93d3dc39
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 470.0
   - Name: Pipes
     Id: g=e029df34bebac61ae14321be5146091f
     Type: Panel
