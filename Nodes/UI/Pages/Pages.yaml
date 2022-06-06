@@ -8415,6 +8415,12 @@ Children:
         DataType: Color
         ModellingRule: Optional
         Value: "#b3b3b3"
+      - Name: CornerRadius
+        Id: g=1a62da328eb8a626c4b96c82e5c514bd
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 5.0
     - Name: RecipesEditor
       Id: g=344f009d2173aa62dc3c442a607a19b3
       Type: Panel
@@ -8890,6 +8896,18 @@ Children:
                 DataType: Size
                 ModellingRule: Optional
                 Value: 0.0
+              - Name: MinValue
+                Id: g=0eb4135b39b08913a362298a48719f64
+                Type: BaseDataVariableType
+                DataType: Double
+                ModellingRule: Optional
+                Value: 2.0
+              - Name: MaxValue
+                Id: g=5d555bc1324a8efd7ba18b28d20d53e0
+                Type: BaseDataVariableType
+                DataType: Double
+                ModellingRule: Optional
+                Value: 100.0
             - Name: TopMargin
               Id: g=f0c2fbd4fc0f03e88277d9bf821f4da0
               Type: BaseVariableType
@@ -9030,6 +9048,18 @@ Children:
                 DataType: Size
                 ModellingRule: Optional
                 Value: 0.0
+              - Name: MinValue
+                Id: g=6e630274eb91da437e5d5b2c290ca4ac
+                Type: BaseDataVariableType
+                DataType: Double
+                ModellingRule: Optional
+                Value: 30.0
+              - Name: MaxValue
+                Id: g=90bbfc99e84697e48406bd3beea15392
+                Type: BaseDataVariableType
+                DataType: Double
+                ModellingRule: Optional
+                Value: 90.0
             - Name: TopMargin
               Id: g=cd164a22c1863b40746f57c413f19033
               Type: BaseVariableType
@@ -11475,12 +11505,12 @@ Children:
               Id: g=1961fdfa3da9f32a1a0a300195d7d739
               Type: BaseDataVariableType
               DataType: LocalizedText
-              Value: {"NamespaceIndex":17,"TextId":"SourceName"}
+              Value: {"LocaleId":"en-US","Text":"Source"}
             - Name: Width
               Id: g=32477bad7ebcec0e654150c572f64af2
               Type: BaseDataVariableType
               DataType: Size
-              Value: 130.0
+              Value: 100.0
             - Name: HeaderAlignment
               Id: g=b77e0048e2e32f5e674ef5d4f9a97c52
               Type: BaseDataVariableType
@@ -11871,7 +11901,7 @@ Children:
               Id: g=b0276125664cbbd03559320aa5570066
               Type: BaseDataVariableType
               DataType: TextHorizontalAlignment
-              Value: 2
+              Value: 1
             - Name: ContentAlignment
               Id: g=50ea15d931a8690d7da04313e74bae5e
               Type: BaseVariableType
